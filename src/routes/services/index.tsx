@@ -18,6 +18,16 @@ const faqs: FaqItem[] = [
       "If you need subject understanding, start with university tutoring. If you need structure, planning and accountability, choose academic coaching. For a dissertation, thesis coaching plus research methodology is the usual combination. Tell us your situation and we will recommend honestly.",
   },
   {
+    question: "Do you support all majors, courses and assignment types?",
+    answer:
+      "Yes. We coach across all university majors and courses — from weekly assignments and essays to senior projects, Master's theses, dissertations and PhD research. If a particular subject is outside our expertise, we will say so clearly.",
+  },
+  {
+    question: "Can I receive coaching in Arabic or French?",
+    answer:
+      "Yes. Sessions are available in English, Arabic and French, depending on your preference and the language requirements of your programme.",
+  },
+  {
     question: "Do you write or submit work for students?",
     answer:
       "No. Every service is coaching, teaching or feedback on work you produce yourself. You remain responsible for producing and submitting your own academic work.",
