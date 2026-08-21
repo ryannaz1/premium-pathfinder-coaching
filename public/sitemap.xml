@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: prefix each <loc> with the site's absolute base URL once a domain is set. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><priority>1.0</priority></url>
+  <url><loc>/services</loc><priority>0.9</priority></url>
+  <url><loc>/services/university-tutoring</loc><priority>0.8</priority></url>
+  <url><loc>/services/academic-coaching</loc><priority>0.8</priority></url>
+  <url><loc>/services/thesis-dissertation-coaching</loc><priority>0.8</priority></url>
+  <url><loc>/services/research-methodology</loc><priority>0.8</priority></url>
+  <url><loc>/services/academic-writing-coaching</loc><priority>0.8</priority></url>
+  <url><loc>/services/editing-proofreading</loc><priority>0.8</priority></url>
+  <url><loc>/services/exam-preparation</loc><priority>0.8</priority></url>
+  <url><loc>/services/sat-preparation</loc><priority>0.8</priority></url>
+  <url><loc>/services/research-statistics-support</loc><priority>0.8</priority></url>
+  <url><loc>/locations</loc><priority>0.8</priority></url>
+  <url><loc>/locations/uk</loc><priority>0.8</priority></url>
+  <url><loc>/locations/dubai</loc><priority>0.8</priority></url>
+  <url><loc>/locations/abu-dhabi</loc><priority>0.8</priority></url>
+  <url><loc>/locations/montreal</loc><priority>0.8</priority></url>
+  <url><loc>/locations/lebanon</loc><priority>0.8</priority></url>
+  <url><loc>/who-we-help</loc><priority>0.7</priority></url>
+  <url><loc>/about</loc><priority>0.7</priority></url>
+  <url><loc>/resources</loc><priority>0.7</priority></url>
+  <url><loc>/contact</loc><priority>0.9</priority></url>
+</urlset>

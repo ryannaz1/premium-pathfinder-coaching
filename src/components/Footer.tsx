@@ -12,11 +12,12 @@ const serviceLinks = [
 ];
 
 const locationLinks = [
-  { label: "United Kingdom", to: "/locations" },
-  { label: "Dubai", to: "/locations" },
-  { label: "Abu Dhabi", to: "/locations" },
-  { label: "Montreal", to: "/locations" },
-  { label: "Lebanon", to: "/locations" },
+  { label: "United Kingdom", to: "/locations/uk" },
+  { label: "Dubai", to: "/locations/dubai" },
+  { label: "Abu Dhabi", to: "/locations/abu-dhabi" },
+  { label: "Montreal", to: "/locations/montreal" },
+  { label: "Lebanon", to: "/locations/lebanon" },
+
 ];
 
 const companyLinks = [

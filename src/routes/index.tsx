@@ -106,12 +106,27 @@ const reasons = [
 ];
 
 const locations = [
-  { place: "United Kingdom", description: "Coaching for UK undergraduate and Master's students, including international students." },
-  { place: "Dubai", description: "Premium private academic support for students and families in Dubai." },
-  { place: "Abu Dhabi", description: "One-to-one tutoring and coaching for Abu Dhabi students." },
-  { place: "Montreal & Quebec", description: "Support for university students studying in Montreal and across Quebec." },
-  { place: "Lebanon", description: "Academic coaching for Lebanese students studying locally or abroad." },
+  { place: "United Kingdom", description: "Coaching for UK undergraduate and Master's students, including international students.", to: "/locations/uk" },
+  { place: "Dubai", description: "Premium private academic support for students and families in Dubai.", to: "/locations/dubai" },
+  { place: "Abu Dhabi", description: "One-to-one tutoring and coaching for Abu Dhabi students.", to: "/locations/abu-dhabi" },
+  { place: "Montreal & Quebec", description: "Support for university students studying in Montreal and across Quebec.", to: "/locations/montreal" },
+  { place: "Lebanon", description: "Academic coaching for Lebanese students studying locally or abroad.", to: "/locations/lebanon" },
 ];
+
+const trustPoints = [
+  { stat: "13,000+", label: "Students following @yeswedoyourprojects" },
+  { stat: "4 regions", label: "UK · UAE · Quebec · Lebanon" },
+  { stat: "1-to-1", label: "Every session, never group classes" },
+  { stat: "100% yours", label: "You write and submit your own work" },
+];
+
+const international = [
+  { title: "A new academic system", copy: "Marking criteria, classification language and expectations around independent research differ between the UK, North America and the Gulf. We make them explicit instead of leaving you to infer them." },
+  { title: "Academic English", copy: "Writing at university level in an additional language is a skill of its own. We coach register, structure and argument — your ideas stay yours." },
+  { title: "Referencing and integrity", copy: "Citation conventions and originality rules vary by institution. We coach practice that is defensible under any similarity check." },
+  { title: "Your time zone", copy: "Sessions are scheduled in GMT/BST, GST, Eastern Time or Beirut time, including evenings and weekends." },
+];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -186,6 +201,23 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Trust strip */}
+      <section className="border-b border-border bg-sand">
+        <div className="container-editorial grid grid-cols-2 gap-x-6 gap-y-8 py-10 md:grid-cols-4 md:py-12">
+          {trustPoints.map((t) => (
+            <div key={t.stat}>
+              <p className="font-display text-2xl leading-none text-foreground sm:text-3xl">
+                {t.stat}
+              </p>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                {t.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
 
       {/* What we help with */}
       <Section eyebrow="What we help with" heading="Expert support across the work that actually decides your grade">
@@ -275,6 +307,26 @@ function HomePage() {
         </div>
       </Section>
 
+      {/* International students */}
+      <Section
+        eyebrow="International students"
+        heading="Studying far from home, assessed by rules nobody explained"
+      >
+        <div className="grid gap-8 md:grid-cols-2">
+          {international.map((i) => (
+            <div key={i.title} className="rule-accent">
+              <h3 className="text-xl text-foreground">{i.title}</h3>
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{i.copy}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8">
+          <CTAButton to="/who-we-help" variant="outline" withArrow>
+            See who we help
+          </CTAButton>
+        </div>
+      </Section>
+
       {/* Locations */}
       <Section
         tone="sand"
@@ -283,10 +335,16 @@ function HomePage() {
       >
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {locations.map((l) => (
-            <LocationCard key={l.place} place={l.place} description={l.description} to="/locations" />
+            <LocationCard key={l.place} place={l.place} description={l.description} to={l.to} />
           ))}
         </div>
+        <div className="mt-8">
+          <CTAButton to="/locations" variant="outline" withArrow>
+            Explore all locations
+          </CTAButton>
+        </div>
       </Section>
+
 
       {/* Testimonials */}
       <Section eyebrow="Student feedback" heading="In our students' words">
