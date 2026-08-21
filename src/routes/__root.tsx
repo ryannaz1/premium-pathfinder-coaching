@@ -88,7 +88,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:site_name", content: "Yes We Do Your Projects" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(
+        "Yes We Do Your Projects — Premium Academic Coaching",
+        "Premium one-to-one academic coaching, university tutoring and research guidance for students in the UK, UAE, Canada and Lebanon.",
+      ),
     ],
     links: [
       { rel: "stylesheet", href: appCss },
