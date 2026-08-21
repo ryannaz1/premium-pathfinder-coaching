@@ -35,9 +35,29 @@ const faqs: FaqItem[] = [
       "We support students across a wide range of majors, disciplines and university courses. If your subject isn't listed, contact us and we'll assess your requirements.",
   },
   {
-    question: "Do you support Master's and PhD students?",
+    question: "Do you support Bachelor's, Master's and PhD students?",
     answer:
-      "Yes. We provide research guidance, thesis/dissertation coaching, methodology support, academic writing guidance and research planning.",
+      "Yes. We support undergraduate and Bachelor's students with assignments, coursework, exams and final-year projects, and Master's and PhD students with research guidance, thesis and dissertation coaching, methodology support, literature reviews, academic writing guidance and research planning.",
+  },
+  {
+    question: "Can you help with engineering projects?",
+    answer:
+      "Yes. We provide tutoring and guidance for engineering coursework, modelling, technical drawings, prototypes, calculations, reports and final-year or capstone engineering projects.",
+  },
+  {
+    question: "Can you help with GIS, Revit, AutoCAD and 3ds Max?",
+    answer:
+      "Yes. We provide tutoring and guidance for university projects using GIS mapping and spatial analysis, Revit and BIM modelling, AutoCAD drafting and 3ds Max modelling, rendering and visualisation. We are independent and not certified by or affiliated with these software companies.",
+  },
+  {
+    question: "Can you help with Arduino projects?",
+    answer:
+      "Yes. We guide students through circuit design, sensors, wiring logic, code structure, debugging and documenting Arduino-based prototypes and technical projects.",
+  },
+  {
+    question: "Can you help with SPSS and data analysis?",
+    answer:
+      "Yes. We help you choose appropriate statistical tests, set up and run analyses in SPSS or similar tools, interpret the output and present results correctly in your own report, thesis or dissertation.",
   },
   {
     question: "Can you help with engineering and technical projects?",
@@ -111,7 +131,7 @@ const services = [
 const audiences = [
   { icon: GraduationCap, label: "University students", copy: "Undergraduates who want to understand their subject, not just survive the deadline." },
   { icon: Users, label: "International students", copy: "Students adapting to a new academic system, language and set of expectations." },
-  { icon: NotebookPen, label: "Master's students", copy: "Researchers navigating dissertations, methodology and higher academic standards." },
+  { icon: NotebookPen, label: "Master's & PhD students", copy: "Researchers navigating theses, dissertations, methodology and higher academic standards." },
   { icon: Presentation, label: "Exam candidates", copy: "Students preparing for high-stakes assessments including the SAT." },
   { icon: BookOpen, label: "Parents", copy: "Families arranging serious, well-structured academic support for their child." },
   { icon: LineChart, label: "Ambitious students", copy: "Students aiming higher who want expert mentoring alongside their studies." },
@@ -132,7 +152,7 @@ const reasons = [
 ];
 
 const locations = [
-  { place: "United Kingdom", description: "Coaching for UK undergraduate and Master's students, including international students.", to: "/locations/uk" },
+  { place: "United Kingdom", description: "Coaching for UK undergraduate, Bachelor's, Master's and PhD students, including international students.", to: "/locations/uk" },
   { place: "Dubai", description: "Premium private academic support for students and families in Dubai.", to: "/locations/dubai" },
   { place: "Abu Dhabi", description: "One-to-one tutoring and coaching for Abu Dhabi students.", to: "/locations/abu-dhabi" },
   { place: "Montreal & Quebec", description: "Support for university students studying in Montreal and across Quebec.", to: "/locations/montreal" },
@@ -305,10 +325,17 @@ function HomePage() {
       </Section>
 
       {/* Majors */}
-      <Section eyebrow="Majors & disciplines" heading="Every major. Every discipline.">
+      <Section
+        eyebrow="Majors & disciplines"
+        heading="All majors. All courses. All academic levels."
+      >
+        <p className="mb-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          We support students across virtually every university discipline, from engineering and
+          medicine to business, computer science, architecture, arts, sciences, law and the social
+          sciences.
+        </p>
         <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          We support students across a wide range of university majors and disciplines. If you
-          don't see your subject listed, contact us — we can assess your requirements and
+          If you don't see your subject listed, contact us — we can assess your requirements and
           recommend the appropriate support.
         </p>
         <div className="grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -325,18 +352,24 @@ function HomePage() {
             </div>
           ))}
         </div>
+        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-foreground">
+          Don't see your major?{" "}
+          <Link to="/contact" className="font-semibold underline underline-offset-4">
+            Contact us
+          </Link>{" "}
+          — we support many additional disciplines.
+        </p>
       </Section>
 
       {/* Technical & project support */}
       <Section
         tone="ink"
-        eyebrow="Technical & project support"
-        heading="Guidance for technical and software-based university projects"
+        eyebrow="Technical support"
+        heading="Technical tools & project support"
       >
         <p className="mb-10 max-w-2xl text-base leading-relaxed text-ink-foreground/75">
-          University projects increasingly require students to use specialist software, technical
-          tools and practical skills. We provide guidance and tutoring for projects involving
-          technical software, programming, modelling, data analysis and design.
+          Guidance and tutoring for students working with specialist software, technical tools,
+          modelling, data analysis and practical university projects.
         </p>
         <ul className="flex flex-wrap gap-2">
           {technicalAreas.map((t) => (
@@ -372,13 +405,11 @@ function HomePage() {
       </Section>
 
       {/* Practical projects */}
-      <Section
-        eyebrow="Practical projects"
-        heading="From digital projects to physical models"
-      >
+      <Section eyebrow="Practical projects" heading="Physical models & project builds">
         <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          Some projects are built, not typed. We guide students through planning, materials,
-          technique and presentation so the finished piece communicates the idea behind it.
+          From digital projects to physical models. We provide guidance, tutoring and feedback on
+          planning, materials, technique and presentation — students build and submit their own
+          work.
         </p>
         <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
           {practicalProjects.map((p, i) => (

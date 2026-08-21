@@ -6,8 +6,18 @@ import { site, whatsappHref, mailtoHref } from "@/lib/site";
 const serviceLinks = [
   { label: "University Tutoring", to: "/services/university-tutoring" },
   { label: "Academic Coaching", to: "/services/academic-coaching" },
+  { label: "Assignment & Coursework Guidance", to: "/services/university-tutoring" },
+  { label: "Research Project Guidance", to: "/services/research-methodology" },
+  { label: "Senior & Final-Year Projects", to: "/services" },
+  { label: "Capstone Projects", to: "/services" },
   { label: "Thesis & Dissertation Coaching", to: "/services/thesis-dissertation-coaching" },
+  { label: "PhD Research Guidance", to: "/services/research-methodology" },
   { label: "Academic Writing Coaching", to: "/services/academic-writing-coaching" },
+  { label: "Research Methodology", to: "/services/research-methodology" },
+  { label: "Data Analysis & Statistics", to: "/services/research-statistics-support" },
+  { label: "Engineering Project Support", to: "/services" },
+  { label: "Architecture & Design Project Support", to: "/services" },
+  { label: "Technical Software Support", to: "/services" },
   { label: "SAT Preparation", to: "/services/sat-preparation" },
 ];
 
@@ -67,8 +77,17 @@ export function Footer() {
               <p className="font-display text-2xl">Yes We Do Your Projects</p>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-foreground/75">
-              Premium one-to-one academic coaching, tutoring and research guidance for university
-              and Master&apos;s students in the UK, the UAE, Canada and Lebanon.
+              Premium one-to-one academic coaching, tutoring, research guidance and technical
+              project support for students at every academic level — from undergraduate study to
+              Master&apos;s and PhD research — across the UK, UAE, Canada, Lebanon and
+              internationally.
+            </p>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-foreground/85">
+              Support is available in English, Arabic and French.
+            </p>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-foreground/75">
+              Online academic coaching, tutoring, research guidance and technical project support
+              for students in the UK, UAE, Canada, Lebanon and internationally.
             </p>
             <div className="mt-6 flex flex-col gap-3 text-sm">
               <a
@@ -109,7 +128,12 @@ export function Footer() {
           </div>
 
           <Column title="Services" links={serviceLinks} />
-          <Column title="Locations" links={locationLinks} />
+          <div>
+            <Column title="Locations" links={locationLinks} />
+            <p className="mt-4 max-w-xs text-xs leading-relaxed text-ink-foreground/60">
+              Online academic support across multiple time zones.
+            </p>
+          </div>
           <Column title="Company" links={companyLinks} />
         </div>
 

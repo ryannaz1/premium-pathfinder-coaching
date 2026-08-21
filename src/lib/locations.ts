@@ -25,13 +25,13 @@ export const locations: LocationContent[] = [
   {
     slug: "uk",
     place: "United Kingdom",
-    short: "Coaching for UK undergraduate and Master's students, including international students.",
+    short: "Coaching for UK undergraduate, Bachelor's, Master's and PhD students, including international students.",
     h1: "University academic coaching in the United Kingdom",
     title: "UK University Academic Coaching & Tutoring | Yes We Do Your Projects",
     description:
       "One-to-one academic coaching and tutoring for UK university students: essays, dissertations, research methods and exams, delivered online in UK time.",
     intro:
-      "We coach undergraduate and Master's students studying at UK universities. Sessions are online and scheduled in UK time, built around the assessment culture British degrees actually run on: a small number of high-weight essays, a dissertation, and marking criteria that reward critical argument far more than description.",
+      "We coach undergraduate, Bachelor's, Master's and PhD students studying at UK universities, across a wide range of disciplines. Sessions are online and scheduled in UK time, built around the assessment culture British degrees actually run on: a small number of high-weight essays, a dissertation, and marking criteria that reward critical argument far more than description.",
     timezone: "Sessions run in GMT/BST, including evenings after lectures.",
     context: [
       {
@@ -252,7 +252,7 @@ export const locations: LocationContent[] = [
       {
         question: "Do you support CEGEP students as well as university students?",
         answer:
-          "Yes. We work with CEGEP students preparing for university-level study, and with undergraduates and Master's students already at Montreal and Quebec universities.",
+          "Yes. We work with CEGEP students preparing for university-level study, and with undergraduate, Bachelor's, Master's and PhD students already at Montreal and Quebec universities.",
       },
       {
         question: "Can you coach writing in French?",

@@ -24,10 +24,10 @@ export const services: ServiceContent[] = [
   {
     slug: "university-tutoring",
     name: "University Tutoring",
-    h1: "University tutoring for undergraduate and Master's students",
+    h1: "University tutoring for undergraduate, Bachelor's, Master's and PhD students",
     title: "University Tutoring | One-to-One Online Tutors | Yes We Do Your Projects",
     description:
-      "One-to-one university tutoring for undergraduate, Master's and international students. Online sessions built around your modules, assessments and deadlines.",
+      "One-to-one university tutoring for undergraduate, Bachelor's, Master's and PhD students, including international students, across a wide range of majors. Online sessions built around your modules, assessments and deadlines.",
     intro:
       "University tutoring is one-to-one teaching built around your actual modules, reading lists and assessments. A tutor works through the concepts you find hardest, checks your understanding, and helps you approach coursework and exams with a clear method rather than guesswork.",
     forWho: [
@@ -64,7 +64,7 @@ export const services: ServiceContent[] = [
     h1: "Academic coaching for students who want direction, not pressure",
     title: "Academic Coaching for University Students | Yes We Do Your Projects",
     description:
-      "One-to-one academic coaching covering planning, workload management, motivation, study strategy and accountability for university and Master's students.",
+      "One-to-one academic coaching covering planning, workload management, motivation, study strategy and accountability for undergraduate, Bachelor's, Master's and PhD students.",
     intro:
       "Academic coaching is about how you work, not only what you know. A coach helps you build a realistic plan across all your modules, sort priorities, break large projects into manageable stages, and stay accountable between sessions so deadlines stop arriving as emergencies.",
     forWho: [

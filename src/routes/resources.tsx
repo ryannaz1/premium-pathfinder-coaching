@@ -7,7 +7,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const title = "Academic Resources & Study Guides | Yes We Do Your Projects";
 const description =
-  "Practical guidance on academic writing, dissertation planning, research methodology, referencing and exam preparation for university and Master's students.";
+  "Practical guidance on academic writing, dissertation planning, research methodology, referencing and exam preparation for undergraduate, Bachelor's, Master's and PhD students.";
 
 const guides = [
   {
