@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { articles } from "@/lib/articles";
 import { socialMeta } from "@/lib/seo";
 
 const title = "Academic Resources & Study Guides | Yes We Do Your Projects";
@@ -56,7 +57,7 @@ const faqs: FaqItem[] = [
   },
 ];
 
-export const Route = createFileRoute("/resources")({
+export const Route = createFileRoute("/resources/")({
   head: () => ({
     meta: [
       { title },
@@ -112,10 +113,47 @@ function ResourcesPage() {
 
       <section className="border-b border-border bg-background">
         <div className="container-editorial py-14 md:py-20">
-          <div className="grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2">
+          <p className="eyebrow">Student guides</p>
+          <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">
+            In-depth guides you can work through
+          </h2>
+          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2">
+            {articles.map((a) => (
+              <article key={a.slug} className="bg-card p-6 sm:p-8">
+                <p className="eyebrow">
+                  {a.category} · {a.readingTime}
+                </p>
+                <h3 className="mt-3 text-xl leading-snug text-foreground">
+                  <Link
+                    to={`/resources/${a.slug}` as never}
+                    className="underline-offset-4 hover:underline"
+                  >
+                    {a.h1}
+                  </Link>
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.summary}</p>
+                <Link
+                  to={`/resources/${a.slug}` as never}
+                  className="mt-5 inline-block text-sm font-semibold text-foreground underline underline-offset-4 hover:text-accent"
+                >
+                  Read the guide
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-background">
+        <div className="container-editorial py-14 md:py-20">
+          <p className="eyebrow">Quick notes</p>
+          <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">
+            Short answers to recurring questions
+          </h2>
+          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2">
             {guides.map((g) => (
               <article key={g.heading} className="bg-card p-6 sm:p-8">
-                <h2 className="text-xl leading-snug text-foreground">{g.heading}</h2>
+                <h3 className="text-xl leading-snug text-foreground">{g.heading}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{g.copy}</p>
                 <Link
                   to={g.link.to as never}

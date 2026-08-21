@@ -44,7 +44,6 @@ import { Route as PhotoshopAcademicProjectHelpRouteImport } from './routes/photo
 import { Route as PhysicalProjectModelsRouteImport } from './routes/physical-project-models'
 import { Route as ResearchMethodologySupportRouteImport } from './routes/research-methodology-support'
 import { Route as ResearchProposalSupportRouteImport } from './routes/research-proposal-support'
-import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as RevitProjectHelpRouteImport } from './routes/revit-project-help'
 import { Route as ScienceAcademicSupportRouteImport } from './routes/science-academic-support'
 import { Route as SocialScienceAcademicSupportRouteImport } from './routes/social-science-academic-support'
@@ -58,6 +57,12 @@ import { Route as LocationsDubaiRouteImport } from './routes/locations/dubai'
 import { Route as LocationsLebanonRouteImport } from './routes/locations/lebanon'
 import { Route as LocationsMontrealRouteImport } from './routes/locations/montreal'
 import { Route as LocationsUkRouteImport } from './routes/locations/uk'
+import { Route as ResourcesIndexRouteImport } from './routes/resources/index'
+import { Route as ResourcesArchitectureMaquetteGuideRouteImport } from './routes/resources/architecture-maquette-guide'
+import { Route as ResourcesEngineeringFinalYearProjectGuideRouteImport } from './routes/resources/engineering-final-year-project-guide'
+import { Route as ResourcesHowToChooseDissertationMethodologyRouteImport } from './routes/resources/how-to-choose-dissertation-methodology'
+import { Route as ResourcesRevitForArchitectureStudentsRouteImport } from './routes/resources/revit-for-architecture-students'
+import { Route as ResourcesSpssDissertationDataAnalysisGuideRouteImport } from './routes/resources/spss-dissertation-data-analysis-guide'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
 import { Route as ServicesAcademicCoachingRouteImport } from './routes/services/academic-coaching'
 import { Route as ServicesAcademicWritingCoachingRouteImport } from './routes/services/academic-writing-coaching'
@@ -252,11 +257,6 @@ const ResearchProposalSupportRoute = ResearchProposalSupportRouteImport.update({
   path: '/research-proposal-support',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ResourcesRoute = ResourcesRouteImport.update({
-  id: '/resources',
-  path: '/resources',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const RevitProjectHelpRoute = RevitProjectHelpRouteImport.update({
   id: '/revit-project-help',
   path: '/revit-project-help',
@@ -324,6 +324,41 @@ const LocationsUkRoute = LocationsUkRouteImport.update({
   path: '/locations/uk',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResourcesIndexRoute = ResourcesIndexRouteImport.update({
+  id: '/resources/',
+  path: '/resources/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesArchitectureMaquetteGuideRoute =
+  ResourcesArchitectureMaquetteGuideRouteImport.update({
+    id: '/resources/architecture-maquette-guide',
+    path: '/resources/architecture-maquette-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesEngineeringFinalYearProjectGuideRoute =
+  ResourcesEngineeringFinalYearProjectGuideRouteImport.update({
+    id: '/resources/engineering-final-year-project-guide',
+    path: '/resources/engineering-final-year-project-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesHowToChooseDissertationMethodologyRoute =
+  ResourcesHowToChooseDissertationMethodologyRouteImport.update({
+    id: '/resources/how-to-choose-dissertation-methodology',
+    path: '/resources/how-to-choose-dissertation-methodology',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesRevitForArchitectureStudentsRoute =
+  ResourcesRevitForArchitectureStudentsRouteImport.update({
+    id: '/resources/revit-for-architecture-students',
+    path: '/resources/revit-for-architecture-students',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesSpssDissertationDataAnalysisGuideRoute =
+  ResourcesSpssDissertationDataAnalysisGuideRouteImport.update({
+    id: '/resources/spss-dissertation-data-analysis-guide',
+    path: '/resources/spss-dissertation-data-analysis-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/services/',
   path: '/services/',
@@ -418,7 +453,6 @@ export interface FileRoutesByFullPath {
   '/physical-project-models': typeof PhysicalProjectModelsRoute
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
-  '/resources': typeof ResourcesRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
@@ -431,6 +465,11 @@ export interface FileRoutesByFullPath {
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
   '/locations/uk': typeof LocationsUkRoute
+  '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
+  '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
+  '/resources/how-to-choose-dissertation-methodology': typeof ResourcesHowToChooseDissertationMethodologyRoute
+  '/resources/revit-for-architecture-students': typeof ResourcesRevitForArchitectureStudentsRoute
+  '/resources/spss-dissertation-data-analysis-guide': typeof ResourcesSpssDissertationDataAnalysisGuideRoute
   '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
   '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
   '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
@@ -441,6 +480,7 @@ export interface FileRoutesByFullPath {
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
   '/locations/': typeof LocationsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -479,7 +519,6 @@ export interface FileRoutesByTo {
   '/physical-project-models': typeof PhysicalProjectModelsRoute
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
-  '/resources': typeof ResourcesRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
@@ -492,6 +531,11 @@ export interface FileRoutesByTo {
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
   '/locations/uk': typeof LocationsUkRoute
+  '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
+  '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
+  '/resources/how-to-choose-dissertation-methodology': typeof ResourcesHowToChooseDissertationMethodologyRoute
+  '/resources/revit-for-architecture-students': typeof ResourcesRevitForArchitectureStudentsRoute
+  '/resources/spss-dissertation-data-analysis-guide': typeof ResourcesSpssDissertationDataAnalysisGuideRoute
   '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
   '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
   '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
@@ -502,6 +546,7 @@ export interface FileRoutesByTo {
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
   '/locations': typeof LocationsIndexRoute
+  '/resources': typeof ResourcesIndexRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
@@ -541,7 +586,6 @@ export interface FileRoutesById {
   '/physical-project-models': typeof PhysicalProjectModelsRoute
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
-  '/resources': typeof ResourcesRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
@@ -554,6 +598,11 @@ export interface FileRoutesById {
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
   '/locations/uk': typeof LocationsUkRoute
+  '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
+  '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
+  '/resources/how-to-choose-dissertation-methodology': typeof ResourcesHowToChooseDissertationMethodologyRoute
+  '/resources/revit-for-architecture-students': typeof ResourcesRevitForArchitectureStudentsRoute
+  '/resources/spss-dissertation-data-analysis-guide': typeof ResourcesSpssDissertationDataAnalysisGuideRoute
   '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
   '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
   '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
@@ -564,6 +613,7 @@ export interface FileRoutesById {
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
   '/locations/': typeof LocationsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -604,7 +654,6 @@ export interface FileRouteTypes {
     | '/physical-project-models'
     | '/research-methodology-support'
     | '/research-proposal-support'
-    | '/resources'
     | '/revit-project-help'
     | '/science-academic-support'
     | '/social-science-academic-support'
@@ -617,6 +666,11 @@ export interface FileRouteTypes {
     | '/locations/lebanon'
     | '/locations/montreal'
     | '/locations/uk'
+    | '/resources/architecture-maquette-guide'
+    | '/resources/engineering-final-year-project-guide'
+    | '/resources/how-to-choose-dissertation-methodology'
+    | '/resources/revit-for-architecture-students'
+    | '/resources/spss-dissertation-data-analysis-guide'
     | '/services/academic-coaching'
     | '/services/academic-writing-coaching'
     | '/services/editing-proofreading'
@@ -627,6 +681,7 @@ export interface FileRouteTypes {
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
     | '/locations/'
+    | '/resources/'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -665,7 +720,6 @@ export interface FileRouteTypes {
     | '/physical-project-models'
     | '/research-methodology-support'
     | '/research-proposal-support'
-    | '/resources'
     | '/revit-project-help'
     | '/science-academic-support'
     | '/social-science-academic-support'
@@ -678,6 +732,11 @@ export interface FileRouteTypes {
     | '/locations/lebanon'
     | '/locations/montreal'
     | '/locations/uk'
+    | '/resources/architecture-maquette-guide'
+    | '/resources/engineering-final-year-project-guide'
+    | '/resources/how-to-choose-dissertation-methodology'
+    | '/resources/revit-for-architecture-students'
+    | '/resources/spss-dissertation-data-analysis-guide'
     | '/services/academic-coaching'
     | '/services/academic-writing-coaching'
     | '/services/editing-proofreading'
@@ -688,6 +747,7 @@ export interface FileRouteTypes {
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
     | '/locations'
+    | '/resources'
     | '/services'
   id:
     | '__root__'
@@ -726,7 +786,6 @@ export interface FileRouteTypes {
     | '/physical-project-models'
     | '/research-methodology-support'
     | '/research-proposal-support'
-    | '/resources'
     | '/revit-project-help'
     | '/science-academic-support'
     | '/social-science-academic-support'
@@ -739,6 +798,11 @@ export interface FileRouteTypes {
     | '/locations/lebanon'
     | '/locations/montreal'
     | '/locations/uk'
+    | '/resources/architecture-maquette-guide'
+    | '/resources/engineering-final-year-project-guide'
+    | '/resources/how-to-choose-dissertation-methodology'
+    | '/resources/revit-for-architecture-students'
+    | '/resources/spss-dissertation-data-analysis-guide'
     | '/services/academic-coaching'
     | '/services/academic-writing-coaching'
     | '/services/editing-proofreading'
@@ -749,6 +813,7 @@ export interface FileRouteTypes {
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
     | '/locations/'
+    | '/resources/'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
@@ -788,7 +853,6 @@ export interface RootRouteChildren {
   PhysicalProjectModelsRoute: typeof PhysicalProjectModelsRoute
   ResearchMethodologySupportRoute: typeof ResearchMethodologySupportRoute
   ResearchProposalSupportRoute: typeof ResearchProposalSupportRoute
-  ResourcesRoute: typeof ResourcesRoute
   RevitProjectHelpRoute: typeof RevitProjectHelpRoute
   ScienceAcademicSupportRoute: typeof ScienceAcademicSupportRoute
   SocialScienceAcademicSupportRoute: typeof SocialScienceAcademicSupportRoute
@@ -801,6 +865,11 @@ export interface RootRouteChildren {
   LocationsLebanonRoute: typeof LocationsLebanonRoute
   LocationsMontrealRoute: typeof LocationsMontrealRoute
   LocationsUkRoute: typeof LocationsUkRoute
+  ResourcesArchitectureMaquetteGuideRoute: typeof ResourcesArchitectureMaquetteGuideRoute
+  ResourcesEngineeringFinalYearProjectGuideRoute: typeof ResourcesEngineeringFinalYearProjectGuideRoute
+  ResourcesHowToChooseDissertationMethodologyRoute: typeof ResourcesHowToChooseDissertationMethodologyRoute
+  ResourcesRevitForArchitectureStudentsRoute: typeof ResourcesRevitForArchitectureStudentsRoute
+  ResourcesSpssDissertationDataAnalysisGuideRoute: typeof ResourcesSpssDissertationDataAnalysisGuideRoute
   ServicesAcademicCoachingRoute: typeof ServicesAcademicCoachingRoute
   ServicesAcademicWritingCoachingRoute: typeof ServicesAcademicWritingCoachingRoute
   ServicesEditingProofreadingRoute: typeof ServicesEditingProofreadingRoute
@@ -811,6 +880,7 @@ export interface RootRouteChildren {
   ServicesThesisDissertationCoachingRoute: typeof ServicesThesisDissertationCoachingRoute
   ServicesUniversityTutoringRoute: typeof ServicesUniversityTutoringRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
+  ResourcesIndexRoute: typeof ResourcesIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
@@ -1061,13 +1131,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResearchProposalSupportRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/resources': {
-      id: '/resources'
-      path: '/resources'
-      fullPath: '/resources'
-      preLoaderRoute: typeof ResourcesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/revit-project-help': {
       id: '/revit-project-help'
       path: '/revit-project-help'
@@ -1157,6 +1220,48 @@ declare module '@tanstack/react-router' {
       path: '/locations/uk'
       fullPath: '/locations/uk'
       preLoaderRoute: typeof LocationsUkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/': {
+      id: '/resources/'
+      path: '/resources'
+      fullPath: '/resources/'
+      preLoaderRoute: typeof ResourcesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/architecture-maquette-guide': {
+      id: '/resources/architecture-maquette-guide'
+      path: '/resources/architecture-maquette-guide'
+      fullPath: '/resources/architecture-maquette-guide'
+      preLoaderRoute: typeof ResourcesArchitectureMaquetteGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/engineering-final-year-project-guide': {
+      id: '/resources/engineering-final-year-project-guide'
+      path: '/resources/engineering-final-year-project-guide'
+      fullPath: '/resources/engineering-final-year-project-guide'
+      preLoaderRoute: typeof ResourcesEngineeringFinalYearProjectGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/how-to-choose-dissertation-methodology': {
+      id: '/resources/how-to-choose-dissertation-methodology'
+      path: '/resources/how-to-choose-dissertation-methodology'
+      fullPath: '/resources/how-to-choose-dissertation-methodology'
+      preLoaderRoute: typeof ResourcesHowToChooseDissertationMethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/revit-for-architecture-students': {
+      id: '/resources/revit-for-architecture-students'
+      path: '/resources/revit-for-architecture-students'
+      fullPath: '/resources/revit-for-architecture-students'
+      preLoaderRoute: typeof ResourcesRevitForArchitectureStudentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/spss-dissertation-data-analysis-guide': {
+      id: '/resources/spss-dissertation-data-analysis-guide'
+      path: '/resources/spss-dissertation-data-analysis-guide'
+      fullPath: '/resources/spss-dissertation-data-analysis-guide'
+      preLoaderRoute: typeof ResourcesSpssDissertationDataAnalysisGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/': {
@@ -1269,7 +1374,6 @@ const rootRouteChildren: RootRouteChildren = {
   PhysicalProjectModelsRoute: PhysicalProjectModelsRoute,
   ResearchMethodologySupportRoute: ResearchMethodologySupportRoute,
   ResearchProposalSupportRoute: ResearchProposalSupportRoute,
-  ResourcesRoute: ResourcesRoute,
   RevitProjectHelpRoute: RevitProjectHelpRoute,
   ScienceAcademicSupportRoute: ScienceAcademicSupportRoute,
   SocialScienceAcademicSupportRoute: SocialScienceAcademicSupportRoute,
@@ -1282,6 +1386,16 @@ const rootRouteChildren: RootRouteChildren = {
   LocationsLebanonRoute: LocationsLebanonRoute,
   LocationsMontrealRoute: LocationsMontrealRoute,
   LocationsUkRoute: LocationsUkRoute,
+  ResourcesArchitectureMaquetteGuideRoute:
+    ResourcesArchitectureMaquetteGuideRoute,
+  ResourcesEngineeringFinalYearProjectGuideRoute:
+    ResourcesEngineeringFinalYearProjectGuideRoute,
+  ResourcesHowToChooseDissertationMethodologyRoute:
+    ResourcesHowToChooseDissertationMethodologyRoute,
+  ResourcesRevitForArchitectureStudentsRoute:
+    ResourcesRevitForArchitectureStudentsRoute,
+  ResourcesSpssDissertationDataAnalysisGuideRoute:
+    ResourcesSpssDissertationDataAnalysisGuideRoute,
   ServicesAcademicCoachingRoute: ServicesAcademicCoachingRoute,
   ServicesAcademicWritingCoachingRoute: ServicesAcademicWritingCoachingRoute,
   ServicesEditingProofreadingRoute: ServicesEditingProofreadingRoute,
@@ -1294,6 +1408,7 @@ const rootRouteChildren: RootRouteChildren = {
     ServicesThesisDissertationCoachingRoute,
   ServicesUniversityTutoringRoute: ServicesUniversityTutoringRoute,
   LocationsIndexRoute: LocationsIndexRoute,
+  ResourcesIndexRoute: ResourcesIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
