@@ -4,7 +4,7 @@ import { Mail, MessageCircle } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { site, mailtoHref } from "@/lib/site";
+import { site, mailtoHref, whatsappHref } from "@/lib/site";
 
 const title = "Contact Yes We Do Your Projects — Book an Academic Consultation";
 const description =
