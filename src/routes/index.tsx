@@ -182,10 +182,10 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -256,8 +256,10 @@ function HomePage() {
             <img
               src={heroImage}
               alt="A university student studying with notes, books and a laptop in a quiet library"
-              width={1408}
-              height={1600}
+              width={1200}
+              height={1364}
+              fetchPriority="high"
+              decoding="async"
               className="aspect-[4/5] w-full object-cover"
             />
             <div className="absolute -bottom-px left-0 hidden bg-paper p-5 pr-8 sm:block">

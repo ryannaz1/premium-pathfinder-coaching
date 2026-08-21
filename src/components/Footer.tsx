@@ -10,6 +10,7 @@ const directoryGroups: LandingGroup[] = [
   "Services",
   "Software",
   "Models",
+  "Students",
 ];
 
 const serviceLinks = [
@@ -27,6 +28,8 @@ const serviceLinks = [
   { label: "Engineering Project Support", to: "/services" },
   { label: "Architecture & Design Project Support", to: "/services" },
   { label: "Technical Software Support", to: "/services" },
+  { label: "Editing & Proofreading", to: "/services/editing-proofreading" },
+  { label: "Exam Preparation", to: "/services/exam-preparation" },
   { label: "SAT Preparation", to: "/services/sat-preparation" },
 ];
 

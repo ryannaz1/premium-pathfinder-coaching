@@ -337,9 +337,11 @@ export function getLocation(slug: string): LocationContent {
   return locationBySlug[slug]!;
 }
 
+const BASE_URL = "https://premium-pathfinder-coaching.lovable.app";
+
 export function locationHead(slug: string) {
   const l = getLocation(slug);
-  const url = `/locations/${l.slug}`;
+  const url = `${BASE_URL}/locations/${l.slug}`;
   return {
     meta: [
       { title: l.title },
@@ -362,8 +364,18 @@ export function locationHead(slug: string) {
               name: `Academic coaching in ${l.place}`,
               description: l.description,
               serviceType: "Academic coaching and university tutoring",
-              provider: { "@type": "Organization", name: "Yes We Do Your Projects" },
+              url,
+              provider: { "@type": "Organization", name: "Yes We Do Your Projects", url: BASE_URL },
               areaServed: { "@type": "Place", name: l.place },
+              availableLanguage: ["English", "Arabic", "French"],
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+                { "@type": "ListItem", position: 2, name: "Locations", item: `${BASE_URL}/locations` },
+                { "@type": "ListItem", position: 3, name: l.place, item: url },
+              ],
             },
             {
               "@type": "FAQPage",
