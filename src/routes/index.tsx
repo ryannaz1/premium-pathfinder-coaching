@@ -325,10 +325,17 @@ function HomePage() {
       </Section>
 
       {/* Majors */}
-      <Section eyebrow="Majors & disciplines" heading="Every major. Every discipline.">
+      <Section
+        eyebrow="Majors & disciplines"
+        heading="All majors. All courses. All academic levels."
+      >
+        <p className="mb-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          We support students across virtually every university discipline, from engineering and
+          medicine to business, computer science, architecture, arts, sciences, law and the social
+          sciences.
+        </p>
         <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          We support students across a wide range of university majors and disciplines. If you
-          don't see your subject listed, contact us — we can assess your requirements and
+          If you don't see your subject listed, contact us — we can assess your requirements and
           recommend the appropriate support.
         </p>
         <div className="grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -345,6 +352,13 @@ function HomePage() {
             </div>
           ))}
         </div>
+        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-foreground">
+          Don't see your major?{" "}
+          <Link to="/contact" className="font-semibold underline underline-offset-4">
+            Contact us
+          </Link>{" "}
+          — we support many additional disciplines.
+        </p>
       </Section>
 
       {/* Technical & project support */}
