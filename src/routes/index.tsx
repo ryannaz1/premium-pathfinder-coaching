@@ -305,7 +305,7 @@ function HomePage() {
       </Section>
 
       {/* Majors */}
-      <Section eyebrow="Majors &amp; disciplines" heading="Every major. Every discipline.">
+      <Section eyebrow="Majors & disciplines" heading="Every major. Every discipline.">
         <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
           We support students across a wide range of university majors and disciplines. If you
           don't see your subject listed, contact us — we can assess your requirements and
@@ -330,7 +330,7 @@ function HomePage() {
       {/* Technical & project support */}
       <Section
         tone="ink"
-        eyebrow="Technical &amp; project support"
+        eyebrow="Technical & project support"
         heading="Guidance for technical and software-based university projects"
       >
         <p className="mb-10 max-w-2xl text-base leading-relaxed text-ink-foreground/75">
