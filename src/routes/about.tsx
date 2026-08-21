@@ -128,7 +128,10 @@ function AboutPage() {
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
             Consultations are conversations, not sales calls. Message us on WhatsApp or email{" "}
-            {site.email}.
+            <a href={mailtoHref} className="underline underline-offset-4 hover:text-ink-foreground">
+              {site.email}
+            </a>
+            .
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <CTAButton to="/contact" variant="accent">
