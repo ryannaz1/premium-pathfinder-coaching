@@ -4,7 +4,6 @@ import { Check, Clock, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ } from "@/components/FAQ";
-import { FindSupportCTA } from "@/components/FindSupportCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { integrityNote, type Article, type Block } from "@/lib/articles";
 import { mailtoHref, site } from "@/lib/site";
@@ -207,12 +206,6 @@ export function ArticlePage({ article }: { article: Article }) {
               </Link>
             </div>
           </aside>
-        </div>
-      </section>
-
-      <section className="border-b border-border bg-paper">
-        <div className="container-editorial py-12 md:py-16">
-          <FindSupportCTA tone="sand" className="mx-auto max-w-3xl" />
         </div>
       </section>
 
