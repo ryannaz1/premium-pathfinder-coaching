@@ -18,14 +18,24 @@ const faqs: FaqItem[] = [
       "If you need subject understanding, start with university tutoring. If you need structure, planning and accountability, choose academic coaching. For a dissertation, thesis coaching plus research methodology is the usual combination. Tell us your situation and we will recommend honestly.",
   },
   {
-    question: "Do you support all majors, courses and assignment types?",
+    question: "Do you support all majors?",
     answer:
-      "Yes. We coach across all university majors and courses — from weekly assignments and essays to senior projects, Master's theses, dissertations and PhD research. If a particular subject is outside our expertise, we will say so clearly.",
+      "We coach across a wide range of university majors and courses — engineering, medicine and health, business, computer science, architecture and design, arts and humanities, social sciences, law and the sciences — from weekly assignments and essays to senior projects, Master's theses, dissertations and PhD research. If a particular subject is outside our expertise, we will say so clearly.",
   },
   {
-    question: "Can I receive coaching in Arabic or French?",
+    question: "Do you support Bachelor's, Master's and PhD students?",
     answer:
-      "Yes. Sessions are available in English, Arabic and French, depending on your preference and the language requirements of your programme.",
+      "Yes. Undergraduate and Bachelor's students for assignments, coursework, exams and final-year or capstone projects; Master's and PhD students for research planning, methodology, literature reviews, thesis and dissertation coaching and academic writing.",
+  },
+  {
+    question: "Can you help with engineering, architecture and technical projects?",
+    answer:
+      "Yes. We provide guidance and tutoring for technical university projects involving GIS, Revit, AutoCAD, 3ds Max, Arduino, SPSS, Photoshop, CAD, 3D modelling, technical and architectural drawings, data analysis, presentations and physical models or maquettes.",
+  },
+  {
+    question: "What languages do you provide support in?",
+    answer:
+      "English, Arabic and French. Students can receive explanations, tutoring, coaching and guidance in whichever of the three suits them and their programme.",
   },
   {
     question: "Do you write or submit work for students?",
