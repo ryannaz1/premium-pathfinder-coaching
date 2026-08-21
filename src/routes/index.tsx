@@ -258,19 +258,19 @@ function HomePage() {
             index={0}
             title="Thesis & Dissertation Coaching"
             description="Refine your topic and research question, plan your methodology and receive structured feedback on your own drafts."
-            to="/services"
+            to="/services/thesis-dissertation-coaching"
           />
           <ServiceCard
             index={1}
             title="Academic Writing Coaching"
             description="Build clear structure, stronger argumentation and correct referencing so your writing reads at university standard."
-            to="/services"
+            to="/services/academic-writing-coaching"
           />
           <ServiceCard
             index={2}
             title="SAT Preparation"
             description="A diagnostic-led preparation plan targeting your weakest areas, with practice strategy and exam technique."
-            to="/services"
+            to="/services/sat-preparation"
           />
         </div>
       </Section>

@@ -3,11 +3,11 @@ import { Instagram, Mail, MessageCircle } from "lucide-react";
 import { site, whatsappHref, mailtoHref } from "@/lib/site";
 
 const serviceLinks = [
-  { label: "University Tutoring", to: "/services" },
-  { label: "Academic Coaching", to: "/services" },
-  { label: "Thesis & Dissertation Coaching", to: "/services" },
-  { label: "Academic Writing Coaching", to: "/services" },
-  { label: "SAT Preparation", to: "/services" },
+  { label: "University Tutoring", to: "/services/university-tutoring" },
+  { label: "Academic Coaching", to: "/services/academic-coaching" },
+  { label: "Thesis & Dissertation Coaching", to: "/services/thesis-dissertation-coaching" },
+  { label: "Academic Writing Coaching", to: "/services/academic-writing-coaching" },
+  { label: "SAT Preparation", to: "/services/sat-preparation" },
 ];
 
 const locationLinks = [
