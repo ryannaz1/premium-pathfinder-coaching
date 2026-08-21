@@ -28,7 +28,7 @@ export function CTAButton({
   withArrow = false,
 }: Props) {
   return (
-    <Link to={to} className={cn(base, variants[variant], className)}>
+    <Link to={to as never} className={cn(base, variants[variant], className)}>
       {children}
       {withArrow && <ArrowRight className="size-4" aria-hidden="true" />}
     </Link>
