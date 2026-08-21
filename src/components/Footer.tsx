@@ -33,7 +33,7 @@ function Column({ title, links }: { title: string; links: { label: string; to: s
       </h3>
       <ul className="mt-4 space-y-2.5">
         {links.map((l) => (
-          <li key={l.to}>
+          <li key={l.label}>
             <Link
               to={l.to as never}
               className="text-sm text-ink-foreground/85 transition-colors hover:text-ink-foreground"
