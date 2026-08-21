@@ -56,7 +56,7 @@ const faqs: FaqItem[] = [
   },
 ];
 
-export const Route = createFileRoute("/resources")({
+export const Route = createFileRoute("/resources/")({
   head: () => ({
     meta: [
       { title },
