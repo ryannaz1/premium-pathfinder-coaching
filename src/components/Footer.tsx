@@ -77,8 +77,17 @@ export function Footer() {
               <p className="font-display text-2xl">Yes We Do Your Projects</p>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-foreground/75">
-              Premium one-to-one academic coaching, tutoring and research guidance for university
-              and Master&apos;s students in the UK, the UAE, Canada and Lebanon.
+              Premium one-to-one academic coaching, tutoring, research guidance and technical
+              project support for students at every academic level — from undergraduate study to
+              Master&apos;s and PhD research — across the UK, UAE, Canada, Lebanon and
+              internationally.
+            </p>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-foreground/85">
+              Support is available in English, Arabic and French.
+            </p>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-foreground/75">
+              Online academic coaching, tutoring, research guidance and technical project support
+              for students in the UK, UAE, Canada, Lebanon and internationally.
             </p>
             <div className="mt-6 flex flex-col gap-3 text-sm">
               <a
