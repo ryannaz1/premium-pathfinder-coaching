@@ -337,9 +337,11 @@ export function getLocation(slug: string): LocationContent {
   return locationBySlug[slug]!;
 }
 
+const BASE_URL = "https://premium-pathfinder-coaching.lovable.app";
+
 export function locationHead(slug: string) {
   const l = getLocation(slug);
-  const url = `/locations/${l.slug}`;
+  const url = `${BASE_URL}/locations/${l.slug}`;
   return {
     meta: [
       { title: l.title },
