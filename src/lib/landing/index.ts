@@ -4,6 +4,7 @@ import { serviceLandings } from "./services";
 import { softwareLandings } from "./software";
 import { modelLandings } from "./models";
 import type { LandingContent } from "./types";
+import { socialMeta } from "@/lib/seo";
 
 export type { LandingContent, LandingGroup } from "./types";
 
@@ -38,7 +39,7 @@ export function landingHead(slug: string) {
       { property: "og:description", content: l.description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: url },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(l.title, l.description),
     ],
     links: [{ rel: "canonical", href: url }],
     scripts: [

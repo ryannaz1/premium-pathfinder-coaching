@@ -1,4 +1,5 @@
 import type { FaqItem } from "@/components/FAQ";
+import { socialMeta } from "@/lib/seo";
 
 export type LocationContent = {
   slug: string;
@@ -350,7 +351,7 @@ export function locationHead(slug: string) {
       { property: "og:description", content: l.description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: url },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(l.title, l.description),
     ],
     links: [{ rel: "canonical", href: url }],
     scripts: [
