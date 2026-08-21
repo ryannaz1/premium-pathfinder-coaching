@@ -8,7 +8,7 @@ import { site, mailtoHref } from "@/lib/site";
 
 const title = "About Yes We Do Your Projects — Premium Academic Coaching";
 const description =
-  "Yes We Do Your Projects is a premium academic coaching practice supporting university and Master's students in the UK, UAE, Canada and Lebanon with tutoring, research and writing guidance.";
+  "Yes We Do Your Projects is a premium academic coaching practice supporting university, Master's and PhD students across all majors and courses, with coaching in English, Arabic and French."; 
 
 const principles = [
   {
@@ -89,15 +89,18 @@ function AboutPage() {
               for a Master's student three weeks from a methodology chapter.
             </p>
             <p>
-              From there we agree a plan: what we will cover, how often we meet, and what progress
-              should look like. Sessions are scheduled in your time zone. Between sessions we give
-              structured feedback on the work you have written yourself, so you can see precisely
-              what to change and why it matters to your grade.
+              We coach across all majors, all courses and all assignment types — from weekly essays
+              and senior projects to Master's dissertations and PhD research. Sessions are scheduled
+              in your time zone. Between sessions we give structured feedback on the work you have
+              written yourself, so you can see precisely what to change and why it matters to your
+              grade.
             </p>
             <p>
-              Our Instagram community — over thirteen thousand students — is deliberately light in
-              tone. The coaching behind it is not. Students come for the humour and stay because the
-              academic support is serious, specific and honest about its limits.
+              Sessions are conducted in English, Arabic or French, depending on the student's
+              language and the requirements of their programme. Our Instagram community — over
+              thirteen thousand students — is deliberately light in tone. The coaching behind it is
+              not. Students come for the humour and stay because the academic support is serious,
+              specific and honest about its limits.
             </p>
           </div>
         </div>
