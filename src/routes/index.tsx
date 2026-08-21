@@ -18,7 +18,7 @@ import { site, whatsappHref } from "@/lib/site";
 
 const title = "Premium Academic Coaching & University Tutoring | Yes We Do Your Projects";
 const description =
-  "One-to-one academic coaching, university tutoring, thesis and dissertation guidance, academic writing support and SAT preparation for students in the UK, UAE, Canada and Lebanon.";
+  "One-to-one academic coaching, university tutoring, thesis and dissertation guidance, research support, exam preparation and SAT prep for all majors, courses, assignments, senior projects, Master's dissertations and PhD work — in English, Arabic and French.";
 
 const faqs: FaqItem[] = [
   {
@@ -42,9 +42,9 @@ const faqs: FaqItem[] = [
       "Message us on WhatsApp or email us with your subject, level of study and what you would like support with. We will discuss your goals in a consultation and recommend the right format of support.",
   },
   {
-    question: "Which subjects and disciplines do you cover?",
+    question: "Which subjects, courses and levels do you cover?",
     answer:
-      "We cover a broad range of university disciplines including business and management, social sciences, humanities, economics, health sciences and research-heavy programmes. If we are not the right fit for your subject, we will tell you honestly.",
+      "We support all majors, courses and assignments across undergraduate, Master's and PhD level, including senior projects, Master's theses and doctoral dissertations. If your subject is not a good fit for our team, we will tell you honestly.",
   },
 ];
 
@@ -169,9 +169,10 @@ function HomePage() {
               Premium academic coaching for ambitious university students
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Yes We Do Your Projects provides expert one-to-one tutoring, academic coaching,
-              research guidance, exam preparation and academic writing support — helping you
-              produce stronger work of your own, with a coach beside you at every stage.
+              Expert one-to-one academic coaching, tutoring, research guidance, dissertation
+              support, exam preparation and academic writing help for every major and course — from
+              assignments and senior projects to Master's theses and PhDs. Support available in
+              English, Arabic and French.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CTAButton to="/contact" variant="primary" withArrow>
@@ -219,7 +220,12 @@ function HomePage() {
 
 
       {/* What we help with */}
-      <Section eyebrow="What we help with" heading="Expert support across the work that actually decides your grade">
+      <Section eyebrow="What we help with" heading="Expert support across every level of university work">
+        <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          From first-year assignments to PhD dissertations, and from engineering to business,
+          humanities and health sciences. We coach across all majors, all courses and all
+          assignment types — in English, Arabic and French.
+        </p>
         <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <div key={s.title} className="bg-card p-6 sm:p-8">
