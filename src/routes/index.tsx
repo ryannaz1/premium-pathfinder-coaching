@@ -596,11 +596,12 @@ function HomePage() {
       <section className="bg-ink text-ink-foreground">
         <div className="container-editorial py-16 text-center md:py-24">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight sm:text-4xl">
-            Talk to an academic coach about your next deadline
+            Tell us what you're studying. Tell us what you're working on.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
-            Tell us your course, your level of study and what you need help with. We will reply with
-            an honest recommendation — no pressure, no obligation.
+            Whether it's an assignment, engineering project, dissertation, thesis, PhD research or
+            technical project, tell us what you need help with and we'll recommend the right
+            support.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
