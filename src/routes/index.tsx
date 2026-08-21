@@ -346,22 +346,20 @@ function HomePage() {
       </Section>
 
 
-      {/* Testimonials */}
-      <Section eyebrow="Student feedback" heading="In our students' words">
-        <div className="grid gap-4 md:grid-cols-3">
-          <TestimonialCard
-            quote="The coaching sessions helped me understand how to structure my dissertation rather than panic about it. I finally felt in control of my own research."
-            attribution="Layla M. — Master's student, Dubai"
-          />
-          <TestimonialCard
-            quote="I was struggling to adapt to the UK academic style. My coach explained what examiners actually look for and how to improve my own writing without doing it for me."
-            attribution="James T. — Undergraduate, United Kingdom"
-          />
-          <TestimonialCard
-            quote="Working across time zones was easy. The feedback was clear, honest and focused on my weaknesses, which made my final work much stronger."
-            attribution="Sophia R. — Student, Montreal"
-          />
+      {/* Student feedback */}
+      <Section eyebrow="Student feedback" heading="Student feedback coming soon">
+        <div className="rounded-lg border border-border bg-card p-8 md:p-12">
+          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            We only publish feedback from students who have actually worked with us, in
+            their own words and with their permission. Verified testimonials will appear
+            here as students complete their coaching programmes.
+          </p>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            In the meantime, you are welcome to ask about our approach directly on
+            WhatsApp — we will tell you honestly whether we are the right fit.
+          </p>
         </div>
+
         <div className="mt-8">
           <a
             href={site.instagram}
