@@ -10,9 +10,47 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as R3dMaxHelpRouteImport } from './routes/3d-max-help'
+import { Route as R3dModellingHelpRouteImport } from './routes/3d-modelling-help'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AbuDhabiAcademicSupportRouteImport } from './routes/abu-dhabi-academic-support'
+import { Route as AcademicWritingCoachingRouteImport } from './routes/academic-writing-coaching'
+import { Route as ArchitectureMaquetteHelpRouteImport } from './routes/architecture-maquette-help'
+import { Route as ArchitectureProjectHelpRouteImport } from './routes/architecture-project-help'
+import { Route as ArduinoProjectHelpRouteImport } from './routes/arduino-project-help'
+import { Route as ArtsHumanitiesAcademicSupportRouteImport } from './routes/arts-humanities-academic-support'
+import { Route as AssignmentCourseworkGuidanceRouteImport } from './routes/assignment-coursework-guidance'
+import { Route as AutocadHelpRouteImport } from './routes/autocad-help'
+import { Route as BuildingModelHelpRouteImport } from './routes/building-model-help'
+import { Route as BusinessAcademicSupportRouteImport } from './routes/business-academic-support'
+import { Route as CapstoneProjectSupportRouteImport } from './routes/capstone-project-support'
+import { Route as ComputerScienceAcademicSupportRouteImport } from './routes/computer-science-academic-support'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DataAnalysisStatisticsRouteImport } from './routes/data-analysis-statistics'
+import { Route as DesignAcademicSupportRouteImport } from './routes/design-academic-support'
+import { Route as DubaiAcademicSupportRouteImport } from './routes/dubai-academic-support'
+import { Route as EngineeringProjectHelpRouteImport } from './routes/engineering-project-help'
+import { Route as EngineeringSoftwareSupportRouteImport } from './routes/engineering-software-support'
+import { Route as FinalYearProjectSupportRouteImport } from './routes/final-year-project-support'
+import { Route as GisProjectHelpRouteImport } from './routes/gis-project-help'
+import { Route as InternationalStudentAcademicSupportRouteImport } from './routes/international-student-academic-support'
+import { Route as LawAcademicSupportRouteImport } from './routes/law-academic-support'
+import { Route as LebanonAcademicSupportRouteImport } from './routes/lebanon-academic-support'
+import { Route as LiteratureReviewSupportRouteImport } from './routes/literature-review-support'
+import { Route as MedicineAcademicSupportRouteImport } from './routes/medicine-academic-support'
+import { Route as MontrealAcademicSupportRouteImport } from './routes/montreal-academic-support'
+import { Route as PhdResearchSupportRouteImport } from './routes/phd-research-support'
+import { Route as PhotoshopAcademicProjectHelpRouteImport } from './routes/photoshop-academic-project-help'
+import { Route as PhysicalProjectModelsRouteImport } from './routes/physical-project-models'
+import { Route as ResearchMethodologySupportRouteImport } from './routes/research-methodology-support'
+import { Route as ResearchProposalSupportRouteImport } from './routes/research-proposal-support'
 import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as RevitProjectHelpRouteImport } from './routes/revit-project-help'
+import { Route as ScienceAcademicSupportRouteImport } from './routes/science-academic-support'
+import { Route as SocialScienceAcademicSupportRouteImport } from './routes/social-science-academic-support'
+import { Route as SpssStatisticsHelpRouteImport } from './routes/spss-statistics-help'
+import { Route as ThesisDissertationCoachingRouteImport } from './routes/thesis-dissertation-coaching'
+import { Route as UkAcademicSupportRouteImport } from './routes/uk-academic-support'
 import { Route as WhoWeHelpRouteImport } from './routes/who-we-help'
 import { Route as LocationsIndexRouteImport } from './routes/locations/index'
 import { Route as LocationsAbuDhabiRouteImport } from './routes/locations/abu-dhabi'
@@ -36,19 +74,219 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const R3dMaxHelpRoute = R3dMaxHelpRouteImport.update({
+  id: '/3d-max-help',
+  path: '/3d-max-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R3dModellingHelpRoute = R3dModellingHelpRouteImport.update({
+  id: '/3d-modelling-help',
+  path: '/3d-modelling-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AbuDhabiAcademicSupportRoute = AbuDhabiAcademicSupportRouteImport.update({
+  id: '/abu-dhabi-academic-support',
+  path: '/abu-dhabi-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademicWritingCoachingRoute = AcademicWritingCoachingRouteImport.update({
+  id: '/academic-writing-coaching',
+  path: '/academic-writing-coaching',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchitectureMaquetteHelpRoute =
+  ArchitectureMaquetteHelpRouteImport.update({
+    id: '/architecture-maquette-help',
+    path: '/architecture-maquette-help',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ArchitectureProjectHelpRoute = ArchitectureProjectHelpRouteImport.update({
+  id: '/architecture-project-help',
+  path: '/architecture-project-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArduinoProjectHelpRoute = ArduinoProjectHelpRouteImport.update({
+  id: '/arduino-project-help',
+  path: '/arduino-project-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArtsHumanitiesAcademicSupportRoute =
+  ArtsHumanitiesAcademicSupportRouteImport.update({
+    id: '/arts-humanities-academic-support',
+    path: '/arts-humanities-academic-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AssignmentCourseworkGuidanceRoute =
+  AssignmentCourseworkGuidanceRouteImport.update({
+    id: '/assignment-coursework-guidance',
+    path: '/assignment-coursework-guidance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AutocadHelpRoute = AutocadHelpRouteImport.update({
+  id: '/autocad-help',
+  path: '/autocad-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuildingModelHelpRoute = BuildingModelHelpRouteImport.update({
+  id: '/building-model-help',
+  path: '/building-model-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessAcademicSupportRoute = BusinessAcademicSupportRouteImport.update({
+  id: '/business-academic-support',
+  path: '/business-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapstoneProjectSupportRoute = CapstoneProjectSupportRouteImport.update({
+  id: '/capstone-project-support',
+  path: '/capstone-project-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComputerScienceAcademicSupportRoute =
+  ComputerScienceAcademicSupportRouteImport.update({
+    id: '/computer-science-academic-support',
+    path: '/computer-science-academic-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DataAnalysisStatisticsRoute = DataAnalysisStatisticsRouteImport.update({
+  id: '/data-analysis-statistics',
+  path: '/data-analysis-statistics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesignAcademicSupportRoute = DesignAcademicSupportRouteImport.update({
+  id: '/design-academic-support',
+  path: '/design-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DubaiAcademicSupportRoute = DubaiAcademicSupportRouteImport.update({
+  id: '/dubai-academic-support',
+  path: '/dubai-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EngineeringProjectHelpRoute = EngineeringProjectHelpRouteImport.update({
+  id: '/engineering-project-help',
+  path: '/engineering-project-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EngineeringSoftwareSupportRoute =
+  EngineeringSoftwareSupportRouteImport.update({
+    id: '/engineering-software-support',
+    path: '/engineering-software-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FinalYearProjectSupportRoute = FinalYearProjectSupportRouteImport.update({
+  id: '/final-year-project-support',
+  path: '/final-year-project-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GisProjectHelpRoute = GisProjectHelpRouteImport.update({
+  id: '/gis-project-help',
+  path: '/gis-project-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InternationalStudentAcademicSupportRoute =
+  InternationalStudentAcademicSupportRouteImport.update({
+    id: '/international-student-academic-support',
+    path: '/international-student-academic-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LawAcademicSupportRoute = LawAcademicSupportRouteImport.update({
+  id: '/law-academic-support',
+  path: '/law-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LebanonAcademicSupportRoute = LebanonAcademicSupportRouteImport.update({
+  id: '/lebanon-academic-support',
+  path: '/lebanon-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LiteratureReviewSupportRoute = LiteratureReviewSupportRouteImport.update({
+  id: '/literature-review-support',
+  path: '/literature-review-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MedicineAcademicSupportRoute = MedicineAcademicSupportRouteImport.update({
+  id: '/medicine-academic-support',
+  path: '/medicine-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MontrealAcademicSupportRoute = MontrealAcademicSupportRouteImport.update({
+  id: '/montreal-academic-support',
+  path: '/montreal-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhdResearchSupportRoute = PhdResearchSupportRouteImport.update({
+  id: '/phd-research-support',
+  path: '/phd-research-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotoshopAcademicProjectHelpRoute =
+  PhotoshopAcademicProjectHelpRouteImport.update({
+    id: '/photoshop-academic-project-help',
+    path: '/photoshop-academic-project-help',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PhysicalProjectModelsRoute = PhysicalProjectModelsRouteImport.update({
+  id: '/physical-project-models',
+  path: '/physical-project-models',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchMethodologySupportRoute =
+  ResearchMethodologySupportRouteImport.update({
+    id: '/research-methodology-support',
+    path: '/research-methodology-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResearchProposalSupportRoute = ResearchProposalSupportRouteImport.update({
+  id: '/research-proposal-support',
+  path: '/research-proposal-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResourcesRoute = ResourcesRouteImport.update({
   id: '/resources',
   path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RevitProjectHelpRoute = RevitProjectHelpRouteImport.update({
+  id: '/revit-project-help',
+  path: '/revit-project-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScienceAcademicSupportRoute = ScienceAcademicSupportRouteImport.update({
+  id: '/science-academic-support',
+  path: '/science-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SocialScienceAcademicSupportRoute =
+  SocialScienceAcademicSupportRouteImport.update({
+    id: '/social-science-academic-support',
+    path: '/social-science-academic-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SpssStatisticsHelpRoute = SpssStatisticsHelpRouteImport.update({
+  id: '/spss-statistics-help',
+  path: '/spss-statistics-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThesisDissertationCoachingRoute =
+  ThesisDissertationCoachingRouteImport.update({
+    id: '/thesis-dissertation-coaching',
+    path: '/thesis-dissertation-coaching',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const UkAcademicSupportRoute = UkAcademicSupportRouteImport.update({
+  id: '/uk-academic-support',
+  path: '/uk-academic-support',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WhoWeHelpRoute = WhoWeHelpRouteImport.update({
@@ -146,9 +384,47 @@ const ServicesUniversityTutoringRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/3d-max-help': typeof R3dMaxHelpRoute
+  '/3d-modelling-help': typeof R3dModellingHelpRoute
   '/about': typeof AboutRoute
+  '/abu-dhabi-academic-support': typeof AbuDhabiAcademicSupportRoute
+  '/academic-writing-coaching': typeof AcademicWritingCoachingRoute
+  '/architecture-maquette-help': typeof ArchitectureMaquetteHelpRoute
+  '/architecture-project-help': typeof ArchitectureProjectHelpRoute
+  '/arduino-project-help': typeof ArduinoProjectHelpRoute
+  '/arts-humanities-academic-support': typeof ArtsHumanitiesAcademicSupportRoute
+  '/assignment-coursework-guidance': typeof AssignmentCourseworkGuidanceRoute
+  '/autocad-help': typeof AutocadHelpRoute
+  '/building-model-help': typeof BuildingModelHelpRoute
+  '/business-academic-support': typeof BusinessAcademicSupportRoute
+  '/capstone-project-support': typeof CapstoneProjectSupportRoute
+  '/computer-science-academic-support': typeof ComputerScienceAcademicSupportRoute
   '/contact': typeof ContactRoute
+  '/data-analysis-statistics': typeof DataAnalysisStatisticsRoute
+  '/design-academic-support': typeof DesignAcademicSupportRoute
+  '/dubai-academic-support': typeof DubaiAcademicSupportRoute
+  '/engineering-project-help': typeof EngineeringProjectHelpRoute
+  '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
+  '/final-year-project-support': typeof FinalYearProjectSupportRoute
+  '/gis-project-help': typeof GisProjectHelpRoute
+  '/international-student-academic-support': typeof InternationalStudentAcademicSupportRoute
+  '/law-academic-support': typeof LawAcademicSupportRoute
+  '/lebanon-academic-support': typeof LebanonAcademicSupportRoute
+  '/literature-review-support': typeof LiteratureReviewSupportRoute
+  '/medicine-academic-support': typeof MedicineAcademicSupportRoute
+  '/montreal-academic-support': typeof MontrealAcademicSupportRoute
+  '/phd-research-support': typeof PhdResearchSupportRoute
+  '/photoshop-academic-project-help': typeof PhotoshopAcademicProjectHelpRoute
+  '/physical-project-models': typeof PhysicalProjectModelsRoute
+  '/research-methodology-support': typeof ResearchMethodologySupportRoute
+  '/research-proposal-support': typeof ResearchProposalSupportRoute
   '/resources': typeof ResourcesRoute
+  '/revit-project-help': typeof RevitProjectHelpRoute
+  '/science-academic-support': typeof ScienceAcademicSupportRoute
+  '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
+  '/spss-statistics-help': typeof SpssStatisticsHelpRoute
+  '/thesis-dissertation-coaching': typeof ThesisDissertationCoachingRoute
+  '/uk-academic-support': typeof UkAcademicSupportRoute
   '/who-we-help': typeof WhoWeHelpRoute
   '/locations/abu-dhabi': typeof LocationsAbuDhabiRoute
   '/locations/dubai': typeof LocationsDubaiRoute
@@ -169,9 +445,47 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/3d-max-help': typeof R3dMaxHelpRoute
+  '/3d-modelling-help': typeof R3dModellingHelpRoute
   '/about': typeof AboutRoute
+  '/abu-dhabi-academic-support': typeof AbuDhabiAcademicSupportRoute
+  '/academic-writing-coaching': typeof AcademicWritingCoachingRoute
+  '/architecture-maquette-help': typeof ArchitectureMaquetteHelpRoute
+  '/architecture-project-help': typeof ArchitectureProjectHelpRoute
+  '/arduino-project-help': typeof ArduinoProjectHelpRoute
+  '/arts-humanities-academic-support': typeof ArtsHumanitiesAcademicSupportRoute
+  '/assignment-coursework-guidance': typeof AssignmentCourseworkGuidanceRoute
+  '/autocad-help': typeof AutocadHelpRoute
+  '/building-model-help': typeof BuildingModelHelpRoute
+  '/business-academic-support': typeof BusinessAcademicSupportRoute
+  '/capstone-project-support': typeof CapstoneProjectSupportRoute
+  '/computer-science-academic-support': typeof ComputerScienceAcademicSupportRoute
   '/contact': typeof ContactRoute
+  '/data-analysis-statistics': typeof DataAnalysisStatisticsRoute
+  '/design-academic-support': typeof DesignAcademicSupportRoute
+  '/dubai-academic-support': typeof DubaiAcademicSupportRoute
+  '/engineering-project-help': typeof EngineeringProjectHelpRoute
+  '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
+  '/final-year-project-support': typeof FinalYearProjectSupportRoute
+  '/gis-project-help': typeof GisProjectHelpRoute
+  '/international-student-academic-support': typeof InternationalStudentAcademicSupportRoute
+  '/law-academic-support': typeof LawAcademicSupportRoute
+  '/lebanon-academic-support': typeof LebanonAcademicSupportRoute
+  '/literature-review-support': typeof LiteratureReviewSupportRoute
+  '/medicine-academic-support': typeof MedicineAcademicSupportRoute
+  '/montreal-academic-support': typeof MontrealAcademicSupportRoute
+  '/phd-research-support': typeof PhdResearchSupportRoute
+  '/photoshop-academic-project-help': typeof PhotoshopAcademicProjectHelpRoute
+  '/physical-project-models': typeof PhysicalProjectModelsRoute
+  '/research-methodology-support': typeof ResearchMethodologySupportRoute
+  '/research-proposal-support': typeof ResearchProposalSupportRoute
   '/resources': typeof ResourcesRoute
+  '/revit-project-help': typeof RevitProjectHelpRoute
+  '/science-academic-support': typeof ScienceAcademicSupportRoute
+  '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
+  '/spss-statistics-help': typeof SpssStatisticsHelpRoute
+  '/thesis-dissertation-coaching': typeof ThesisDissertationCoachingRoute
+  '/uk-academic-support': typeof UkAcademicSupportRoute
   '/who-we-help': typeof WhoWeHelpRoute
   '/locations/abu-dhabi': typeof LocationsAbuDhabiRoute
   '/locations/dubai': typeof LocationsDubaiRoute
@@ -193,9 +507,47 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/3d-max-help': typeof R3dMaxHelpRoute
+  '/3d-modelling-help': typeof R3dModellingHelpRoute
   '/about': typeof AboutRoute
+  '/abu-dhabi-academic-support': typeof AbuDhabiAcademicSupportRoute
+  '/academic-writing-coaching': typeof AcademicWritingCoachingRoute
+  '/architecture-maquette-help': typeof ArchitectureMaquetteHelpRoute
+  '/architecture-project-help': typeof ArchitectureProjectHelpRoute
+  '/arduino-project-help': typeof ArduinoProjectHelpRoute
+  '/arts-humanities-academic-support': typeof ArtsHumanitiesAcademicSupportRoute
+  '/assignment-coursework-guidance': typeof AssignmentCourseworkGuidanceRoute
+  '/autocad-help': typeof AutocadHelpRoute
+  '/building-model-help': typeof BuildingModelHelpRoute
+  '/business-academic-support': typeof BusinessAcademicSupportRoute
+  '/capstone-project-support': typeof CapstoneProjectSupportRoute
+  '/computer-science-academic-support': typeof ComputerScienceAcademicSupportRoute
   '/contact': typeof ContactRoute
+  '/data-analysis-statistics': typeof DataAnalysisStatisticsRoute
+  '/design-academic-support': typeof DesignAcademicSupportRoute
+  '/dubai-academic-support': typeof DubaiAcademicSupportRoute
+  '/engineering-project-help': typeof EngineeringProjectHelpRoute
+  '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
+  '/final-year-project-support': typeof FinalYearProjectSupportRoute
+  '/gis-project-help': typeof GisProjectHelpRoute
+  '/international-student-academic-support': typeof InternationalStudentAcademicSupportRoute
+  '/law-academic-support': typeof LawAcademicSupportRoute
+  '/lebanon-academic-support': typeof LebanonAcademicSupportRoute
+  '/literature-review-support': typeof LiteratureReviewSupportRoute
+  '/medicine-academic-support': typeof MedicineAcademicSupportRoute
+  '/montreal-academic-support': typeof MontrealAcademicSupportRoute
+  '/phd-research-support': typeof PhdResearchSupportRoute
+  '/photoshop-academic-project-help': typeof PhotoshopAcademicProjectHelpRoute
+  '/physical-project-models': typeof PhysicalProjectModelsRoute
+  '/research-methodology-support': typeof ResearchMethodologySupportRoute
+  '/research-proposal-support': typeof ResearchProposalSupportRoute
   '/resources': typeof ResourcesRoute
+  '/revit-project-help': typeof RevitProjectHelpRoute
+  '/science-academic-support': typeof ScienceAcademicSupportRoute
+  '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
+  '/spss-statistics-help': typeof SpssStatisticsHelpRoute
+  '/thesis-dissertation-coaching': typeof ThesisDissertationCoachingRoute
+  '/uk-academic-support': typeof UkAcademicSupportRoute
   '/who-we-help': typeof WhoWeHelpRoute
   '/locations/abu-dhabi': typeof LocationsAbuDhabiRoute
   '/locations/dubai': typeof LocationsDubaiRoute
@@ -218,9 +570,47 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/3d-max-help'
+    | '/3d-modelling-help'
     | '/about'
+    | '/abu-dhabi-academic-support'
+    | '/academic-writing-coaching'
+    | '/architecture-maquette-help'
+    | '/architecture-project-help'
+    | '/arduino-project-help'
+    | '/arts-humanities-academic-support'
+    | '/assignment-coursework-guidance'
+    | '/autocad-help'
+    | '/building-model-help'
+    | '/business-academic-support'
+    | '/capstone-project-support'
+    | '/computer-science-academic-support'
     | '/contact'
+    | '/data-analysis-statistics'
+    | '/design-academic-support'
+    | '/dubai-academic-support'
+    | '/engineering-project-help'
+    | '/engineering-software-support'
+    | '/final-year-project-support'
+    | '/gis-project-help'
+    | '/international-student-academic-support'
+    | '/law-academic-support'
+    | '/lebanon-academic-support'
+    | '/literature-review-support'
+    | '/medicine-academic-support'
+    | '/montreal-academic-support'
+    | '/phd-research-support'
+    | '/photoshop-academic-project-help'
+    | '/physical-project-models'
+    | '/research-methodology-support'
+    | '/research-proposal-support'
     | '/resources'
+    | '/revit-project-help'
+    | '/science-academic-support'
+    | '/social-science-academic-support'
+    | '/spss-statistics-help'
+    | '/thesis-dissertation-coaching'
+    | '/uk-academic-support'
     | '/who-we-help'
     | '/locations/abu-dhabi'
     | '/locations/dubai'
@@ -241,9 +631,47 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/3d-max-help'
+    | '/3d-modelling-help'
     | '/about'
+    | '/abu-dhabi-academic-support'
+    | '/academic-writing-coaching'
+    | '/architecture-maquette-help'
+    | '/architecture-project-help'
+    | '/arduino-project-help'
+    | '/arts-humanities-academic-support'
+    | '/assignment-coursework-guidance'
+    | '/autocad-help'
+    | '/building-model-help'
+    | '/business-academic-support'
+    | '/capstone-project-support'
+    | '/computer-science-academic-support'
     | '/contact'
+    | '/data-analysis-statistics'
+    | '/design-academic-support'
+    | '/dubai-academic-support'
+    | '/engineering-project-help'
+    | '/engineering-software-support'
+    | '/final-year-project-support'
+    | '/gis-project-help'
+    | '/international-student-academic-support'
+    | '/law-academic-support'
+    | '/lebanon-academic-support'
+    | '/literature-review-support'
+    | '/medicine-academic-support'
+    | '/montreal-academic-support'
+    | '/phd-research-support'
+    | '/photoshop-academic-project-help'
+    | '/physical-project-models'
+    | '/research-methodology-support'
+    | '/research-proposal-support'
     | '/resources'
+    | '/revit-project-help'
+    | '/science-academic-support'
+    | '/social-science-academic-support'
+    | '/spss-statistics-help'
+    | '/thesis-dissertation-coaching'
+    | '/uk-academic-support'
     | '/who-we-help'
     | '/locations/abu-dhabi'
     | '/locations/dubai'
@@ -264,9 +692,47 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/3d-max-help'
+    | '/3d-modelling-help'
     | '/about'
+    | '/abu-dhabi-academic-support'
+    | '/academic-writing-coaching'
+    | '/architecture-maquette-help'
+    | '/architecture-project-help'
+    | '/arduino-project-help'
+    | '/arts-humanities-academic-support'
+    | '/assignment-coursework-guidance'
+    | '/autocad-help'
+    | '/building-model-help'
+    | '/business-academic-support'
+    | '/capstone-project-support'
+    | '/computer-science-academic-support'
     | '/contact'
+    | '/data-analysis-statistics'
+    | '/design-academic-support'
+    | '/dubai-academic-support'
+    | '/engineering-project-help'
+    | '/engineering-software-support'
+    | '/final-year-project-support'
+    | '/gis-project-help'
+    | '/international-student-academic-support'
+    | '/law-academic-support'
+    | '/lebanon-academic-support'
+    | '/literature-review-support'
+    | '/medicine-academic-support'
+    | '/montreal-academic-support'
+    | '/phd-research-support'
+    | '/photoshop-academic-project-help'
+    | '/physical-project-models'
+    | '/research-methodology-support'
+    | '/research-proposal-support'
     | '/resources'
+    | '/revit-project-help'
+    | '/science-academic-support'
+    | '/social-science-academic-support'
+    | '/spss-statistics-help'
+    | '/thesis-dissertation-coaching'
+    | '/uk-academic-support'
     | '/who-we-help'
     | '/locations/abu-dhabi'
     | '/locations/dubai'
@@ -288,9 +754,47 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R3dMaxHelpRoute: typeof R3dMaxHelpRoute
+  R3dModellingHelpRoute: typeof R3dModellingHelpRoute
   AboutRoute: typeof AboutRoute
+  AbuDhabiAcademicSupportRoute: typeof AbuDhabiAcademicSupportRoute
+  AcademicWritingCoachingRoute: typeof AcademicWritingCoachingRoute
+  ArchitectureMaquetteHelpRoute: typeof ArchitectureMaquetteHelpRoute
+  ArchitectureProjectHelpRoute: typeof ArchitectureProjectHelpRoute
+  ArduinoProjectHelpRoute: typeof ArduinoProjectHelpRoute
+  ArtsHumanitiesAcademicSupportRoute: typeof ArtsHumanitiesAcademicSupportRoute
+  AssignmentCourseworkGuidanceRoute: typeof AssignmentCourseworkGuidanceRoute
+  AutocadHelpRoute: typeof AutocadHelpRoute
+  BuildingModelHelpRoute: typeof BuildingModelHelpRoute
+  BusinessAcademicSupportRoute: typeof BusinessAcademicSupportRoute
+  CapstoneProjectSupportRoute: typeof CapstoneProjectSupportRoute
+  ComputerScienceAcademicSupportRoute: typeof ComputerScienceAcademicSupportRoute
   ContactRoute: typeof ContactRoute
+  DataAnalysisStatisticsRoute: typeof DataAnalysisStatisticsRoute
+  DesignAcademicSupportRoute: typeof DesignAcademicSupportRoute
+  DubaiAcademicSupportRoute: typeof DubaiAcademicSupportRoute
+  EngineeringProjectHelpRoute: typeof EngineeringProjectHelpRoute
+  EngineeringSoftwareSupportRoute: typeof EngineeringSoftwareSupportRoute
+  FinalYearProjectSupportRoute: typeof FinalYearProjectSupportRoute
+  GisProjectHelpRoute: typeof GisProjectHelpRoute
+  InternationalStudentAcademicSupportRoute: typeof InternationalStudentAcademicSupportRoute
+  LawAcademicSupportRoute: typeof LawAcademicSupportRoute
+  LebanonAcademicSupportRoute: typeof LebanonAcademicSupportRoute
+  LiteratureReviewSupportRoute: typeof LiteratureReviewSupportRoute
+  MedicineAcademicSupportRoute: typeof MedicineAcademicSupportRoute
+  MontrealAcademicSupportRoute: typeof MontrealAcademicSupportRoute
+  PhdResearchSupportRoute: typeof PhdResearchSupportRoute
+  PhotoshopAcademicProjectHelpRoute: typeof PhotoshopAcademicProjectHelpRoute
+  PhysicalProjectModelsRoute: typeof PhysicalProjectModelsRoute
+  ResearchMethodologySupportRoute: typeof ResearchMethodologySupportRoute
+  ResearchProposalSupportRoute: typeof ResearchProposalSupportRoute
   ResourcesRoute: typeof ResourcesRoute
+  RevitProjectHelpRoute: typeof RevitProjectHelpRoute
+  ScienceAcademicSupportRoute: typeof ScienceAcademicSupportRoute
+  SocialScienceAcademicSupportRoute: typeof SocialScienceAcademicSupportRoute
+  SpssStatisticsHelpRoute: typeof SpssStatisticsHelpRoute
+  ThesisDissertationCoachingRoute: typeof ThesisDissertationCoachingRoute
+  UkAcademicSupportRoute: typeof UkAcademicSupportRoute
   WhoWeHelpRoute: typeof WhoWeHelpRoute
   LocationsAbuDhabiRoute: typeof LocationsAbuDhabiRoute
   LocationsDubaiRoute: typeof LocationsDubaiRoute
@@ -319,11 +823,109 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/3d-max-help': {
+      id: '/3d-max-help'
+      path: '/3d-max-help'
+      fullPath: '/3d-max-help'
+      preLoaderRoute: typeof R3dMaxHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/3d-modelling-help': {
+      id: '/3d-modelling-help'
+      path: '/3d-modelling-help'
+      fullPath: '/3d-modelling-help'
+      preLoaderRoute: typeof R3dModellingHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/abu-dhabi-academic-support': {
+      id: '/abu-dhabi-academic-support'
+      path: '/abu-dhabi-academic-support'
+      fullPath: '/abu-dhabi-academic-support'
+      preLoaderRoute: typeof AbuDhabiAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academic-writing-coaching': {
+      id: '/academic-writing-coaching'
+      path: '/academic-writing-coaching'
+      fullPath: '/academic-writing-coaching'
+      preLoaderRoute: typeof AcademicWritingCoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/architecture-maquette-help': {
+      id: '/architecture-maquette-help'
+      path: '/architecture-maquette-help'
+      fullPath: '/architecture-maquette-help'
+      preLoaderRoute: typeof ArchitectureMaquetteHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/architecture-project-help': {
+      id: '/architecture-project-help'
+      path: '/architecture-project-help'
+      fullPath: '/architecture-project-help'
+      preLoaderRoute: typeof ArchitectureProjectHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arduino-project-help': {
+      id: '/arduino-project-help'
+      path: '/arduino-project-help'
+      fullPath: '/arduino-project-help'
+      preLoaderRoute: typeof ArduinoProjectHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arts-humanities-academic-support': {
+      id: '/arts-humanities-academic-support'
+      path: '/arts-humanities-academic-support'
+      fullPath: '/arts-humanities-academic-support'
+      preLoaderRoute: typeof ArtsHumanitiesAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assignment-coursework-guidance': {
+      id: '/assignment-coursework-guidance'
+      path: '/assignment-coursework-guidance'
+      fullPath: '/assignment-coursework-guidance'
+      preLoaderRoute: typeof AssignmentCourseworkGuidanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/autocad-help': {
+      id: '/autocad-help'
+      path: '/autocad-help'
+      fullPath: '/autocad-help'
+      preLoaderRoute: typeof AutocadHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/building-model-help': {
+      id: '/building-model-help'
+      path: '/building-model-help'
+      fullPath: '/building-model-help'
+      preLoaderRoute: typeof BuildingModelHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-academic-support': {
+      id: '/business-academic-support'
+      path: '/business-academic-support'
+      fullPath: '/business-academic-support'
+      preLoaderRoute: typeof BusinessAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capstone-project-support': {
+      id: '/capstone-project-support'
+      path: '/capstone-project-support'
+      fullPath: '/capstone-project-support'
+      preLoaderRoute: typeof CapstoneProjectSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/computer-science-academic-support': {
+      id: '/computer-science-academic-support'
+      path: '/computer-science-academic-support'
+      fullPath: '/computer-science-academic-support'
+      preLoaderRoute: typeof ComputerScienceAcademicSupportRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -333,11 +935,179 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/data-analysis-statistics': {
+      id: '/data-analysis-statistics'
+      path: '/data-analysis-statistics'
+      fullPath: '/data-analysis-statistics'
+      preLoaderRoute: typeof DataAnalysisStatisticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/design-academic-support': {
+      id: '/design-academic-support'
+      path: '/design-academic-support'
+      fullPath: '/design-academic-support'
+      preLoaderRoute: typeof DesignAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dubai-academic-support': {
+      id: '/dubai-academic-support'
+      path: '/dubai-academic-support'
+      fullPath: '/dubai-academic-support'
+      preLoaderRoute: typeof DubaiAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/engineering-project-help': {
+      id: '/engineering-project-help'
+      path: '/engineering-project-help'
+      fullPath: '/engineering-project-help'
+      preLoaderRoute: typeof EngineeringProjectHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/engineering-software-support': {
+      id: '/engineering-software-support'
+      path: '/engineering-software-support'
+      fullPath: '/engineering-software-support'
+      preLoaderRoute: typeof EngineeringSoftwareSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/final-year-project-support': {
+      id: '/final-year-project-support'
+      path: '/final-year-project-support'
+      fullPath: '/final-year-project-support'
+      preLoaderRoute: typeof FinalYearProjectSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gis-project-help': {
+      id: '/gis-project-help'
+      path: '/gis-project-help'
+      fullPath: '/gis-project-help'
+      preLoaderRoute: typeof GisProjectHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/international-student-academic-support': {
+      id: '/international-student-academic-support'
+      path: '/international-student-academic-support'
+      fullPath: '/international-student-academic-support'
+      preLoaderRoute: typeof InternationalStudentAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/law-academic-support': {
+      id: '/law-academic-support'
+      path: '/law-academic-support'
+      fullPath: '/law-academic-support'
+      preLoaderRoute: typeof LawAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lebanon-academic-support': {
+      id: '/lebanon-academic-support'
+      path: '/lebanon-academic-support'
+      fullPath: '/lebanon-academic-support'
+      preLoaderRoute: typeof LebanonAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/literature-review-support': {
+      id: '/literature-review-support'
+      path: '/literature-review-support'
+      fullPath: '/literature-review-support'
+      preLoaderRoute: typeof LiteratureReviewSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/medicine-academic-support': {
+      id: '/medicine-academic-support'
+      path: '/medicine-academic-support'
+      fullPath: '/medicine-academic-support'
+      preLoaderRoute: typeof MedicineAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/montreal-academic-support': {
+      id: '/montreal-academic-support'
+      path: '/montreal-academic-support'
+      fullPath: '/montreal-academic-support'
+      preLoaderRoute: typeof MontrealAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/phd-research-support': {
+      id: '/phd-research-support'
+      path: '/phd-research-support'
+      fullPath: '/phd-research-support'
+      preLoaderRoute: typeof PhdResearchSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photoshop-academic-project-help': {
+      id: '/photoshop-academic-project-help'
+      path: '/photoshop-academic-project-help'
+      fullPath: '/photoshop-academic-project-help'
+      preLoaderRoute: typeof PhotoshopAcademicProjectHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/physical-project-models': {
+      id: '/physical-project-models'
+      path: '/physical-project-models'
+      fullPath: '/physical-project-models'
+      preLoaderRoute: typeof PhysicalProjectModelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research-methodology-support': {
+      id: '/research-methodology-support'
+      path: '/research-methodology-support'
+      fullPath: '/research-methodology-support'
+      preLoaderRoute: typeof ResearchMethodologySupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research-proposal-support': {
+      id: '/research-proposal-support'
+      path: '/research-proposal-support'
+      fullPath: '/research-proposal-support'
+      preLoaderRoute: typeof ResearchProposalSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/resources': {
       id: '/resources'
       path: '/resources'
       fullPath: '/resources'
       preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/revit-project-help': {
+      id: '/revit-project-help'
+      path: '/revit-project-help'
+      fullPath: '/revit-project-help'
+      preLoaderRoute: typeof RevitProjectHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/science-academic-support': {
+      id: '/science-academic-support'
+      path: '/science-academic-support'
+      fullPath: '/science-academic-support'
+      preLoaderRoute: typeof ScienceAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/social-science-academic-support': {
+      id: '/social-science-academic-support'
+      path: '/social-science-academic-support'
+      fullPath: '/social-science-academic-support'
+      preLoaderRoute: typeof SocialScienceAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/spss-statistics-help': {
+      id: '/spss-statistics-help'
+      path: '/spss-statistics-help'
+      fullPath: '/spss-statistics-help'
+      preLoaderRoute: typeof SpssStatisticsHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thesis-dissertation-coaching': {
+      id: '/thesis-dissertation-coaching'
+      path: '/thesis-dissertation-coaching'
+      fullPath: '/thesis-dissertation-coaching'
+      preLoaderRoute: typeof ThesisDissertationCoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uk-academic-support': {
+      id: '/uk-academic-support'
+      path: '/uk-academic-support'
+      fullPath: '/uk-academic-support'
+      preLoaderRoute: typeof UkAcademicSupportRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/who-we-help': {
@@ -464,9 +1234,48 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R3dMaxHelpRoute: R3dMaxHelpRoute,
+  R3dModellingHelpRoute: R3dModellingHelpRoute,
   AboutRoute: AboutRoute,
+  AbuDhabiAcademicSupportRoute: AbuDhabiAcademicSupportRoute,
+  AcademicWritingCoachingRoute: AcademicWritingCoachingRoute,
+  ArchitectureMaquetteHelpRoute: ArchitectureMaquetteHelpRoute,
+  ArchitectureProjectHelpRoute: ArchitectureProjectHelpRoute,
+  ArduinoProjectHelpRoute: ArduinoProjectHelpRoute,
+  ArtsHumanitiesAcademicSupportRoute: ArtsHumanitiesAcademicSupportRoute,
+  AssignmentCourseworkGuidanceRoute: AssignmentCourseworkGuidanceRoute,
+  AutocadHelpRoute: AutocadHelpRoute,
+  BuildingModelHelpRoute: BuildingModelHelpRoute,
+  BusinessAcademicSupportRoute: BusinessAcademicSupportRoute,
+  CapstoneProjectSupportRoute: CapstoneProjectSupportRoute,
+  ComputerScienceAcademicSupportRoute: ComputerScienceAcademicSupportRoute,
   ContactRoute: ContactRoute,
+  DataAnalysisStatisticsRoute: DataAnalysisStatisticsRoute,
+  DesignAcademicSupportRoute: DesignAcademicSupportRoute,
+  DubaiAcademicSupportRoute: DubaiAcademicSupportRoute,
+  EngineeringProjectHelpRoute: EngineeringProjectHelpRoute,
+  EngineeringSoftwareSupportRoute: EngineeringSoftwareSupportRoute,
+  FinalYearProjectSupportRoute: FinalYearProjectSupportRoute,
+  GisProjectHelpRoute: GisProjectHelpRoute,
+  InternationalStudentAcademicSupportRoute:
+    InternationalStudentAcademicSupportRoute,
+  LawAcademicSupportRoute: LawAcademicSupportRoute,
+  LebanonAcademicSupportRoute: LebanonAcademicSupportRoute,
+  LiteratureReviewSupportRoute: LiteratureReviewSupportRoute,
+  MedicineAcademicSupportRoute: MedicineAcademicSupportRoute,
+  MontrealAcademicSupportRoute: MontrealAcademicSupportRoute,
+  PhdResearchSupportRoute: PhdResearchSupportRoute,
+  PhotoshopAcademicProjectHelpRoute: PhotoshopAcademicProjectHelpRoute,
+  PhysicalProjectModelsRoute: PhysicalProjectModelsRoute,
+  ResearchMethodologySupportRoute: ResearchMethodologySupportRoute,
+  ResearchProposalSupportRoute: ResearchProposalSupportRoute,
   ResourcesRoute: ResourcesRoute,
+  RevitProjectHelpRoute: RevitProjectHelpRoute,
+  ScienceAcademicSupportRoute: ScienceAcademicSupportRoute,
+  SocialScienceAcademicSupportRoute: SocialScienceAcademicSupportRoute,
+  SpssStatisticsHelpRoute: SpssStatisticsHelpRoute,
+  ThesisDissertationCoachingRoute: ThesisDissertationCoachingRoute,
+  UkAcademicSupportRoute: UkAcademicSupportRoute,
   WhoWeHelpRoute: WhoWeHelpRoute,
   LocationsAbuDhabiRoute: LocationsAbuDhabiRoute,
   LocationsDubaiRoute: LocationsDubaiRoute,
