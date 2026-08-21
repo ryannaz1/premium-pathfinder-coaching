@@ -58,6 +58,11 @@ import { Route as LocationsLebanonRouteImport } from './routes/locations/lebanon
 import { Route as LocationsMontrealRouteImport } from './routes/locations/montreal'
 import { Route as LocationsUkRouteImport } from './routes/locations/uk'
 import { Route as ResourcesIndexRouteImport } from './routes/resources/index'
+import { Route as ResourcesArchitectureMaquetteGuideRouteImport } from './routes/resources/architecture-maquette-guide'
+import { Route as ResourcesEngineeringFinalYearProjectGuideRouteImport } from './routes/resources/engineering-final-year-project-guide'
+import { Route as ResourcesHowToChooseDissertationMethodologyRouteImport } from './routes/resources/how-to-choose-dissertation-methodology'
+import { Route as ResourcesRevitForArchitectureStudentsRouteImport } from './routes/resources/revit-for-architecture-students'
+import { Route as ResourcesSpssDissertationDataAnalysisGuideRouteImport } from './routes/resources/spss-dissertation-data-analysis-guide'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
 import { Route as ServicesAcademicCoachingRouteImport } from './routes/services/academic-coaching'
 import { Route as ServicesAcademicWritingCoachingRouteImport } from './routes/services/academic-writing-coaching'
@@ -324,6 +329,36 @@ const ResourcesIndexRoute = ResourcesIndexRouteImport.update({
   path: '/resources/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResourcesArchitectureMaquetteGuideRoute =
+  ResourcesArchitectureMaquetteGuideRouteImport.update({
+    id: '/resources/architecture-maquette-guide',
+    path: '/resources/architecture-maquette-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesEngineeringFinalYearProjectGuideRoute =
+  ResourcesEngineeringFinalYearProjectGuideRouteImport.update({
+    id: '/resources/engineering-final-year-project-guide',
+    path: '/resources/engineering-final-year-project-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesHowToChooseDissertationMethodologyRoute =
+  ResourcesHowToChooseDissertationMethodologyRouteImport.update({
+    id: '/resources/how-to-choose-dissertation-methodology',
+    path: '/resources/how-to-choose-dissertation-methodology',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesRevitForArchitectureStudentsRoute =
+  ResourcesRevitForArchitectureStudentsRouteImport.update({
+    id: '/resources/revit-for-architecture-students',
+    path: '/resources/revit-for-architecture-students',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesSpssDissertationDataAnalysisGuideRoute =
+  ResourcesSpssDissertationDataAnalysisGuideRouteImport.update({
+    id: '/resources/spss-dissertation-data-analysis-guide',
+    path: '/resources/spss-dissertation-data-analysis-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/services/',
   path: '/services/',
@@ -430,6 +465,11 @@ export interface FileRoutesByFullPath {
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
   '/locations/uk': typeof LocationsUkRoute
+  '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
+  '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
+  '/resources/how-to-choose-dissertation-methodology': typeof ResourcesHowToChooseDissertationMethodologyRoute
+  '/resources/revit-for-architecture-students': typeof ResourcesRevitForArchitectureStudentsRoute
+  '/resources/spss-dissertation-data-analysis-guide': typeof ResourcesSpssDissertationDataAnalysisGuideRoute
   '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
   '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
   '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
@@ -491,6 +531,11 @@ export interface FileRoutesByTo {
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
   '/locations/uk': typeof LocationsUkRoute
+  '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
+  '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
+  '/resources/how-to-choose-dissertation-methodology': typeof ResourcesHowToChooseDissertationMethodologyRoute
+  '/resources/revit-for-architecture-students': typeof ResourcesRevitForArchitectureStudentsRoute
+  '/resources/spss-dissertation-data-analysis-guide': typeof ResourcesSpssDissertationDataAnalysisGuideRoute
   '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
   '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
   '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
@@ -553,6 +598,11 @@ export interface FileRoutesById {
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
   '/locations/uk': typeof LocationsUkRoute
+  '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
+  '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
+  '/resources/how-to-choose-dissertation-methodology': typeof ResourcesHowToChooseDissertationMethodologyRoute
+  '/resources/revit-for-architecture-students': typeof ResourcesRevitForArchitectureStudentsRoute
+  '/resources/spss-dissertation-data-analysis-guide': typeof ResourcesSpssDissertationDataAnalysisGuideRoute
   '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
   '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
   '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
@@ -616,6 +666,11 @@ export interface FileRouteTypes {
     | '/locations/lebanon'
     | '/locations/montreal'
     | '/locations/uk'
+    | '/resources/architecture-maquette-guide'
+    | '/resources/engineering-final-year-project-guide'
+    | '/resources/how-to-choose-dissertation-methodology'
+    | '/resources/revit-for-architecture-students'
+    | '/resources/spss-dissertation-data-analysis-guide'
     | '/services/academic-coaching'
     | '/services/academic-writing-coaching'
     | '/services/editing-proofreading'
@@ -677,6 +732,11 @@ export interface FileRouteTypes {
     | '/locations/lebanon'
     | '/locations/montreal'
     | '/locations/uk'
+    | '/resources/architecture-maquette-guide'
+    | '/resources/engineering-final-year-project-guide'
+    | '/resources/how-to-choose-dissertation-methodology'
+    | '/resources/revit-for-architecture-students'
+    | '/resources/spss-dissertation-data-analysis-guide'
     | '/services/academic-coaching'
     | '/services/academic-writing-coaching'
     | '/services/editing-proofreading'
@@ -738,6 +798,11 @@ export interface FileRouteTypes {
     | '/locations/lebanon'
     | '/locations/montreal'
     | '/locations/uk'
+    | '/resources/architecture-maquette-guide'
+    | '/resources/engineering-final-year-project-guide'
+    | '/resources/how-to-choose-dissertation-methodology'
+    | '/resources/revit-for-architecture-students'
+    | '/resources/spss-dissertation-data-analysis-guide'
     | '/services/academic-coaching'
     | '/services/academic-writing-coaching'
     | '/services/editing-proofreading'
@@ -800,6 +865,11 @@ export interface RootRouteChildren {
   LocationsLebanonRoute: typeof LocationsLebanonRoute
   LocationsMontrealRoute: typeof LocationsMontrealRoute
   LocationsUkRoute: typeof LocationsUkRoute
+  ResourcesArchitectureMaquetteGuideRoute: typeof ResourcesArchitectureMaquetteGuideRoute
+  ResourcesEngineeringFinalYearProjectGuideRoute: typeof ResourcesEngineeringFinalYearProjectGuideRoute
+  ResourcesHowToChooseDissertationMethodologyRoute: typeof ResourcesHowToChooseDissertationMethodologyRoute
+  ResourcesRevitForArchitectureStudentsRoute: typeof ResourcesRevitForArchitectureStudentsRoute
+  ResourcesSpssDissertationDataAnalysisGuideRoute: typeof ResourcesSpssDissertationDataAnalysisGuideRoute
   ServicesAcademicCoachingRoute: typeof ServicesAcademicCoachingRoute
   ServicesAcademicWritingCoachingRoute: typeof ServicesAcademicWritingCoachingRoute
   ServicesEditingProofreadingRoute: typeof ServicesEditingProofreadingRoute
@@ -1159,6 +1229,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResourcesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resources/architecture-maquette-guide': {
+      id: '/resources/architecture-maquette-guide'
+      path: '/resources/architecture-maquette-guide'
+      fullPath: '/resources/architecture-maquette-guide'
+      preLoaderRoute: typeof ResourcesArchitectureMaquetteGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/engineering-final-year-project-guide': {
+      id: '/resources/engineering-final-year-project-guide'
+      path: '/resources/engineering-final-year-project-guide'
+      fullPath: '/resources/engineering-final-year-project-guide'
+      preLoaderRoute: typeof ResourcesEngineeringFinalYearProjectGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/how-to-choose-dissertation-methodology': {
+      id: '/resources/how-to-choose-dissertation-methodology'
+      path: '/resources/how-to-choose-dissertation-methodology'
+      fullPath: '/resources/how-to-choose-dissertation-methodology'
+      preLoaderRoute: typeof ResourcesHowToChooseDissertationMethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/revit-for-architecture-students': {
+      id: '/resources/revit-for-architecture-students'
+      path: '/resources/revit-for-architecture-students'
+      fullPath: '/resources/revit-for-architecture-students'
+      preLoaderRoute: typeof ResourcesRevitForArchitectureStudentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/spss-dissertation-data-analysis-guide': {
+      id: '/resources/spss-dissertation-data-analysis-guide'
+      path: '/resources/spss-dissertation-data-analysis-guide'
+      fullPath: '/resources/spss-dissertation-data-analysis-guide'
+      preLoaderRoute: typeof ResourcesSpssDissertationDataAnalysisGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services/': {
       id: '/services/'
       path: '/services'
@@ -1281,6 +1386,16 @@ const rootRouteChildren: RootRouteChildren = {
   LocationsLebanonRoute: LocationsLebanonRoute,
   LocationsMontrealRoute: LocationsMontrealRoute,
   LocationsUkRoute: LocationsUkRoute,
+  ResourcesArchitectureMaquetteGuideRoute:
+    ResourcesArchitectureMaquetteGuideRoute,
+  ResourcesEngineeringFinalYearProjectGuideRoute:
+    ResourcesEngineeringFinalYearProjectGuideRoute,
+  ResourcesHowToChooseDissertationMethodologyRoute:
+    ResourcesHowToChooseDissertationMethodologyRoute,
+  ResourcesRevitForArchitectureStudentsRoute:
+    ResourcesRevitForArchitectureStudentsRoute,
+  ResourcesSpssDissertationDataAnalysisGuideRoute:
+    ResourcesSpssDissertationDataAnalysisGuideRoute,
   ServicesAcademicCoachingRoute: ServicesAcademicCoachingRoute,
   ServicesAcademicWritingCoachingRoute: ServicesAcademicWritingCoachingRoute,
   ServicesEditingProofreadingRoute: ServicesEditingProofreadingRoute,
