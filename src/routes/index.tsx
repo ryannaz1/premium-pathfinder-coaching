@@ -13,7 +13,6 @@ import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { LocationCard } from "@/components/LocationCard";
 import { ServiceCard } from "@/components/ServiceCard";
-import { TestimonialCard } from "@/components/TestimonialCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, whatsappHref } from "@/lib/site";
 
@@ -123,7 +122,7 @@ const trustPoints = [
 const international = [
   { title: "A new academic system", copy: "Marking criteria, classification language and expectations around independent research differ between the UK, North America and the Gulf. We make them explicit instead of leaving you to infer them." },
   { title: "Academic English", copy: "Writing at university level in an additional language is a skill of its own. We coach register, structure and argument — your ideas stay yours." },
-  { title: "Referencing and integrity", copy: "Citation conventions and originality rules vary by institution. We coach practice that is defensible under any similarity check." },
+  { title: "Referencing and integrity", copy: "Citation conventions and originality rules vary by institution. We coach proper citation, originality and academic integrity so students can confidently develop and reference their own work." },
   { title: "Your time zone", copy: "Sessions are scheduled in GMT/BST, GST, Eastern Time or Beirut time, including evenings and weekends." },
 ];
 
@@ -346,22 +345,20 @@ function HomePage() {
       </Section>
 
 
-      {/* Testimonials */}
-      <Section eyebrow="Student feedback" heading="In our students' words">
-        <div className="grid gap-4 md:grid-cols-3">
-          <TestimonialCard
-            quote="The coaching sessions helped me understand how to structure my dissertation rather than panic about it. I finally felt in control of my own research."
-            attribution="Layla M. — Master's student, Dubai"
-          />
-          <TestimonialCard
-            quote="I was struggling to adapt to the UK academic style. My coach explained what examiners actually look for and how to improve my own writing without doing it for me."
-            attribution="James T. — Undergraduate, United Kingdom"
-          />
-          <TestimonialCard
-            quote="Working across time zones was easy. The feedback was clear, honest and focused on my weaknesses, which made my final work much stronger."
-            attribution="Sophia R. — Student, Montreal"
-          />
+      {/* Student feedback */}
+      <Section eyebrow="Student feedback" heading="Student feedback coming soon">
+        <div className="rounded-lg border border-border bg-card p-8 md:p-12">
+          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            We only publish feedback from students who have actually worked with us, in
+            their own words and with their permission. Verified testimonials will appear
+            here as students complete their coaching programmes.
+          </p>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            In the meantime, you are welcome to ask about our approach directly on
+            WhatsApp — we will tell you honestly whether we are the right fit.
+          </p>
         </div>
+
         <div className="mt-8">
           <a
             href={site.instagram}
