@@ -321,7 +321,7 @@ function HomePage() {
         </div>
         <div className="mt-8">
           <CTAButton to="/who-we-help" variant="outline" withArrow>
-            See who we help
+            Find the right support
           </CTAButton>
         </div>
       </Section>

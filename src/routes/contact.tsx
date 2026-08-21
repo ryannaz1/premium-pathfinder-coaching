@@ -4,7 +4,7 @@ import { Mail, MessageCircle } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { site, mailtoHref } from "@/lib/site";
+import { site, mailtoHref, whatsappHref } from "@/lib/site";
 
 const title = "Contact Yes We Do Your Projects — Book an Academic Consultation";
 const description =
@@ -94,14 +94,25 @@ function ContactPage() {
           <dl className="mt-10 space-y-4 text-sm">
             <div>
               <dt className="eyebrow">WhatsApp</dt>
-              <dd className="mt-1 flex items-center gap-2 text-foreground">
-                <MessageCircle className="size-4 text-accent" aria-hidden="true" />
-                {site.whatsappNumber}
+              <dd className="mt-1">
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-foreground underline underline-offset-4"
+                >
+                  <MessageCircle className="size-4 text-accent" aria-hidden="true" />
+                  {site.whatsappNumber}
+                </a>
               </dd>
             </div>
             <div>
               <dt className="eyebrow">Email</dt>
-              <dd className="mt-1 text-foreground">{site.email}</dd>
+              <dd className="mt-1">
+                <a href={mailtoHref} className="text-foreground underline underline-offset-4">
+                  {site.email}
+                </a>
+              </dd>
             </div>
             <div>
               <dt className="eyebrow">Instagram</dt>
@@ -116,7 +127,21 @@ function ContactPage() {
                 </a>
               </dd>
             </div>
+            <div>
+              <dt className="eyebrow">Facebook</dt>
+              <dd className="mt-1">
+                <a
+                  href={site.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground underline underline-offset-4"
+                >
+                  Yes We Do Your Projects
+                </a>
+              </dd>
+            </div>
           </dl>
+
         </div>
 
         <form onSubmit={handleSubmit} className="border border-border bg-card p-6 sm:p-8">
