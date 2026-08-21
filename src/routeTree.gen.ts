@@ -14,8 +14,17 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as LocationsRouteImport } from './routes/locations'
 import { Route as ResourcesRouteImport } from './routes/resources'
-import { Route as ServicesRouteImport } from './routes/services'
 import { Route as WhoWeHelpRouteImport } from './routes/who-we-help'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as ServicesAcademicCoachingRouteImport } from './routes/services/academic-coaching'
+import { Route as ServicesAcademicWritingCoachingRouteImport } from './routes/services/academic-writing-coaching'
+import { Route as ServicesEditingProofreadingRouteImport } from './routes/services/editing-proofreading'
+import { Route as ServicesExamPreparationRouteImport } from './routes/services/exam-preparation'
+import { Route as ServicesResearchMethodologyRouteImport } from './routes/services/research-methodology'
+import { Route as ServicesResearchStatisticsSupportRouteImport } from './routes/services/research-statistics-support'
+import { Route as ServicesSatPreparationRouteImport } from './routes/services/sat-preparation'
+import { Route as ServicesThesisDissertationCoachingRouteImport } from './routes/services/thesis-dissertation-coaching'
+import { Route as ServicesUniversityTutoringRouteImport } from './routes/services/university-tutoring'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -42,16 +51,68 @@ const ResourcesRoute = ResourcesRouteImport.update({
   path: '/resources',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const WhoWeHelpRoute = WhoWeHelpRouteImport.update({
   id: '/who-we-help',
   path: '/who-we-help',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesAcademicCoachingRoute =
+  ServicesAcademicCoachingRouteImport.update({
+    id: '/services/academic-coaching',
+    path: '/services/academic-coaching',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesAcademicWritingCoachingRoute =
+  ServicesAcademicWritingCoachingRouteImport.update({
+    id: '/services/academic-writing-coaching',
+    path: '/services/academic-writing-coaching',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesEditingProofreadingRoute =
+  ServicesEditingProofreadingRouteImport.update({
+    id: '/services/editing-proofreading',
+    path: '/services/editing-proofreading',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesExamPreparationRoute = ServicesExamPreparationRouteImport.update({
+  id: '/services/exam-preparation',
+  path: '/services/exam-preparation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesResearchMethodologyRoute =
+  ServicesResearchMethodologyRouteImport.update({
+    id: '/services/research-methodology',
+    path: '/services/research-methodology',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesResearchStatisticsSupportRoute =
+  ServicesResearchStatisticsSupportRouteImport.update({
+    id: '/services/research-statistics-support',
+    path: '/services/research-statistics-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesSatPreparationRoute = ServicesSatPreparationRouteImport.update({
+  id: '/services/sat-preparation',
+  path: '/services/sat-preparation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesThesisDissertationCoachingRoute =
+  ServicesThesisDissertationCoachingRouteImport.update({
+    id: '/services/thesis-dissertation-coaching',
+    path: '/services/thesis-dissertation-coaching',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesUniversityTutoringRoute =
+  ServicesUniversityTutoringRouteImport.update({
+    id: '/services/university-tutoring',
+    path: '/services/university-tutoring',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -59,8 +120,17 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/locations': typeof LocationsRoute
   '/resources': typeof ResourcesRoute
-  '/services': typeof ServicesRoute
   '/who-we-help': typeof WhoWeHelpRoute
+  '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
+  '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
+  '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
+  '/services/exam-preparation': typeof ServicesExamPreparationRoute
+  '/services/research-methodology': typeof ServicesResearchMethodologyRoute
+  '/services/research-statistics-support': typeof ServicesResearchStatisticsSupportRoute
+  '/services/sat-preparation': typeof ServicesSatPreparationRoute
+  '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
+  '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -68,8 +138,17 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/locations': typeof LocationsRoute
   '/resources': typeof ResourcesRoute
-  '/services': typeof ServicesRoute
   '/who-we-help': typeof WhoWeHelpRoute
+  '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
+  '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
+  '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
+  '/services/exam-preparation': typeof ServicesExamPreparationRoute
+  '/services/research-methodology': typeof ServicesResearchMethodologyRoute
+  '/services/research-statistics-support': typeof ServicesResearchStatisticsSupportRoute
+  '/services/sat-preparation': typeof ServicesSatPreparationRoute
+  '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
+  '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -78,8 +157,17 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/locations': typeof LocationsRoute
   '/resources': typeof ResourcesRoute
-  '/services': typeof ServicesRoute
   '/who-we-help': typeof WhoWeHelpRoute
+  '/services/academic-coaching': typeof ServicesAcademicCoachingRoute
+  '/services/academic-writing-coaching': typeof ServicesAcademicWritingCoachingRoute
+  '/services/editing-proofreading': typeof ServicesEditingProofreadingRoute
+  '/services/exam-preparation': typeof ServicesExamPreparationRoute
+  '/services/research-methodology': typeof ServicesResearchMethodologyRoute
+  '/services/research-statistics-support': typeof ServicesResearchStatisticsSupportRoute
+  '/services/sat-preparation': typeof ServicesSatPreparationRoute
+  '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
+  '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -89,8 +177,17 @@ export interface FileRouteTypes {
     | '/contact'
     | '/locations'
     | '/resources'
-    | '/services'
     | '/who-we-help'
+    | '/services/academic-coaching'
+    | '/services/academic-writing-coaching'
+    | '/services/editing-proofreading'
+    | '/services/exam-preparation'
+    | '/services/research-methodology'
+    | '/services/research-statistics-support'
+    | '/services/sat-preparation'
+    | '/services/thesis-dissertation-coaching'
+    | '/services/university-tutoring'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -98,8 +195,17 @@ export interface FileRouteTypes {
     | '/contact'
     | '/locations'
     | '/resources'
-    | '/services'
     | '/who-we-help'
+    | '/services/academic-coaching'
+    | '/services/academic-writing-coaching'
+    | '/services/editing-proofreading'
+    | '/services/exam-preparation'
+    | '/services/research-methodology'
+    | '/services/research-statistics-support'
+    | '/services/sat-preparation'
+    | '/services/thesis-dissertation-coaching'
+    | '/services/university-tutoring'
+    | '/services'
   id:
     | '__root__'
     | '/'
@@ -107,8 +213,17 @@ export interface FileRouteTypes {
     | '/contact'
     | '/locations'
     | '/resources'
-    | '/services'
     | '/who-we-help'
+    | '/services/academic-coaching'
+    | '/services/academic-writing-coaching'
+    | '/services/editing-proofreading'
+    | '/services/exam-preparation'
+    | '/services/research-methodology'
+    | '/services/research-statistics-support'
+    | '/services/sat-preparation'
+    | '/services/thesis-dissertation-coaching'
+    | '/services/university-tutoring'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -117,8 +232,17 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   LocationsRoute: typeof LocationsRoute
   ResourcesRoute: typeof ResourcesRoute
-  ServicesRoute: typeof ServicesRoute
   WhoWeHelpRoute: typeof WhoWeHelpRoute
+  ServicesAcademicCoachingRoute: typeof ServicesAcademicCoachingRoute
+  ServicesAcademicWritingCoachingRoute: typeof ServicesAcademicWritingCoachingRoute
+  ServicesEditingProofreadingRoute: typeof ServicesEditingProofreadingRoute
+  ServicesExamPreparationRoute: typeof ServicesExamPreparationRoute
+  ServicesResearchMethodologyRoute: typeof ServicesResearchMethodologyRoute
+  ServicesResearchStatisticsSupportRoute: typeof ServicesResearchStatisticsSupportRoute
+  ServicesSatPreparationRoute: typeof ServicesSatPreparationRoute
+  ServicesThesisDissertationCoachingRoute: typeof ServicesThesisDissertationCoachingRoute
+  ServicesUniversityTutoringRoute: typeof ServicesUniversityTutoringRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -158,18 +282,81 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/who-we-help': {
       id: '/who-we-help'
       path: '/who-we-help'
       fullPath: '/who-we-help'
       preLoaderRoute: typeof WhoWeHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/academic-coaching': {
+      id: '/services/academic-coaching'
+      path: '/services/academic-coaching'
+      fullPath: '/services/academic-coaching'
+      preLoaderRoute: typeof ServicesAcademicCoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/academic-writing-coaching': {
+      id: '/services/academic-writing-coaching'
+      path: '/services/academic-writing-coaching'
+      fullPath: '/services/academic-writing-coaching'
+      preLoaderRoute: typeof ServicesAcademicWritingCoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/editing-proofreading': {
+      id: '/services/editing-proofreading'
+      path: '/services/editing-proofreading'
+      fullPath: '/services/editing-proofreading'
+      preLoaderRoute: typeof ServicesEditingProofreadingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/exam-preparation': {
+      id: '/services/exam-preparation'
+      path: '/services/exam-preparation'
+      fullPath: '/services/exam-preparation'
+      preLoaderRoute: typeof ServicesExamPreparationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/research-methodology': {
+      id: '/services/research-methodology'
+      path: '/services/research-methodology'
+      fullPath: '/services/research-methodology'
+      preLoaderRoute: typeof ServicesResearchMethodologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/research-statistics-support': {
+      id: '/services/research-statistics-support'
+      path: '/services/research-statistics-support'
+      fullPath: '/services/research-statistics-support'
+      preLoaderRoute: typeof ServicesResearchStatisticsSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/sat-preparation': {
+      id: '/services/sat-preparation'
+      path: '/services/sat-preparation'
+      fullPath: '/services/sat-preparation'
+      preLoaderRoute: typeof ServicesSatPreparationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/thesis-dissertation-coaching': {
+      id: '/services/thesis-dissertation-coaching'
+      path: '/services/thesis-dissertation-coaching'
+      fullPath: '/services/thesis-dissertation-coaching'
+      preLoaderRoute: typeof ServicesThesisDissertationCoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/university-tutoring': {
+      id: '/services/university-tutoring'
+      path: '/services/university-tutoring'
+      fullPath: '/services/university-tutoring'
+      preLoaderRoute: typeof ServicesUniversityTutoringRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -181,8 +368,19 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   LocationsRoute: LocationsRoute,
   ResourcesRoute: ResourcesRoute,
-  ServicesRoute: ServicesRoute,
   WhoWeHelpRoute: WhoWeHelpRoute,
+  ServicesAcademicCoachingRoute: ServicesAcademicCoachingRoute,
+  ServicesAcademicWritingCoachingRoute: ServicesAcademicWritingCoachingRoute,
+  ServicesEditingProofreadingRoute: ServicesEditingProofreadingRoute,
+  ServicesExamPreparationRoute: ServicesExamPreparationRoute,
+  ServicesResearchMethodologyRoute: ServicesResearchMethodologyRoute,
+  ServicesResearchStatisticsSupportRoute:
+    ServicesResearchStatisticsSupportRoute,
+  ServicesSatPreparationRoute: ServicesSatPreparationRoute,
+  ServicesThesisDissertationCoachingRoute:
+    ServicesThesisDissertationCoachingRoute,
+  ServicesUniversityTutoringRoute: ServicesUniversityTutoringRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
