@@ -35,9 +35,29 @@ const faqs: FaqItem[] = [
       "We support students across a wide range of majors, disciplines and university courses. If your subject isn't listed, contact us and we'll assess your requirements.",
   },
   {
-    question: "Do you support Master's and PhD students?",
+    question: "Do you support Bachelor's, Master's and PhD students?",
     answer:
-      "Yes. We provide research guidance, thesis/dissertation coaching, methodology support, academic writing guidance and research planning.",
+      "Yes. We support undergraduate and Bachelor's students with assignments, coursework, exams and final-year projects, and Master's and PhD students with research guidance, thesis and dissertation coaching, methodology support, literature reviews, academic writing guidance and research planning.",
+  },
+  {
+    question: "Can you help with engineering projects?",
+    answer:
+      "Yes. We provide tutoring and guidance for engineering coursework, modelling, technical drawings, prototypes, calculations, reports and final-year or capstone engineering projects.",
+  },
+  {
+    question: "Can you help with GIS, Revit, AutoCAD and 3ds Max?",
+    answer:
+      "Yes. We provide tutoring and guidance for university projects using GIS mapping and spatial analysis, Revit and BIM modelling, AutoCAD drafting and 3ds Max modelling, rendering and visualisation. We are independent and not certified by or affiliated with these software companies.",
+  },
+  {
+    question: "Can you help with Arduino projects?",
+    answer:
+      "Yes. We guide students through circuit design, sensors, wiring logic, code structure, debugging and documenting Arduino-based prototypes and technical projects.",
+  },
+  {
+    question: "Can you help with SPSS and data analysis?",
+    answer:
+      "Yes. We help you choose appropriate statistical tests, set up and run analyses in SPSS or similar tools, interpret the output and present results correctly in your own report, thesis or dissertation.",
   },
   {
     question: "Can you help with engineering and technical projects?",
