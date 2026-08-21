@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as LocationsRouteImport } from './routes/locations'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as WhoWeHelpRouteImport } from './routes/who-we-help'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
 import { Route as ServicesAcademicCoachingRouteImport } from './routes/services/academic-coaching'
 import { Route as ServicesAcademicWritingCoachingRouteImport } from './routes/services/academic-writing-coaching'
 import { Route as ServicesEditingProofreadingRouteImport } from './routes/services/editing-proofreading'
@@ -53,6 +54,11 @@ const ResourcesRoute = ResourcesRouteImport.update({
 const WhoWeHelpRoute = WhoWeHelpRouteImport.update({
   id: '/who-we-help',
   path: '/who-we-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesAcademicCoachingRoute =
@@ -124,6 +130,7 @@ export interface FileRoutesByFullPath {
   '/services/sat-preparation': typeof ServicesSatPreparationRoute
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -141,6 +148,7 @@ export interface FileRoutesByTo {
   '/services/sat-preparation': typeof ServicesSatPreparationRoute
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -159,6 +167,7 @@ export interface FileRoutesById {
   '/services/sat-preparation': typeof ServicesSatPreparationRoute
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/services/sat-preparation'
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
     | '/services/sat-preparation'
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
+    | '/services'
   id:
     | '__root__'
     | '/'
@@ -212,6 +223,7 @@ export interface FileRouteTypes {
     | '/services/sat-preparation'
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -230,6 +242,7 @@ export interface RootRouteChildren {
   ServicesSatPreparationRoute: typeof ServicesSatPreparationRoute
   ServicesThesisDissertationCoachingRoute: typeof ServicesThesisDissertationCoachingRoute
   ServicesUniversityTutoringRoute: typeof ServicesUniversityTutoringRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -274,6 +287,13 @@ declare module '@tanstack/react-router' {
       path: '/who-we-help'
       fullPath: '/who-we-help'
       preLoaderRoute: typeof WhoWeHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/academic-coaching': {
@@ -360,6 +380,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesThesisDissertationCoachingRoute:
     ServicesThesisDissertationCoachingRoute,
   ServicesUniversityTutoringRoute: ServicesUniversityTutoringRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
