@@ -185,14 +185,34 @@ function HomePage() {
           <div>
             <p className="eyebrow">Academic coaching · UK · UAE · Canada · Lebanon</p>
             <h1 className="mt-5 text-4xl leading-[1.08] text-foreground sm:text-5xl lg:text-6xl">
-              Premium academic coaching for ambitious university students
+              Academic support for every major, every course &amp; every level
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Expert one-to-one academic coaching, tutoring, research guidance, dissertation
-              support, exam preparation and academic writing help for every major and course — from
-              assignments and senior projects to Master's theses and PhDs. Support available in
-              English, Arabic and French.
+              From your first university assignment to your final-year project, Master's
+              dissertation or PhD research, we provide personalised academic, research and
+              technical guidance across disciplines — in English, Arabic and French.
             </p>
+            <p className="mt-5 max-w-xl font-display text-lg leading-snug text-foreground">
+              Engineering. Medicine. Business. Architecture. Computer Science. Arts. Sciences.
+              Every major, every level.
+            </p>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {[
+                "Undergraduate",
+                "Bachelor's",
+                "Master's",
+                "PhD",
+                "International students",
+                "Students studying abroad",
+              ].map((tag) => (
+                <li
+                  key={tag}
+                  className="border border-border px-3 py-1 text-xs tracking-wide text-muted-foreground"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CTAButton to="/contact" variant="primary" withArrow>
                 Book a consultation
