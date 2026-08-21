@@ -5,6 +5,7 @@ import { Mail, MessageCircle } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, mailtoHref, whatsappHref } from "@/lib/site";
+import { socialMeta } from "@/lib/seo";
 
 const title = "Contact Yes We Do Your Projects — Book an Academic Consultation";
 const description =
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/contact" },
+      ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/contact" }],
   }),

@@ -1,4 +1,5 @@
 import type { FaqItem } from "@/components/FAQ";
+import { socialMeta } from "@/lib/seo";
 
 export type ServiceContent = {
   slug: string;
@@ -371,7 +372,7 @@ export function serviceHead(slug: string) {
       { property: "og:description", content: s.description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: url },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(s.title, s.description),
     ],
     links: [{ rel: "canonical", href: url }],
     scripts: [

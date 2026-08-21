@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloating } from "@/components/WhatsAppButton";
+import { socialMeta, SITE_URL, OG_IMAGE } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -88,7 +89,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:site_name", content: "Yes We Do Your Projects" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(
+        "Yes We Do Your Projects — Premium Academic Coaching",
+        "Premium one-to-one academic coaching, university tutoring and research guidance for students in the UK, UAE, Canada and Lebanon.",
+      ),
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -105,17 +109,49 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "ProfessionalService",
+          "@id": `${SITE_URL}/#organization`,
           name: "Yes We Do Your Projects",
+          url: `${SITE_URL}/`,
+          image: OG_IMAGE,
+          logo: `${SITE_URL}/favicon.png`,
           description:
-            "Premium academic coaching, university tutoring, research guidance and technical project support for undergraduate, Bachelor's, Master's and PhD students across a wide range of disciplines, in English, Arabic and French.",
+            "Premium academic coaching, university tutoring, research guidance and technical project support for undergraduate, Bachelor's, Master's and PhD students across a wide range of disciplines, in English, Arabic and French. Students remain responsible for producing and submitting their own academic work.",
           email: "ryannazha@gmail.com",
           telephone: "+34667641491",
+          knowsLanguage: ["English", "Arabic", "French"],
+          availableLanguage: ["English", "Arabic", "French"],
           sameAs: [
             "https://www.instagram.com/yeswedoyourprojects/",
             "https://www.facebook.com/share/1Qo9ponNjD/",
           ],
-          areaServed: ["United Kingdom", "United Arab Emirates", "Canada", "Lebanon"],
+          areaServed: [
+            { "@type": "Country", name: "United Kingdom" },
+            { "@type": "City", name: "Dubai" },
+            { "@type": "City", name: "Abu Dhabi" },
+            { "@type": "City", name: "Montreal" },
+            { "@type": "AdministrativeArea", name: "Quebec" },
+            { "@type": "Country", name: "Lebanon" },
+          ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Academic coaching and tutoring services",
+            itemListElement: [
+              "University tutoring",
+              "Academic coaching",
+              "Assignment guidance",
+              "Thesis and dissertation coaching",
+              "PhD research guidance",
+              "Engineering project guidance",
+              "Architecture project guidance",
+              "Technical and software project guidance",
+              "Academic writing coaching",
+              "Research methodology and SPSS support",
+            ].map((name) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name },
+            })),
+          },
         }),
       },
     ],
