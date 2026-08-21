@@ -130,6 +130,95 @@ function ServicesPage() {
       </section>
 
       <section className="border-b border-border bg-paper">
+        <div className="container-editorial py-14 md:py-20">
+          <p className="eyebrow">Disciplines</p>
+          <h2 className="mt-3 max-w-2xl text-2xl leading-snug sm:text-3xl">
+            All majors. All courses. All academic levels.
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            We support students across virtually every university discipline, from engineering and
+            medicine to business, computer science, architecture, arts, sciences, law and the
+            social sciences.
+          </p>
+          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+            {majorCategories.map((cat) => (
+              <div key={cat.name} className="bg-card p-6">
+                <h3 className="text-base text-foreground">{cat.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {cat.subjects.join(" · ")}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 max-w-2xl text-sm leading-relaxed text-foreground">
+            Don&apos;t see your major?{" "}
+            <Link to="/contact" className="font-semibold underline underline-offset-4">
+              Contact us
+            </Link>{" "}
+            — we support many additional disciplines.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-ink text-ink-foreground">
+        <div className="container-editorial py-14 md:py-20">
+          <p className="eyebrow">Technical support</p>
+          <h2 className="mt-3 max-w-2xl text-2xl leading-snug sm:text-3xl">
+            Technical tools &amp; project support
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-foreground/75">
+            Guidance and tutoring for students working with specialist software, technical tools,
+            modelling, data analysis and practical university projects.
+          </p>
+          <ul className="mt-8 flex flex-wrap gap-2">
+            {technicalAreas.map((t) => (
+              <li
+                key={t}
+                className="border border-ink-foreground/25 px-3 py-1.5 text-sm text-ink-foreground/90"
+              >
+                {t}
+              </li>
+            ))}
+          </ul>
+          <h3 className="mt-12 text-xl text-ink-foreground">Physical models &amp; project builds</h3>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-foreground/75">
+            Guidance and tutoring for {practicalProjects.join(", ").toLowerCase()} — students build
+            and submit their own work.
+          </p>
+          <p className="mt-8 text-xs leading-relaxed text-ink-foreground/60">
+            We are an independent academic coaching service and are not certified by, affiliated
+            with or partnered with any named software company.
+          </p>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-sand">
+        <div className="container-editorial grid gap-6 py-12 md:grid-cols-[1fr_auto] md:items-center md:py-14">
+          <div>
+            <p className="eyebrow">Languages</p>
+            <h2 className="mt-3 max-w-2xl text-2xl leading-snug sm:text-3xl">
+              Academic support in English, Arabic &amp; French
+            </h2>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Students can receive explanations, tutoring, coaching and guidance in English, Arabic
+              or French. Sessions are online, across multiple time zones.
+            </p>
+          </div>
+          <ul className="flex flex-wrap gap-3">
+            {["English", "العربية · Arabic", "Français · French"].map((l) => (
+              <li
+                key={l}
+                className="border border-border bg-card px-4 py-2.5 font-display text-base text-foreground"
+              >
+                {l}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+
+      <section className="border-b border-border bg-paper">
         <div className="container-editorial grid gap-10 py-14 md:grid-cols-[0.8fr_1.2fr] md:py-20">
           <div>
             <p className="eyebrow">FAQ</p>
