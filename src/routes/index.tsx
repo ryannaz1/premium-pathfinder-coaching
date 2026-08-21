@@ -281,6 +281,167 @@ function HomePage() {
         </div>
       </Section>
 
+      {/* Help areas */}
+      <Section tone="sand" eyebrow="Scope of support" heading="What can we help you with?">
+        <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          Coaching, tutoring, research guidance and technical guidance across the full range of
+          university work — at every stage, from brief to submission.
+        </p>
+        <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {helpAreas.map((area) => (
+            <div key={area} className="bg-card px-5 py-4 text-sm text-foreground">
+              {area}
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Majors */}
+      <Section eyebrow="Majors &amp; disciplines" heading="Every major. Every discipline.">
+        <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          We support students across a wide range of university majors and disciplines. If you
+          don't see your subject listed, contact us — we can assess your requirements and
+          recommend the appropriate support.
+        </p>
+        <div className="grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+          {majorCategories.map((cat) => (
+            <div key={cat.name} className="bg-card p-6 sm:p-8">
+              <h3 className="text-lg text-foreground">{cat.name}</h3>
+              <ul className="mt-4 space-y-1.5">
+                {cat.subjects.map((s) => (
+                  <li key={s} className="text-sm leading-relaxed text-muted-foreground">
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Technical & project support */}
+      <Section
+        tone="ink"
+        eyebrow="Technical &amp; project support"
+        heading="Guidance for technical and software-based university projects"
+      >
+        <p className="mb-10 max-w-2xl text-base leading-relaxed text-ink-foreground/75">
+          University projects increasingly require students to use specialist software, technical
+          tools and practical skills. We provide guidance and tutoring for projects involving
+          technical software, programming, modelling, data analysis and design.
+        </p>
+        <ul className="flex flex-wrap gap-2">
+          {technicalAreas.map((t) => (
+            <li
+              key={t}
+              className="border border-ink-foreground/25 px-3 py-1.5 text-sm text-ink-foreground/90"
+            >
+              {t}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-14">
+          <p className="eyebrow">Software guidance</p>
+          <h3 className="mt-3 max-w-2xl text-2xl leading-tight text-ink-foreground">
+            The tools students most often need help with
+          </h3>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {softwareGrid.map((s) => (
+              <div key={s.name} className="border-t border-ink-foreground/25 pt-5">
+                <p className="font-display text-xl uppercase tracking-wide text-accent">
+                  {s.name}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-foreground/75">{s.copy}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-xs leading-relaxed text-ink-foreground/60">
+            We are an independent academic coaching service. We are not certified by, affiliated
+            with or partnered with any of the software companies named above.
+          </p>
+        </div>
+      </Section>
+
+      {/* Practical projects */}
+      <Section
+        eyebrow="Practical projects"
+        heading="From digital projects to physical models"
+      >
+        <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          Some projects are built, not typed. We guide students through planning, materials,
+          technique and presentation so the finished piece communicates the idea behind it.
+        </p>
+        <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
+          {practicalProjects.map((p, i) => (
+            <div key={p} className="bg-card p-6">
+              <span className="eyebrow">{String(i + 1).padStart(2, "0")}</span>
+              <p className="mt-3 text-sm leading-relaxed text-foreground">{p}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Languages */}
+      <section className="border-b border-border bg-sand">
+        <div className="container-editorial grid gap-8 py-14 md:grid-cols-[1fr_auto] md:items-center md:py-16">
+          <div>
+            <p className="eyebrow">Languages</p>
+            <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">
+              Academic support in English, Arabic &amp; French
+            </h2>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
+              Students can receive explanations, tutoring, coaching and guidance in English,
+              Arabic or French.
+            </p>
+          </div>
+          <ul className="flex flex-wrap gap-3">
+            {["English", "العربية · Arabic", "Français · French"].map((l) => (
+              <li
+                key={l}
+                className="border border-border bg-card px-5 py-3 font-display text-lg text-foreground"
+              >
+                {l}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Academic levels */}
+      <Section eyebrow="Academic levels" heading="Support from undergraduate to PhD">
+        <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+          {academicLevels.map((l) => (
+            <div key={l.name} className="bg-card p-6 sm:p-8">
+              <h3 className="text-lg text-foreground">{l.name}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{l.copy}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Don't see your course CTA */}
+      <section className="border-b border-border bg-background">
+        <div className="container-editorial py-14 md:py-20">
+          <div className="border border-border bg-card p-8 md:p-12">
+            <h2 className="max-w-2xl text-2xl leading-tight sm:text-3xl">
+              Don't see your course or project?
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Tell us your major, course, academic level and what you need help with. We'll assess
+              your requirements and recommend the most appropriate support.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <CTAButton to="/contact" variant="primary" withArrow>
+                Tell us about your project
+              </CTAButton>
+              <WhatsAppButton label="Chat on WhatsApp" variant="outline" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Who we help */}
       <Section
         tone="sand"
