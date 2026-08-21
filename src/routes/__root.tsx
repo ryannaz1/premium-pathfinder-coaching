@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Manrope:wght@400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
     scripts: [
       {
@@ -111,7 +111,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "Premium academic coaching, university tutoring and research guidance for university and Master's students.",
           email: "ryannazha@gmail.com",
           telephone: "+34667641491",
-          sameAs: ["https://www.instagram.com/yeswedoyourprojects/"],
+          sameAs: [
+            "https://www.instagram.com/yeswedoyourprojects/",
+            "https://www.facebook.com/share/1Qo9ponNjD/",
+          ],
           areaServed: ["United Kingdom", "United Arab Emirates", "Canada", "Lebanon"],
         }),
       },

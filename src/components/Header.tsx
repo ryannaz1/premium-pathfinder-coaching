@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { navLinks, whatsappHref } from "@/lib/site";
 
 export function Header() {
@@ -11,12 +12,21 @@ export function Header() {
       <div className="container-editorial flex h-16 items-center justify-between gap-6 md:h-20">
         <Link
           to="/"
-          className="font-display text-base leading-tight tracking-tight text-foreground sm:text-lg"
+          className="flex items-center gap-2.5 font-display text-base leading-tight tracking-tight text-foreground sm:text-lg"
           onClick={() => setOpen(false)}
         >
+          <img
+            src={logoAsset.url}
+            alt="Yes We Do Your Projects crowned chimpanzee logo"
+            width={44}
+            height={44}
+            className="size-9 shrink-0 object-contain sm:size-11"
+          />
+          <span>
           Yes We Do
           <span className="block text-[0.65rem] font-sans font-semibold uppercase tracking-[0.22em] text-accent">
             Your Projects
+          </span>
           </span>
         </Link>
 

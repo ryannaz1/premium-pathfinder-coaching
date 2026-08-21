@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MessageCircle } from "lucide-react";
+import { Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { site, whatsappHref, mailtoHref } from "@/lib/site";
 
 const serviceLinks = [
@@ -83,6 +84,15 @@ export function Footer() {
               >
                 <Instagram className="size-4" aria-hidden="true" />
                 @yeswedoyourprojects
+              </a>
+              <a
+                href={site.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-ink-foreground/85 hover:text-ink-foreground"
+              >
+                <Facebook className="size-4" aria-hidden="true" />
+                Yes We Do Your Projects on Facebook
               </a>
             </div>
           </div>
