@@ -5,6 +5,7 @@ export const site = {
   whatsappNumber: "+34 667 641 491",
   whatsappDigits: "34667641491",
   instagram: "https://www.instagram.com/yeswedoyourprojects/",
+  facebook: "https://www.facebook.com/share/1Qo9ponNjD/",
   whatsappMessage: "Hi, I'd like to learn more about your academic coaching services.",
 };
 

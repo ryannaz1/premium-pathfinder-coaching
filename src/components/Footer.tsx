@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MessageCircle } from "lucide-react";
+import { Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { site, whatsappHref, mailtoHref } from "@/lib/site";
 
 const serviceLinks = [
@@ -53,7 +54,17 @@ export function Footer() {
       <div className="container-editorial py-14 md:py-20">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <p className="font-display text-2xl">Yes We Do Your Projects</p>
+            <div className="flex items-center gap-3">
+              <img
+                src={logoAsset.url}
+                alt="Yes We Do Your Projects crowned chimpanzee logo"
+                width={56}
+                height={56}
+                loading="lazy"
+                className="size-12 shrink-0 object-contain"
+              />
+              <p className="font-display text-2xl">Yes We Do Your Projects</p>
+            </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-foreground/75">
               Premium one-to-one academic coaching, tutoring and research guidance for university
               and Master&apos;s students in the UK, the UAE, Canada and Lebanon.
@@ -83,6 +94,15 @@ export function Footer() {
               >
                 <Instagram className="size-4" aria-hidden="true" />
                 @yeswedoyourprojects
+              </a>
+              <a
+                href={site.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-ink-foreground/85 hover:text-ink-foreground"
+              >
+                <Facebook className="size-4" aria-hidden="true" />
+                Yes We Do Your Projects on Facebook
               </a>
             </div>
           </div>
