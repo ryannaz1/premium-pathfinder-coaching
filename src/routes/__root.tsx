@@ -108,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "Yes We Do Your Projects",
           description:
-            "Premium academic coaching, university tutoring and research guidance for university and Master's students.",
+            "Premium academic coaching, university tutoring, research guidance and technical project support for undergraduate, Bachelor's, Master's and PhD students across a wide range of disciplines, in English, Arabic and French.",
           email: "ryannazha@gmail.com",
           telephone: "+34667641491",
           sameAs: [
