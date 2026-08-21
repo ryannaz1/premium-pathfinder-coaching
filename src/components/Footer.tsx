@@ -6,8 +6,18 @@ import { site, whatsappHref, mailtoHref } from "@/lib/site";
 const serviceLinks = [
   { label: "University Tutoring", to: "/services/university-tutoring" },
   { label: "Academic Coaching", to: "/services/academic-coaching" },
+  { label: "Assignment & Coursework Guidance", to: "/services/university-tutoring" },
+  { label: "Research Project Guidance", to: "/services/research-methodology" },
+  { label: "Senior & Final-Year Projects", to: "/services" },
+  { label: "Capstone Projects", to: "/services" },
   { label: "Thesis & Dissertation Coaching", to: "/services/thesis-dissertation-coaching" },
+  { label: "PhD Research Guidance", to: "/services/research-methodology" },
   { label: "Academic Writing Coaching", to: "/services/academic-writing-coaching" },
+  { label: "Research Methodology", to: "/services/research-methodology" },
+  { label: "Data Analysis & Statistics", to: "/services/research-statistics-support" },
+  { label: "Engineering Project Support", to: "/services" },
+  { label: "Architecture & Design Project Support", to: "/services" },
+  { label: "Technical Software Support", to: "/services" },
   { label: "SAT Preparation", to: "/services/sat-preparation" },
 ];
 
