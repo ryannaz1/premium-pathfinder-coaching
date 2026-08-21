@@ -2,6 +2,15 @@ import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
 import { site, whatsappHref, mailtoHref } from "@/lib/site";
+import { landings, type LandingGroup } from "@/lib/landing";
+
+const directoryGroups: LandingGroup[] = [
+  "Locations",
+  "Subjects",
+  "Services",
+  "Software",
+  "Models",
+];
 
 const serviceLinks = [
   { label: "University Tutoring", to: "/services/university-tutoring" },
