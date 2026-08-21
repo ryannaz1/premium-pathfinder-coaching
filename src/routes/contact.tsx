@@ -193,7 +193,7 @@ function Field({
     <div>
       <label htmlFor={name} className="text-sm font-semibold text-foreground">
         {label}
-science      </label>
+      </label>
       <input id={name} name={name} type={type} required={required} className={fieldClass} />
     </div>
   );
