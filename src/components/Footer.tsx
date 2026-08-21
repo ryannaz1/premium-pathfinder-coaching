@@ -3,19 +3,19 @@ import { Instagram, Mail, MessageCircle } from "lucide-react";
 import { site, whatsappHref, mailtoHref } from "@/lib/site";
 
 const serviceLinks = [
-  { label: "University Tutoring", to: "/services/university-tutoring" },
-  { label: "Academic Coaching", to: "/services/academic-coaching" },
-  { label: "Thesis & Dissertation Coaching", to: "/services/thesis-dissertation-coaching" },
-  { label: "Academic Writing Coaching", to: "/services/academic-writing-coaching" },
-  { label: "SAT Preparation", to: "/services/sat-preparation" },
+  { label: "University Tutoring", to: "/services" },
+  { label: "Academic Coaching", to: "/services" },
+  { label: "Thesis & Dissertation Coaching", to: "/services" },
+  { label: "Academic Writing Coaching", to: "/services" },
+  { label: "SAT Preparation", to: "/services" },
 ];
 
 const locationLinks = [
-  { label: "United Kingdom", to: "/locations/united-kingdom" },
-  { label: "Dubai", to: "/locations/dubai" },
-  { label: "Abu Dhabi", to: "/locations/abu-dhabi" },
-  { label: "Montreal", to: "/locations/montreal" },
-  { label: "Lebanon", to: "/locations/lebanon" },
+  { label: "United Kingdom", to: "/locations" },
+  { label: "Dubai", to: "/locations" },
+  { label: "Abu Dhabi", to: "/locations" },
+  { label: "Montreal", to: "/locations" },
+  { label: "Lebanon", to: "/locations" },
 ];
 
 const companyLinks = [
