@@ -8,7 +8,7 @@ import { site, mailtoHref } from "@/lib/site";
 
 const title = "About Yes We Do Your Projects — Premium Academic Coaching";
 const description =
-  "Yes We Do Your Projects is a premium academic coaching practice supporting university, Master's and PhD students across all majors and courses, with coaching in English, Arabic and French."; 
+  "Yes We Do Your Projects is a premium academic coaching practice supporting university, Master's and PhD students across all majors, courses and assignment types — in English, Arabic and French.";
 
 const principles = [
   {

@@ -8,7 +8,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const title = "Who We Help — University, Master's & PhD Students | Yes We Do Your Projects";
 const description =
-  "We coach undergraduates, Master's students, PhD researchers, international students, exam candidates and families seeking premium academic support across all majors and courses, in English, Arabic and French.";
+  "We coach undergraduates, Master's students, PhD researchers, international students, exam candidates and families across all majors and courses — in English, Arabic and French.";
 
 const groups = [
   {

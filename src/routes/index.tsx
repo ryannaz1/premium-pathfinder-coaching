@@ -18,7 +18,7 @@ import { site, whatsappHref } from "@/lib/site";
 
 const title = "Premium Academic Coaching & University Tutoring | Yes We Do Your Projects";
 const description =
-  "One-to-one academic coaching, university tutoring, thesis and dissertation guidance, research support, exam preparation and SAT prep for all majors, courses, assignments, senior projects, Master's dissertations and PhD work — in English, Arabic and French.";
+  "One-to-one academic coaching, university tutoring and dissertation support for all majors, courses, assignments and research levels — delivered in English, Arabic and French.";
 
 const faqs: FaqItem[] = [
   {

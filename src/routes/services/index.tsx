@@ -9,7 +9,7 @@ import { services } from "@/lib/services";
 
 const title = "Academic Coaching & Tutoring Services | Yes We Do Your Projects";
 const description =
-  "University tutoring, academic coaching, thesis and dissertation coaching, research methodology, academic writing, editing, exam preparation, SAT prep and statistics support — across all majors, courses, assignments, senior projects, Master's theses and PhD work, in English, Arabic and French.";
+  "University tutoring, academic coaching, thesis and dissertation support, academic writing, exam prep and SAT prep across all majors and levels — in English, Arabic and French.";
 
 const faqs: FaqItem[] = [
   {
