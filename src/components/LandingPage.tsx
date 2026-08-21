@@ -7,7 +7,59 @@ import { FAQ } from "@/components/FAQ";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import type { LandingContent } from "@/lib/landing";
 
+const guideBySlug: Record<string, { label: string; to: string }> = {
+  "spss-statistics-help": {
+    label: "Read the guide: SPSS for Dissertation Data Analysis",
+    to: "/resources/spss-dissertation-data-analysis-guide",
+  },
+  "data-analysis-statistics": {
+    label: "Read the guide: SPSS for Dissertation Data Analysis",
+    to: "/resources/spss-dissertation-data-analysis-guide",
+  },
+  "research-methodology-support": {
+    label: "Read the guide: How to Choose a Dissertation Methodology",
+    to: "/resources/how-to-choose-dissertation-methodology",
+  },
+  "research-proposal-support": {
+    label: "Read the guide: How to Choose a Dissertation Methodology",
+    to: "/resources/how-to-choose-dissertation-methodology",
+  },
+  "thesis-dissertation-coaching": {
+    label: "Read the guide: How to Choose a Dissertation Methodology",
+    to: "/resources/how-to-choose-dissertation-methodology",
+  },
+  "engineering-project-help": {
+    label: "Read the guide: Engineering Final-Year Project",
+    to: "/resources/engineering-final-year-project-guide",
+  },
+  "final-year-project-support": {
+    label: "Read the guide: Engineering Final-Year Project",
+    to: "/resources/engineering-final-year-project-guide",
+  },
+  "revit-project-help": {
+    label: "Read the guide: Revit for Architecture Students",
+    to: "/resources/revit-for-architecture-students",
+  },
+  "architecture-project-help": {
+    label: "Read the guide: Revit for Architecture Students",
+    to: "/resources/revit-for-architecture-students",
+  },
+  "architecture-maquette-help": {
+    label: "Read the guide: Planning and Building an Architecture Maquette",
+    to: "/resources/architecture-maquette-guide",
+  },
+  "physical-project-models": {
+    label: "Read the guide: Planning and Building an Architecture Maquette",
+    to: "/resources/architecture-maquette-guide",
+  },
+  "building-model-help": {
+    label: "Read the guide: Planning and Building an Architecture Maquette",
+    to: "/resources/architecture-maquette-guide",
+  },
+};
+
 export function LandingPage({ content }: { content: LandingContent }) {
+  const guide = guideBySlug[content.slug];
   return (
     <>
       <section className="border-b border-border bg-paper">
@@ -26,6 +78,16 @@ export function LandingPage({ content }: { content: LandingContent }) {
             </CTAButton>
             <WhatsAppButton label="Chat on WhatsApp" variant="outline" />
           </div>
+          {guide && (
+            <p className="mt-6 text-sm text-muted-foreground">
+              <Link
+                to={guide.to as never}
+                className="font-semibold text-foreground underline underline-offset-4 hover:text-accent"
+              >
+                {guide.label}
+              </Link>
+            </p>
+          )}
         </div>
       </section>
 
