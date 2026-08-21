@@ -7,6 +7,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { majorCategories, practicalProjects, technicalAreas } from "@/lib/disciplines";
 import { services } from "@/lib/services";
+import { socialMeta } from "@/lib/seo";
 
 const title = "Academic Coaching & Tutoring Services | Yes We Do Your Projects";
 const description =
@@ -64,7 +65,7 @@ export const Route = createFileRoute("/services/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/services" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/services" }],
     scripts: [

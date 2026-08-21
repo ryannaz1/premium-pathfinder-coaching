@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { socialMeta } from "@/lib/seo";
 
 const title = "Academic Resources & Study Guides | Yes We Do Your Projects";
 const description =
@@ -64,7 +65,7 @@ export const Route = createFileRoute("/resources")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/resources" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/resources" }],
     scripts: [

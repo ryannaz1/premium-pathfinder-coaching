@@ -5,6 +5,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { locations } from "@/lib/locations";
+import { socialMeta } from "@/lib/seo";
 
 const title = "Locations — UK, Dubai, Abu Dhabi, Montreal & Lebanon | Yes We Do Your Projects";
 const description =
@@ -19,7 +20,7 @@ export const Route = createFileRoute("/locations/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/locations" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/locations" }],
   }),

@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, mailtoHref } from "@/lib/site";
+import { socialMeta } from "@/lib/seo";
 
 const title = "About Yes We Do Your Projects — Premium Academic Coaching";
 const description =
@@ -42,7 +43,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/about" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/about" }],
   }),
