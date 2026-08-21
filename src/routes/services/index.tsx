@@ -1,10 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { majorCategories, practicalProjects, technicalAreas } from "@/lib/disciplines";
 import { services } from "@/lib/services";
 
 const title = "Academic Coaching & Tutoring Services | Yes We Do Your Projects";
