@@ -6,22 +6,22 @@ import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
-const title = "Who We Help — University, Master's & International Students | Yes We Do Your Projects";
+const title = "Who We Help — University, Master's & PhD Students | Yes We Do Your Projects";
 const description =
-  "We coach undergraduates, Master's students, international students, exam candidates and families seeking premium academic support across the UK, UAE, Canada and Lebanon.";
+  "We coach undergraduates, Master's students, PhD researchers, international students, exam candidates and families across all majors and courses — in English, Arabic and French.";
 
 const groups = [
   {
     icon: GraduationCap,
     label: "Undergraduate students",
     copy: "You understand the material in lectures but lose marks in assessment: unclear structure, thin argument, weak referencing or running out of time. Coaching works on the gap between knowing something and being graded well on it.",
-    needs: ["Essay and coursework structure", "Module-level subject tutoring", "Revision and exam technique"],
+    needs: ["All majors and courses", "Essay and coursework structure", "Module-level subject tutoring", "Revision and exam technique"],
   },
   {
     icon: NotebookPen,
     label: "Master's students",
-    copy: "A Master's raises the bar on independence, critical depth and research quality — usually in less time. We help you plan backwards from submission and keep momentum between supervisor meetings.",
-    needs: ["Dissertation planning and chapters", "Research methodology", "Critical academic writing"],
+    copy: "A Master's raises the bar on independence, critical depth and research quality — usually in less time. We help you plan backwards from submission and keep momentum between supervisor meetings, including for senior projects and theses.",
+    needs: ["Master's theses and dissertations", "Research methodology", "Critical academic writing"],
   },
   {
     icon: Users,
@@ -44,7 +44,7 @@ const groups = [
   {
     icon: LineChart,
     label: "Ambitious high performers",
-    copy: "You are already doing well and want a sharper edge: stronger arguments, better research design, and a coach who will tell you where the work is merely good.",
+    copy: "You are already doing well and want a sharper edge: stronger arguments, better research design, and a coach who will tell you where the work is merely good. We support students at all levels, from undergraduates to PhD researchers.",
     needs: ["Advanced feedback on drafts", "Research design and rigour", "Long-term academic strategy"],
   },
 ];
@@ -110,11 +110,14 @@ function WhoWeHelpPage() {
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Who We Help" }]} />
           <p className="eyebrow mt-6">Who we help</p>
           <h1 className="mt-4 max-w-3xl text-3xl leading-[1.12] sm:text-4xl lg:text-5xl">
-            Students and families who take academic work seriously
+            Students and researchers who take academic work seriously
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            We work with students across six broad situations. What they share is a willingness to
-            do the work themselves and a wish to do it properly, with an expert alongside them.
+            We work with students across all majors, courses and assignment types — from first-year
+            undergraduate coursework to senior projects, Master's dissertations and PhD research.
+            Coaching is available in English, Arabic and French. What our students share is a
+            willingness to do the work themselves and a wish to do it properly, with an expert
+            alongside them.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <CTAButton to="/contact" withArrow>
