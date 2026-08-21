@@ -385,8 +385,18 @@ export function serviceHead(slug: string) {
               name: s.name,
               description: s.description,
               serviceType: s.name,
-              provider: { "@type": "Organization", name: "Yes We Do Your Projects" },
+              url,
+              provider: { "@type": "Organization", name: "Yes We Do Your Projects", url: BASE_URL },
               areaServed: ["United Kingdom", "United Arab Emirates", "Canada", "Lebanon"],
+              availableLanguage: ["English", "Arabic", "French"],
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+                { "@type": "ListItem", position: 2, name: "Services", item: `${BASE_URL}/services` },
+                { "@type": "ListItem", position: 3, name: s.name, item: url },
+              ],
             },
             {
               "@type": "FAQPage",
