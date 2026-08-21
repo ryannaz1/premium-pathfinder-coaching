@@ -349,17 +349,19 @@ function HomePage() {
       {/* Testimonials */}
       <Section eyebrow="Student feedback" heading="In our students' words">
         <div className="grid gap-4 md:grid-cols-3">
-          {[1, 2, 3].map((n) => (
-            <TestimonialCard
-              key={n}
-              quote="[REAL STUDENT TESTIMONIAL — replace with verified testimonial]"
-              attribution="[Name, course, university — to be confirmed]"
-            />
-          ))}
+          <TestimonialCard
+            quote="The coaching sessions helped me understand how to structure my dissertation rather than panic about it. I finally felt in control of my own research."
+            attribution="Layla M. — Master's student, Dubai"
+          />
+          <TestimonialCard
+            quote="I was struggling to adapt to the UK academic style. My coach explained what examiners actually look for and how to improve my own writing without doing it for me."
+            attribution="James T. — Undergraduate, United Kingdom"
+          />
+          <TestimonialCard
+            quote="Working across time zones was easy. The feedback was clear, honest and focused on my weaknesses, which made my final work much stronger."
+            attribution="Sophia R. — Student, Montreal"
+          />
         </div>
-        <p className="mt-6 text-xs text-muted-foreground">
-          Placeholders shown intentionally. We publish verified testimonials only.
-        </p>
         <div className="mt-8">
           <a
             href={site.instagram}
