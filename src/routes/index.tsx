@@ -405,13 +405,11 @@ function HomePage() {
       </Section>
 
       {/* Practical projects */}
-      <Section
-        eyebrow="Practical projects"
-        heading="From digital projects to physical models"
-      >
+      <Section eyebrow="Practical projects" heading="Physical models & project builds">
         <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          Some projects are built, not typed. We guide students through planning, materials,
-          technique and presentation so the finished piece communicates the idea behind it.
+          From digital projects to physical models. We provide guidance, tutoring and feedback on
+          planning, materials, technique and presentation — students build and submit their own
+          work.
         </p>
         <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
           {practicalProjects.map((p, i) => (
