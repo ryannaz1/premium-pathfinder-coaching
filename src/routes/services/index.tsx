@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
+import { FindSupportCTA } from "@/components/FindSupportCTA";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { majorCategories, practicalProjects, technicalAreas } from "@/lib/disciplines";
@@ -128,6 +129,12 @@ function ServicesPage() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-paper">
+        <div className="container-editorial py-14 md:py-16">
+          <FindSupportCTA tone="sand" />
         </div>
       </section>
 

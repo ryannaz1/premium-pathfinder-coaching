@@ -32,6 +32,7 @@ import { Route as DubaiAcademicSupportRouteImport } from './routes/dubai-academi
 import { Route as EngineeringProjectHelpRouteImport } from './routes/engineering-project-help'
 import { Route as EngineeringSoftwareSupportRouteImport } from './routes/engineering-software-support'
 import { Route as FinalYearProjectSupportRouteImport } from './routes/final-year-project-support'
+import { Route as FindSupportRouteImport } from './routes/find-support'
 import { Route as GisProjectHelpRouteImport } from './routes/gis-project-help'
 import { Route as InternationalStudentAcademicSupportRouteImport } from './routes/international-student-academic-support'
 import { Route as LawAcademicSupportRouteImport } from './routes/law-academic-support'
@@ -192,6 +193,11 @@ const EngineeringSoftwareSupportRoute =
 const FinalYearProjectSupportRoute = FinalYearProjectSupportRouteImport.update({
   id: '/final-year-project-support',
   path: '/final-year-project-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FindSupportRoute = FindSupportRouteImport.update({
+  id: '/find-support',
+  path: '/find-support',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GisProjectHelpRoute = GisProjectHelpRouteImport.update({
@@ -441,6 +447,7 @@ export interface FileRoutesByFullPath {
   '/engineering-project-help': typeof EngineeringProjectHelpRoute
   '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
   '/final-year-project-support': typeof FinalYearProjectSupportRoute
+  '/find-support': typeof FindSupportRoute
   '/gis-project-help': typeof GisProjectHelpRoute
   '/international-student-academic-support': typeof InternationalStudentAcademicSupportRoute
   '/law-academic-support': typeof LawAcademicSupportRoute
@@ -507,6 +514,7 @@ export interface FileRoutesByTo {
   '/engineering-project-help': typeof EngineeringProjectHelpRoute
   '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
   '/final-year-project-support': typeof FinalYearProjectSupportRoute
+  '/find-support': typeof FindSupportRoute
   '/gis-project-help': typeof GisProjectHelpRoute
   '/international-student-academic-support': typeof InternationalStudentAcademicSupportRoute
   '/law-academic-support': typeof LawAcademicSupportRoute
@@ -574,6 +582,7 @@ export interface FileRoutesById {
   '/engineering-project-help': typeof EngineeringProjectHelpRoute
   '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
   '/final-year-project-support': typeof FinalYearProjectSupportRoute
+  '/find-support': typeof FindSupportRoute
   '/gis-project-help': typeof GisProjectHelpRoute
   '/international-student-academic-support': typeof InternationalStudentAcademicSupportRoute
   '/law-academic-support': typeof LawAcademicSupportRoute
@@ -642,6 +651,7 @@ export interface FileRouteTypes {
     | '/engineering-project-help'
     | '/engineering-software-support'
     | '/final-year-project-support'
+    | '/find-support'
     | '/gis-project-help'
     | '/international-student-academic-support'
     | '/law-academic-support'
@@ -708,6 +718,7 @@ export interface FileRouteTypes {
     | '/engineering-project-help'
     | '/engineering-software-support'
     | '/final-year-project-support'
+    | '/find-support'
     | '/gis-project-help'
     | '/international-student-academic-support'
     | '/law-academic-support'
@@ -774,6 +785,7 @@ export interface FileRouteTypes {
     | '/engineering-project-help'
     | '/engineering-software-support'
     | '/final-year-project-support'
+    | '/find-support'
     | '/gis-project-help'
     | '/international-student-academic-support'
     | '/law-academic-support'
@@ -841,6 +853,7 @@ export interface RootRouteChildren {
   EngineeringProjectHelpRoute: typeof EngineeringProjectHelpRoute
   EngineeringSoftwareSupportRoute: typeof EngineeringSoftwareSupportRoute
   FinalYearProjectSupportRoute: typeof FinalYearProjectSupportRoute
+  FindSupportRoute: typeof FindSupportRoute
   GisProjectHelpRoute: typeof GisProjectHelpRoute
   InternationalStudentAcademicSupportRoute: typeof InternationalStudentAcademicSupportRoute
   LawAcademicSupportRoute: typeof LawAcademicSupportRoute
@@ -1045,6 +1058,13 @@ declare module '@tanstack/react-router' {
       path: '/final-year-project-support'
       fullPath: '/final-year-project-support'
       preLoaderRoute: typeof FinalYearProjectSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/find-support': {
+      id: '/find-support'
+      path: '/find-support'
+      fullPath: '/find-support'
+      preLoaderRoute: typeof FindSupportRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gis-project-help': {
@@ -1361,6 +1381,7 @@ const rootRouteChildren: RootRouteChildren = {
   EngineeringProjectHelpRoute: EngineeringProjectHelpRoute,
   EngineeringSoftwareSupportRoute: EngineeringSoftwareSupportRoute,
   FinalYearProjectSupportRoute: FinalYearProjectSupportRoute,
+  FindSupportRoute: FindSupportRoute,
   GisProjectHelpRoute: GisProjectHelpRoute,
   InternationalStudentAcademicSupportRoute:
     InternationalStudentAcademicSupportRoute,
