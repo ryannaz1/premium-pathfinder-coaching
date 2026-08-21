@@ -80,10 +80,10 @@ export const Route = createFileRoute("/who-we-help")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/who-we-help" },
+      { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/who-we-help" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/who-we-help" }],
+    links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/who-we-help" }],
     scripts: [
       {
         type: "application/ld+json",

@@ -18,10 +18,10 @@ export const Route = createFileRoute("/locations/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/locations" },
+      { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/locations" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/locations" }],
+    links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/locations" }],
   }),
   component: LocationsPage,
 });
