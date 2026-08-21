@@ -364,13 +364,12 @@ function HomePage() {
       {/* Technical & project support */}
       <Section
         tone="ink"
-        eyebrow="Technical & project support"
-        heading="Guidance for technical and software-based university projects"
+        eyebrow="Technical support"
+        heading="Technical tools & project support"
       >
         <p className="mb-10 max-w-2xl text-base leading-relaxed text-ink-foreground/75">
-          University projects increasingly require students to use specialist software, technical
-          tools and practical skills. We provide guidance and tutoring for projects involving
-          technical software, programming, modelling, data analysis and design.
+          Guidance and tutoring for students working with specialist software, technical tools,
+          modelling, data analysis and practical university projects.
         </p>
         <ul className="flex flex-wrap gap-2">
           {technicalAreas.map((t) => (
