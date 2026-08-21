@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { articles } from "@/lib/articles";
 import { socialMeta } from "@/lib/seo";
 
 const title = "Academic Resources & Study Guides | Yes We Do Your Projects";
@@ -152,7 +153,7 @@ function ResourcesPage() {
           <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2">
             {guides.map((g) => (
               <article key={g.heading} className="bg-card p-6 sm:p-8">
-                <h2 className="text-xl leading-snug text-foreground">{g.heading}</h2>
+                <h3 className="text-xl leading-snug text-foreground">{g.heading}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{g.copy}</p>
                 <Link
                   to={g.link.to as never}
