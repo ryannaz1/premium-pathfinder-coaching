@@ -48,7 +48,7 @@ export const locations: LocationContent[] = [
       },
       {
         title: "Referencing and integrity rules",
-        copy: "Harvard, APA, OSCOLA and MHRA all appear across UK institutions, and Turnitin is standard. We coach correct citation practice so your work is defensible.",
+        copy: "Harvard, APA, OSCOLA and MHRA all appear across UK institutions. We coach proper citation, originality and academic integrity so you can confidently develop and reference your own work.",
       },
     ],
     systemNotes: [
