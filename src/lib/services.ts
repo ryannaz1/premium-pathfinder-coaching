@@ -358,9 +358,11 @@ export function getService(slug: string): ServiceContent {
   return serviceBySlug[slug]!;
 }
 
+const BASE_URL = "https://premium-pathfinder-coaching.lovable.app";
+
 export function serviceHead(slug: string) {
   const s = getService(slug);
-  const url = `/services/${s.slug}`;
+  const url = `${BASE_URL}/services/${s.slug}`;
   return {
     meta: [
       { title: s.title },
