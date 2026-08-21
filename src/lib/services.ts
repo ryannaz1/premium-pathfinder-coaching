@@ -27,7 +27,7 @@ export const services: ServiceContent[] = [
     h1: "University tutoring for undergraduate, Bachelor's, Master's and PhD students",
     title: "University Tutoring | One-to-One Online Tutors | Yes We Do Your Projects",
     description:
-      "One-to-one university tutoring for undergraduate, Master's and international students. Online sessions built around your modules, assessments and deadlines.",
+      "One-to-one university tutoring for undergraduate, Bachelor's, Master's and PhD students, including international students, across a wide range of majors. Online sessions built around your modules, assessments and deadlines.",
     intro:
       "University tutoring is one-to-one teaching built around your actual modules, reading lists and assessments. A tutor works through the concepts you find hardest, checks your understanding, and helps you approach coursework and exams with a clear method rather than guesswork.",
     forWho: [
