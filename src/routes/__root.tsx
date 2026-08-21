@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloating } from "@/components/WhatsAppButton";
+import { socialMeta, SITE_URL, OG_IMAGE } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
