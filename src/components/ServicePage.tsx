@@ -42,7 +42,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
           <div>
             <p className="eyebrow">Who it is for</p>
             <h2 className="mt-3 text-2xl leading-snug sm:text-3xl">
-              Is {service.name.toLowerCase()} right for you?
+              Is {service.name} right for you?
             </h2>
           </div>
           <ul className="space-y-4">
@@ -129,7 +129,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
       <section className="bg-paper">
         <div className="container-editorial py-14 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-2xl leading-snug sm:text-3xl">
-            Talk to us about {service.name.toLowerCase()}
+            Talk to us about {service.name}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
             Tell us your course, level of study and deadline. We will tell you honestly whether we
