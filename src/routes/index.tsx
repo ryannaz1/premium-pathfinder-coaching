@@ -11,6 +11,7 @@ import {
 import heroImage from "@/assets/hero-coaching.jpg";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
+import { FindSupportCTA } from "@/components/FindSupportCTA";
 import { LocationCard } from "@/components/LocationCard";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -269,6 +270,13 @@ function HomePage() {
               <p className="text-xs text-muted-foreground">on Instagram @yeswedoyourprojects</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Course finder CTA */}
+      <section className="border-b border-border bg-paper">
+        <div className="container-editorial pb-14 md:pb-16">
+          <FindSupportCTA tone="sand" />
         </div>
       </section>
 
@@ -652,6 +660,9 @@ function HomePage() {
             >
               Chat with an academic coach
             </a>
+          </div>
+          <div className="mx-auto mt-10 max-w-2xl text-left">
+            <FindSupportCTA tone="ink" />
           </div>
         </div>
       </section>
