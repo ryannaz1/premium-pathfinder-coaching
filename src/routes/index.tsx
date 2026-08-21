@@ -111,7 +111,7 @@ const services = [
 const audiences = [
   { icon: GraduationCap, label: "University students", copy: "Undergraduates who want to understand their subject, not just survive the deadline." },
   { icon: Users, label: "International students", copy: "Students adapting to a new academic system, language and set of expectations." },
-  { icon: NotebookPen, label: "Master's students", copy: "Researchers navigating dissertations, methodology and higher academic standards." },
+  { icon: NotebookPen, label: "Master's & PhD students", copy: "Researchers navigating theses, dissertations, methodology and higher academic standards." },
   { icon: Presentation, label: "Exam candidates", copy: "Students preparing for high-stakes assessments including the SAT." },
   { icon: BookOpen, label: "Parents", copy: "Families arranging serious, well-structured academic support for their child." },
   { icon: LineChart, label: "Ambitious students", copy: "Students aiming higher who want expert mentoring alongside their studies." },
@@ -132,7 +132,7 @@ const reasons = [
 ];
 
 const locations = [
-  { place: "United Kingdom", description: "Coaching for UK undergraduate and Master's students, including international students.", to: "/locations/uk" },
+  { place: "United Kingdom", description: "Coaching for UK undergraduate, Bachelor's, Master's and PhD students, including international students.", to: "/locations/uk" },
   { place: "Dubai", description: "Premium private academic support for students and families in Dubai.", to: "/locations/dubai" },
   { place: "Abu Dhabi", description: "One-to-one tutoring and coaching for Abu Dhabi students.", to: "/locations/abu-dhabi" },
   { place: "Montreal & Quebec", description: "Support for university students studying in Montreal and across Quebec.", to: "/locations/montreal" },
