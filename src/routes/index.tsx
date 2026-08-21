@@ -14,6 +14,14 @@ import { FAQ, type FaqItem } from "@/components/FAQ";
 import { LocationCard } from "@/components/LocationCard";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import {
+  academicLevels,
+  helpAreas,
+  majorCategories,
+  practicalProjects,
+  softwareGrid,
+  technicalAreas,
+} from "@/lib/disciplines";
 import { site, whatsappHref } from "@/lib/site";
 
 const title = "Academic Support for Every Major, Course & Level | Yes We Do Your Projects";
