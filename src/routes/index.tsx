@@ -16,20 +16,44 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, whatsappHref } from "@/lib/site";
 
-const title = "Premium Academic Coaching & University Tutoring | Yes We Do Your Projects";
+const title = "Academic Support for Every Major, Course & Level | Yes We Do Your Projects";
 const description =
-  "One-to-one academic coaching, university tutoring and dissertation support for all majors, courses, assignments and research levels — delivered in English, Arabic and French.";
+  "Academic coaching, university tutoring, research guidance and technical project support across all majors and levels — undergraduate to PhD, in English, Arabic and French.";
 
 const faqs: FaqItem[] = [
   {
-    question: "Do you write assignments, dissertations or theses for students?",
+    question: "What subjects do you cover?",
     answer:
-      "No. We are an academic coaching and tutoring service. We help you plan, research, structure, improve and understand your work through guidance and feedback. You remain fully responsible for producing and submitting your own academic work.",
+      "We support students across a wide range of majors, disciplines and university courses. If your subject isn't listed, contact us and we'll assess your requirements.",
   },
   {
-    question: "Who do you work with?",
+    question: "Do you support Master's and PhD students?",
     answer:
-      "Undergraduate and Master's students, international students studying abroad, students preparing for important exams such as the SAT, and parents arranging premium academic support for their children.",
+      "Yes. We provide research guidance, thesis/dissertation coaching, methodology support, academic writing guidance and research planning.",
+  },
+  {
+    question: "Can you help with engineering and technical projects?",
+    answer:
+      "Yes. We provide guidance and tutoring for technical projects involving areas such as GIS, Revit, AutoCAD, 3ds Max, Arduino, SPSS, Photoshop, CAD, modelling, data analysis and more.",
+  },
+  {
+    question: "Can you help with architecture projects and maquettes?",
+    answer:
+      "Yes. We can provide guidance for architectural design projects, technical drawings, 3D modelling, presentations and physical model/maquette projects.",
+  },
+  {
+    question: "Do you support all majors?",
+    answer:
+      "We support a broad range of majors across engineering, medicine, business, technology, architecture, design, sciences, humanities, social sciences, law and more.",
+  },
+  {
+    question: "What languages do you provide support in?",
+    answer: "English, Arabic and French.",
+  },
+  {
+    question: "Do you complete assignments for students?",
+    answer:
+      "No. We provide tutoring, coaching, research guidance, technical guidance and feedback. Students remain responsible for producing and submitting their own academic work.",
   },
   {
     question: "Are sessions online or in person?",
@@ -40,11 +64,6 @@ const faqs: FaqItem[] = [
     question: "How do I get started?",
     answer:
       "Message us on WhatsApp or email us with your subject, level of study and what you would like support with. We will discuss your goals in a consultation and recommend the right format of support.",
-  },
-  {
-    question: "Which subjects, courses and levels do you cover?",
-    answer:
-      "We support all majors, courses and assignments across undergraduate, Master's and PhD level, including senior projects, Master's theses and doctoral dissertations. If your subject is not a good fit for our team, we will tell you honestly.",
   },
 ];
 
