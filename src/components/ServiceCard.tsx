@@ -11,7 +11,7 @@ type Props = {
 export function ServiceCard({ title, description, to, index }: Props) {
   return (
     <Link
-      to={to}
+      to={to as never}
       className="group flex flex-col justify-between gap-6 border border-border bg-card p-6 transition-all duration-300 hover:border-accent/60 hover:shadow-card sm:p-8"
     >
       <div>
