@@ -137,6 +137,35 @@ export function Footer() {
           <Column title="Company" links={companyLinks} />
         </div>
 
+        <div className="mt-12 border-t border-ink-foreground/15 pt-10">
+          <h3 className="text-[0.7rem] font-sans font-semibold uppercase tracking-[0.18em] text-ink-foreground/60">
+            Explore academic support
+          </h3>
+          <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+            {directoryGroups.map((group) => (
+              <div key={group}>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-foreground/50">
+                  {group}
+                </p>
+                <ul className="mt-3 space-y-2">
+                  {landings
+                    .filter((l) => l.group === group)
+                    .map((l) => (
+                      <li key={l.slug}>
+                        <Link
+                          to={`/${l.slug}` as never}
+                          className="text-sm text-ink-foreground/75 transition-colors hover:text-ink-foreground"
+                        >
+                          {l.label}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-12 border-t border-ink-foreground/15 pt-6">
           <p className="text-xs leading-relaxed text-ink-foreground/60">
             Yes We Do Your Projects provides coaching, tutoring and guidance only. We do not write,
