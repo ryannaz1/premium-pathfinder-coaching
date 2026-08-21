@@ -9,7 +9,7 @@ import { services } from "@/lib/services";
 
 const title = "Academic Coaching & Tutoring Services | Yes We Do Your Projects";
 const description =
-  "University tutoring, academic coaching, thesis and dissertation coaching, research methodology, academic writing, editing, exam preparation, SAT preparation and statistics support.";
+  "University tutoring, academic coaching, thesis and dissertation coaching, research methodology, academic writing, editing, exam preparation, SAT prep and statistics support — across all majors, courses, assignments, senior projects, Master's theses and PhD work, in English, Arabic and French.";
 
 const faqs: FaqItem[] = [
   {
@@ -75,9 +75,10 @@ function ServicesPage() {
             Academic coaching and tutoring services
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Expert one-to-one support across tutoring, coaching, research, academic writing,
-            editing, exam preparation and SAT preparation. Every service is built around your own
-            course, your own work and your own deadlines.
+            Expert one-to-one support across all majors, courses, assignments, senior projects,
+            Master's theses, dissertations and PhD research. Coaching is available in English, Arabic
+            and French, and every service is built around your own course, your own work and your own
+            deadlines.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <CTAButton to="/contact" withArrow>
