@@ -13,7 +13,6 @@ import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { LocationCard } from "@/components/LocationCard";
 import { ServiceCard } from "@/components/ServiceCard";
-import { TestimonialCard } from "@/components/TestimonialCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, whatsappHref } from "@/lib/site";
 
@@ -123,7 +122,7 @@ const trustPoints = [
 const international = [
   { title: "A new academic system", copy: "Marking criteria, classification language and expectations around independent research differ between the UK, North America and the Gulf. We make them explicit instead of leaving you to infer them." },
   { title: "Academic English", copy: "Writing at university level in an additional language is a skill of its own. We coach register, structure and argument — your ideas stay yours." },
-  { title: "Referencing and integrity", copy: "Citation conventions and originality rules vary by institution. We coach practice that is defensible under any similarity check." },
+  { title: "Referencing and integrity", copy: "Citation conventions and originality rules vary by institution. We coach proper citation, originality and academic integrity so students can confidently develop and reference their own work." },
   { title: "Your time zone", copy: "Sessions are scheduled in GMT/BST, GST, Eastern Time or Beirut time, including evenings and weekends." },
 ];
 
