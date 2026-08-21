@@ -44,7 +44,6 @@ import { Route as PhotoshopAcademicProjectHelpRouteImport } from './routes/photo
 import { Route as PhysicalProjectModelsRouteImport } from './routes/physical-project-models'
 import { Route as ResearchMethodologySupportRouteImport } from './routes/research-methodology-support'
 import { Route as ResearchProposalSupportRouteImport } from './routes/research-proposal-support'
-import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as RevitProjectHelpRouteImport } from './routes/revit-project-help'
 import { Route as ScienceAcademicSupportRouteImport } from './routes/science-academic-support'
 import { Route as SocialScienceAcademicSupportRouteImport } from './routes/social-science-academic-support'
@@ -58,6 +57,7 @@ import { Route as LocationsDubaiRouteImport } from './routes/locations/dubai'
 import { Route as LocationsLebanonRouteImport } from './routes/locations/lebanon'
 import { Route as LocationsMontrealRouteImport } from './routes/locations/montreal'
 import { Route as LocationsUkRouteImport } from './routes/locations/uk'
+import { Route as ResourcesIndexRouteImport } from './routes/resources/index'
 import { Route as ServicesIndexRouteImport } from './routes/services/index'
 import { Route as ServicesAcademicCoachingRouteImport } from './routes/services/academic-coaching'
 import { Route as ServicesAcademicWritingCoachingRouteImport } from './routes/services/academic-writing-coaching'
@@ -252,11 +252,6 @@ const ResearchProposalSupportRoute = ResearchProposalSupportRouteImport.update({
   path: '/research-proposal-support',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ResourcesRoute = ResourcesRouteImport.update({
-  id: '/resources',
-  path: '/resources',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const RevitProjectHelpRoute = RevitProjectHelpRouteImport.update({
   id: '/revit-project-help',
   path: '/revit-project-help',
@@ -322,6 +317,11 @@ const LocationsMontrealRoute = LocationsMontrealRouteImport.update({
 const LocationsUkRoute = LocationsUkRouteImport.update({
   id: '/locations/uk',
   path: '/locations/uk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesIndexRoute = ResourcesIndexRouteImport.update({
+  id: '/resources/',
+  path: '/resources/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
@@ -418,7 +418,6 @@ export interface FileRoutesByFullPath {
   '/physical-project-models': typeof PhysicalProjectModelsRoute
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
-  '/resources': typeof ResourcesRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
@@ -441,6 +440,7 @@ export interface FileRoutesByFullPath {
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
   '/locations/': typeof LocationsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -479,7 +479,6 @@ export interface FileRoutesByTo {
   '/physical-project-models': typeof PhysicalProjectModelsRoute
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
-  '/resources': typeof ResourcesRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
@@ -502,6 +501,7 @@ export interface FileRoutesByTo {
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
   '/locations': typeof LocationsIndexRoute
+  '/resources': typeof ResourcesIndexRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
@@ -541,7 +541,6 @@ export interface FileRoutesById {
   '/physical-project-models': typeof PhysicalProjectModelsRoute
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
-  '/resources': typeof ResourcesRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
@@ -564,6 +563,7 @@ export interface FileRoutesById {
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
   '/locations/': typeof LocationsIndexRoute
+  '/resources/': typeof ResourcesIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -604,7 +604,6 @@ export interface FileRouteTypes {
     | '/physical-project-models'
     | '/research-methodology-support'
     | '/research-proposal-support'
-    | '/resources'
     | '/revit-project-help'
     | '/science-academic-support'
     | '/social-science-academic-support'
@@ -627,6 +626,7 @@ export interface FileRouteTypes {
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
     | '/locations/'
+    | '/resources/'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -665,7 +665,6 @@ export interface FileRouteTypes {
     | '/physical-project-models'
     | '/research-methodology-support'
     | '/research-proposal-support'
-    | '/resources'
     | '/revit-project-help'
     | '/science-academic-support'
     | '/social-science-academic-support'
@@ -688,6 +687,7 @@ export interface FileRouteTypes {
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
     | '/locations'
+    | '/resources'
     | '/services'
   id:
     | '__root__'
@@ -726,7 +726,6 @@ export interface FileRouteTypes {
     | '/physical-project-models'
     | '/research-methodology-support'
     | '/research-proposal-support'
-    | '/resources'
     | '/revit-project-help'
     | '/science-academic-support'
     | '/social-science-academic-support'
@@ -749,6 +748,7 @@ export interface FileRouteTypes {
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
     | '/locations/'
+    | '/resources/'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
@@ -788,7 +788,6 @@ export interface RootRouteChildren {
   PhysicalProjectModelsRoute: typeof PhysicalProjectModelsRoute
   ResearchMethodologySupportRoute: typeof ResearchMethodologySupportRoute
   ResearchProposalSupportRoute: typeof ResearchProposalSupportRoute
-  ResourcesRoute: typeof ResourcesRoute
   RevitProjectHelpRoute: typeof RevitProjectHelpRoute
   ScienceAcademicSupportRoute: typeof ScienceAcademicSupportRoute
   SocialScienceAcademicSupportRoute: typeof SocialScienceAcademicSupportRoute
@@ -811,6 +810,7 @@ export interface RootRouteChildren {
   ServicesThesisDissertationCoachingRoute: typeof ServicesThesisDissertationCoachingRoute
   ServicesUniversityTutoringRoute: typeof ServicesUniversityTutoringRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
+  ResourcesIndexRoute: typeof ResourcesIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
@@ -1061,13 +1061,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResearchProposalSupportRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/resources': {
-      id: '/resources'
-      path: '/resources'
-      fullPath: '/resources'
-      preLoaderRoute: typeof ResourcesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/revit-project-help': {
       id: '/revit-project-help'
       path: '/revit-project-help'
@@ -1157,6 +1150,13 @@ declare module '@tanstack/react-router' {
       path: '/locations/uk'
       fullPath: '/locations/uk'
       preLoaderRoute: typeof LocationsUkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/': {
+      id: '/resources/'
+      path: '/resources'
+      fullPath: '/resources/'
+      preLoaderRoute: typeof ResourcesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/': {
@@ -1269,7 +1269,6 @@ const rootRouteChildren: RootRouteChildren = {
   PhysicalProjectModelsRoute: PhysicalProjectModelsRoute,
   ResearchMethodologySupportRoute: ResearchMethodologySupportRoute,
   ResearchProposalSupportRoute: ResearchProposalSupportRoute,
-  ResourcesRoute: ResourcesRoute,
   RevitProjectHelpRoute: RevitProjectHelpRoute,
   ScienceAcademicSupportRoute: ScienceAcademicSupportRoute,
   SocialScienceAcademicSupportRoute: SocialScienceAcademicSupportRoute,
@@ -1294,6 +1293,7 @@ const rootRouteChildren: RootRouteChildren = {
     ServicesThesisDissertationCoachingRoute,
   ServicesUniversityTutoringRoute: ServicesUniversityTutoringRoute,
   LocationsIndexRoute: LocationsIndexRoute,
+  ResourcesIndexRoute: ResourcesIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
