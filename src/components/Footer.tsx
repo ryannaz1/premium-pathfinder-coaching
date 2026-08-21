@@ -128,7 +128,12 @@ export function Footer() {
           </div>
 
           <Column title="Services" links={serviceLinks} />
-          <Column title="Locations" links={locationLinks} />
+          <div>
+            <Column title="Locations" links={locationLinks} />
+            <p className="mt-4 max-w-xs text-xs leading-relaxed text-ink-foreground/60">
+              Online academic support across multiple time zones.
+            </p>
+          </div>
           <Column title="Company" links={companyLinks} />
         </div>
 
