@@ -81,10 +81,10 @@ export const Route = createFileRoute("/who-we-help")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/who-we-help" },
+      { property: "og:url", content: "https://yeswedoyourprojects.online/who-we-help" },
       ...socialMeta(title, description),
     ],
-    links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/who-we-help" }],
+    links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/who-we-help" }],
     scripts: [
       {
         type: "application/ld+json",

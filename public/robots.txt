@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://premium-pathfinder-coaching.lovable.app/sitemap.xml
+Sitemap: https://yeswedoyourprojects.online/sitemap.xml

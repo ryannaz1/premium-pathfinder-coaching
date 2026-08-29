@@ -42,10 +42,10 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/about" },
+      { property: "og:url", content: "https://yeswedoyourprojects.online/about" },
       ...socialMeta(title, description),
     ],
-    links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/about" }],
   }),
   component: AboutPage,
 });

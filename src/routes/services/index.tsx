@@ -65,10 +65,10 @@ export const Route = createFileRoute("/services/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/services" },
+      { property: "og:url", content: "https://yeswedoyourprojects.online/services" },
       ...socialMeta(title, description),
     ],
-    links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/services" }],
+    links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/services" }],
     scripts: [
       {
         type: "application/ld+json",

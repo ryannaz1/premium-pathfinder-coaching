@@ -1,4 +1,4 @@
-export const SITE_URL = "https://premium-pathfinder-coaching.lovable.app";
+export const SITE_URL = "https://yeswedoyourprojects.online";
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 /** Social meta tags shared by every page (og:image + full twitter card set). */

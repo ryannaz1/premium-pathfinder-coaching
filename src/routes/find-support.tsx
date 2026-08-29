@@ -11,7 +11,7 @@ import { socialMeta } from "@/lib/seo";
 const title = "Find Support for My Course | Yes We Do Your Projects";
 const description =
   "Tell us your university, course and academic level and we'll help you find the right academic coaching, tutoring, research or technical project support.";
-const url = "https://premium-pathfinder-coaching.lovable.app/find-support";
+const url = "https://yeswedoyourprojects.online/find-support";
 
 export const Route = createFileRoute("/find-support")({
   head: () => ({

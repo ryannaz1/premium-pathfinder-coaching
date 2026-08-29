@@ -338,7 +338,7 @@ export function getLocation(slug: string): LocationContent {
   return locationBySlug[slug]!;
 }
 
-const BASE_URL = "https://premium-pathfinder-coaching.lovable.app";
+const BASE_URL = "https://yeswedoyourprojects.online";
 
 export function locationHead(slug: string) {
   const l = getLocation(slug);
