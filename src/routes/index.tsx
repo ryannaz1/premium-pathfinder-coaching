@@ -184,10 +184,10 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/" },
+      { property: "og:url", content: "https://yeswedoyourprojects.online/" },
       ...socialMeta(title, description),
     ],
-    links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/" }],
     scripts: [
       {
         type: "application/ld+json",

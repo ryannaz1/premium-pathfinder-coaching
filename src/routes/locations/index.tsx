@@ -19,10 +19,10 @@ export const Route = createFileRoute("/locations/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://premium-pathfinder-coaching.lovable.app/locations" },
+      { property: "og:url", content: "https://yeswedoyourprojects.online/locations" },
       ...socialMeta(title, description),
     ],
-    links: [{ rel: "canonical", href: "https://premium-pathfinder-coaching.lovable.app/locations" }],
+    links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/locations" }],
   }),
   component: LocationsPage,
 });

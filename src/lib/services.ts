@@ -359,7 +359,7 @@ export function getService(slug: string): ServiceContent {
   return serviceBySlug[slug]!;
 }
 
-const BASE_URL = "https://premium-pathfinder-coaching.lovable.app";
+const BASE_URL = "https://yeswedoyourprojects.online";
 
 export function serviceHead(slug: string) {
   const s = getService(slug);

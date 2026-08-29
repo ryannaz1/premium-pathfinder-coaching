@@ -16,7 +16,7 @@ export const landings: LandingContent[] = [
   ...modelLandings,
 ];
 
-const BASE_URL = "https://premium-pathfinder-coaching.lovable.app";
+const BASE_URL = "https://yeswedoyourprojects.online";
 
 export function getLanding(slug: string): LandingContent {
   const found = landings.find((l) => l.slug === slug);
