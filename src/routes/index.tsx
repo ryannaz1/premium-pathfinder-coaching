@@ -1,30 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  BookOpen,
+  ArrowRight,
   GraduationCap,
-  LineChart,
-  NotebookPen,
-  Presentation,
-  Users,
+  Globe,
+  Languages,
+  MapPin,
+  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-coaching.jpg";
+import { CategoryGrid } from "@/components/CategoryGrid";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { FindSupportCTA } from "@/components/FindSupportCTA";
-import { LocationCard } from "@/components/LocationCard";
-import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import {
-  academicLevels,
-  helpAreas,
-  majorCategories,
-  practicalProjects,
-  softwareGrid,
-  technicalAreas,
-} from "@/lib/disciplines";
+import { academicLevels, majorCategories, softwareGrid } from "@/lib/disciplines";
 import { site, whatsappHref } from "@/lib/site";
 import { socialMeta } from "@/lib/seo";
+
 
 const title = "Academic Support for Every Major, Course & Level | Yes We Do Your Projects";
 const description =
@@ -97,83 +91,64 @@ const faqs: FaqItem[] = [
   },
 ];
 
-const services = [
+const heroPoints = [
   {
-    title: "University Tutoring",
-    description:
-      "One-to-one tutoring that builds genuine subject understanding, from first-year modules to advanced Master's coursework.",
+    icon: ShieldCheck,
+    title: "Academic integrity",
+    copy: "Guidance and coaching only — your work stays yours.",
   },
   {
-    title: "Academic Coaching",
-    description:
-      "Structured guidance on planning, priorities, workload and academic strategy so you work with direction rather than pressure.",
+    icon: Sparkles,
+    title: "Expert guidance",
+    copy: "Specialists across academic and technical disciplines.",
   },
   {
-    title: "Thesis & Dissertation Coaching",
-    description:
-      "Support with topic refinement, research questions, structure and feedback across every stage of your own research project.",
+    icon: Languages,
+    title: "English · Arabic · French",
+    copy: "Explanations in the language you think in.",
   },
   {
-    title: "Research Methodology",
-    description:
-      "Choose and justify the right methods, design your study properly, and explain your approach with academic confidence.",
+    icon: Globe,
+    title: "Online, your time zone",
+    copy: "UK, UAE, Canada and Lebanon scheduling.",
   },
-  {
-    title: "Academic Writing Coaching",
-    description:
-      "Sharpen structure, clarity, argumentation, critical thinking and referencing so your writing meets university expectations.",
-  },
-  {
-    title: "SAT Preparation",
-    description:
-      "Personalised preparation built around a diagnostic assessment, weak-area work, practice strategy and exam technique.",
-  },
-];
-
-const audiences = [
-  { icon: GraduationCap, label: "University students", copy: "Undergraduates who want to understand their subject, not just survive the deadline." },
-  { icon: Users, label: "International students", copy: "Students adapting to a new academic system, language and set of expectations." },
-  { icon: NotebookPen, label: "Master's & PhD students", copy: "Researchers navigating theses, dissertations, methodology and higher academic standards." },
-  { icon: Presentation, label: "Exam candidates", copy: "Students preparing for high-stakes assessments including the SAT." },
-  { icon: BookOpen, label: "Parents", copy: "Families arranging serious, well-structured academic support for their child." },
-  { icon: LineChart, label: "Ambitious students", copy: "Students aiming higher who want expert mentoring alongside their studies." },
-];
-
-const steps = [
-  { title: "Consultation", copy: "Tell us your course, level of study and what you are finding difficult. We listen before we recommend anything." },
-  { title: "Plan", copy: "We agree a clear plan: what we will cover, how often we meet and what progress should look like." },
-  { title: "Coaching", copy: "One-to-one online sessions with a coach, plus structured feedback on your own drafts and work." },
-  { title: "Progress", copy: "We review what improved, adjust the plan and keep you accountable through to your deadline or exam." },
 ];
 
 const reasons = [
-  { title: "Coaching, not shortcuts", copy: "We build skills you keep. Every piece of work stays yours, which protects your academic integrity." },
-  { title: "One-to-one attention", copy: "No group classes or recycled slide decks — support is shaped around your course and your goals." },
-  { title: "International perspective", copy: "We work with students across the UK, the UAE, Canada and Lebanon, and understand each system's expectations." },
-  { title: "Clear communication", copy: "Fast replies on WhatsApp, straight answers about what we can and cannot do, and no pressure tactics." },
+  "One-to-one support, never group classes",
+  "Academic and technical specialists",
+  "Support from undergraduate to PhD",
+  "English, Arabic and French",
+  "Clear, fast replies on WhatsApp",
+  "Your work stays entirely your own",
+];
+
+const steps = [
+  { title: "Tell us", copy: "Share your course, level and what you're working on." },
+  { title: "Match", copy: "We recommend the right format of academic or technical support." },
+  { title: "Work together", copy: "One-to-one sessions, guidance and structured feedback." },
+  { title: "Submit with confidence", copy: "You understand, finish and submit your own work." },
 ];
 
 const locations = [
-  { place: "United Kingdom", description: "Coaching for UK undergraduate, Bachelor's, Master's and PhD students, including international students.", to: "/locations/uk" },
-  { place: "Dubai", description: "Premium private academic support for students and families in Dubai.", to: "/locations/dubai" },
-  { place: "Abu Dhabi", description: "One-to-one tutoring and coaching for Abu Dhabi students.", to: "/locations/abu-dhabi" },
-  { place: "Montreal & Quebec", description: "Support for university students studying in Montreal and across Quebec.", to: "/locations/montreal" },
-  { place: "Lebanon", description: "Academic coaching for Lebanese students studying locally or abroad.", to: "/locations/lebanon" },
+  { place: "United Kingdom", copy: "UK universities, all levels", to: "/locations/uk" },
+  { place: "UAE", copy: "Dubai, Abu Dhabi & all Emirates", to: "/locations/dubai" },
+  { place: "Canada", copy: "Montreal & across Quebec", to: "/locations/montreal" },
+  { place: "Lebanon", copy: "Lebanese universities", to: "/locations/lebanon" },
 ];
 
-const trustPoints = [
-  { stat: "13,000+", label: "Students following @yeswedoyourprojects" },
-  { stat: "4 regions", label: "UK · UAE · Quebec · Lebanon" },
-  { stat: "1-to-1", label: "Every session, never group classes" },
-  { stat: "100% yours", label: "You write and submit your own work" },
-];
+const majorLinks: Record<string, string> = {
+  Engineering: "/engineering-project-help",
+  "Medicine & Health": "/medicine-academic-support",
+  "Business & Management": "/business-academic-support",
+  "Computer Science & Technology": "/computer-science-academic-support",
+  "Architecture & Design": "/architecture-project-help",
+  "Arts & Humanities": "/arts-humanities-academic-support",
+  "Social Sciences": "/social-science-academic-support",
+  Law: "/law-academic-support",
+  Science: "/science-academic-support",
+};
 
-const international = [
-  { title: "A new academic system", copy: "Marking criteria, classification language and expectations around independent research differ between the UK, North America and the Gulf. We make them explicit instead of leaving you to infer them." },
-  { title: "Academic English", copy: "Writing at university level in an additional language is a skill of its own. We coach register, structure and argument — your ideas stay yours." },
-  { title: "Referencing and integrity", copy: "Citation conventions and originality rules vary by institution. We coach proper citation, originality and academic integrity so students can confidently develop and reference their own work." },
-  { title: "Your time zone", copy: "Sessions are scheduled in GMT/BST, GST, Eastern Time or Beirut time, including evenings and weekends." },
-];
 
 
 export const Route = createFileRoute("/")({
@@ -211,489 +186,415 @@ function HomePage() {
     <>
       {/* Hero */}
       <section className="border-b border-border bg-paper">
-        <div className="container-editorial grid gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
+        <div className="container-editorial grid gap-10 py-12 md:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16">
           <div>
-            <p className="eyebrow">Academic coaching · UK · UAE · Canada · Lebanon</p>
-            <h1 className="mt-5 text-4xl leading-[1.08] text-foreground sm:text-5xl lg:text-6xl">
-              Academic support for every major, every course &amp; every level
+            <p className="eyebrow">Academic &amp; technical project support</p>
+            <h1 className="mt-4 text-[2rem] leading-[1.1] text-foreground sm:text-5xl lg:text-[3.4rem]">
+              Expert support for your university work.
+              <span className="mt-1 block text-accent">You keep the learning.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              From your first university assignment to your final-year project, Master's
-              dissertation or PhD research, we provide personalised academic, research and
-              technical guidance across disciplines — in English, Arabic and French.
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              One-to-one coaching, tutoring, research guidance and technical project support for
+              university students — across every major, from first assignment to PhD research.
             </p>
-            <p className="mt-5 max-w-xl font-display text-lg leading-snug text-foreground">
-              Engineering. Medicine. Business. Architecture. Computer Science. Arts. Sciences.
-              Every major, every level.
-            </p>
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {[
-                "Undergraduate",
-                "Bachelor's",
-                "Master's",
-                "PhD",
-                "International students",
-                "Students studying abroad",
-              ].map((tag) => (
-                <li
-                  key={tag}
-                  className="border border-border px-3 py-1 text-xs tracking-wide text-muted-foreground"
-                >
-                  {tag}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton to="/contact" variant="primary" withArrow>
-                Book a consultation
+
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <CTAButton to="/find-support" variant="primary" withArrow className="px-6 py-3.5">
+                Get expert support
               </CTAButton>
-              <WhatsAppButton label="Chat on WhatsApp" variant="outline" />
+              <WhatsAppButton label="Chat on WhatsApp" variant="outline" className="px-6 py-3.5" />
             </div>
-            <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
-              Coaching and guidance only. We never write or submit academic work on your behalf.
-            </p>
+
+            <dl className="mt-9 grid gap-x-6 gap-y-5 sm:grid-cols-2">
+              {heroPoints.map(({ icon: Icon, title, copy }) => (
+                <div key={title} className="flex gap-3">
+                  <Icon className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
+                  <div className="min-w-0">
+                    <dt className="text-sm font-semibold text-foreground">{title}</dt>
+                    <dd className="mt-1 text-xs leading-relaxed text-muted-foreground">{copy}</dd>
+                  </div>
+                </div>
+              ))}
+            </dl>
           </div>
 
           <div className="relative">
             <img
               src={heroImage}
-              alt="A university student studying with notes, books and a laptop in a quiet library"
+              alt="A university student working on coursework with notes, books and a laptop"
               width={1200}
               height={1364}
               fetchPriority="high"
               decoding="async"
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-[4/5] w-full rounded-2xl object-cover shadow-card sm:aspect-[5/4] lg:aspect-[4/5]"
             />
-            <div className="absolute -bottom-px left-0 hidden bg-paper p-5 pr-8 sm:block">
-              <p className="eyebrow">Trusted by a community of</p>
-              <p className="mt-1 font-display text-2xl text-foreground">13,000+ followers</p>
-              <p className="text-xs text-muted-foreground">on Instagram @yeswedoyourprojects</p>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Course finder CTA */}
-      <section className="border-b border-border bg-paper">
-        <div className="container-editorial pb-14 md:pb-16">
-          <FindSupportCTA tone="sand" />
-        </div>
-      </section>
-
-      {/* Trust strip */}
-      <section className="border-b border-border bg-sand">
-        <div className="container-editorial grid grid-cols-2 gap-x-6 gap-y-8 py-10 md:grid-cols-4 md:py-12">
-          {trustPoints.map((t) => (
-            <div key={t.stat}>
-              <p className="font-display text-2xl leading-none text-foreground sm:text-3xl">
-                {t.stat}
-              </p>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                {t.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-
-      {/* What we help with */}
-      <Section eyebrow="What we help with" heading="Expert support across every level of university work">
-        <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          From first-year assignments to PhD dissertations, and from engineering to business,
-          humanities and health sciences. We coach across all majors, all courses and all
-          assignment types — in English, Arabic and French.
-        </p>
-        <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <div key={s.title} className="bg-card p-6 sm:p-8">
-              <span className="eyebrow">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-3 text-xl text-foreground">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.description}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8">
-          <CTAButton to="/services" variant="outline" withArrow>
-            See all services
-          </CTAButton>
-        </div>
-      </Section>
-
-      {/* Help areas */}
-      <Section tone="sand" eyebrow="Scope of support" heading="What can we help you with?">
-        <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          Coaching, tutoring, research guidance and technical guidance across the full range of
-          university work — at every stage, from brief to submission.
-        </p>
-        <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {helpAreas.map((area) => (
-            <div key={area} className="bg-card px-5 py-4 text-sm text-foreground">
-              {area}
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Majors */}
-      <Section
-        eyebrow="Majors & disciplines"
-        heading="All majors. All courses. All academic levels."
-      >
-        <p className="mb-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          We support students across virtually every university discipline, from engineering and
-          medicine to business, computer science, architecture, arts, sciences, law and the social
-          sciences.
-        </p>
-        <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          If you don't see your subject listed, contact us — we can assess your requirements and
-          recommend the appropriate support.
-        </p>
-        <div className="grid gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-          {majorCategories.map((cat) => (
-            <div key={cat.name} className="bg-card p-6 sm:p-8">
-              <h3 className="text-lg text-foreground">{cat.name}</h3>
-              <ul className="mt-4 space-y-1.5">
-                {cat.subjects.map((s) => (
-                  <li key={s} className="text-sm leading-relaxed text-muted-foreground">
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-foreground">
-          Don't see your major?{" "}
-          <Link to="/contact" className="font-semibold underline underline-offset-4">
-            Contact us
-          </Link>{" "}
-          — we support many additional disciplines.
-        </p>
-      </Section>
-
-      {/* Technical & project support */}
-      <Section
-        tone="ink"
-        eyebrow="Technical support"
-        heading="Technical tools & project support"
-      >
-        <p className="mb-10 max-w-2xl text-base leading-relaxed text-ink-foreground/75">
-          Guidance and tutoring for students working with specialist software, technical tools,
-          modelling, data analysis and practical university projects.
-        </p>
-        <ul className="flex flex-wrap gap-2">
-          {technicalAreas.map((t) => (
-            <li
-              key={t}
-              className="border border-ink-foreground/25 px-3 py-1.5 text-sm text-ink-foreground/90"
+      {/* Primary conversion interaction */}
+      <section className="border-b border-border bg-background">
+        <div className="container-editorial section-y">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Choose your area</p>
+            <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">What do you need help with?</h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Pick the closest area and see exactly how we support it — or tell us about your
+              course and we&rsquo;ll point you to the right support.
+            </p>
+          </div>
+          <CategoryGrid className="mt-10" />
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <CTAButton to="/services" variant="outline" withArrow>
+              See all services
+            </CTAButton>
+            <Link
+              to="/find-support"
+              className="inline-flex items-center gap-1.5 px-1 py-3 text-sm font-semibold text-foreground underline-offset-4 hover:underline"
             >
-              {t}
-            </li>
-          ))}
-        </ul>
+              Can&rsquo;t find your course?
+              <ArrowRight className="size-4 text-accent" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        <div className="mt-14">
-          <p className="eyebrow">Software guidance</p>
-          <h3 className="mt-3 max-w-2xl text-2xl leading-tight text-ink-foreground">
-            The tools students most often need help with
-          </h3>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Why / process / locations */}
+      <section className="border-b border-border bg-sand">
+        <div className="container-editorial section-y grid gap-10 lg:grid-cols-3 lg:gap-8">
+          <div>
+            <h2 className="text-2xl leading-tight sm:text-3xl">Why students choose us</h2>
+            <ul className="mt-6 space-y-3">
+              {reasons.map((r) => (
+                <li key={r} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                  <ShieldCheck className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                  <span>{r}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-2xl leading-tight sm:text-3xl">How it works</h2>
+            <ol className="mt-6 space-y-5">
+              {steps.map((s, i) => (
+                <li key={s.title} className="flex gap-4">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full border border-accent/40 font-display text-sm text-accent">
+                    {i + 1}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm font-semibold text-foreground">{s.title}</span>
+                    <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">
+                      {s.copy}
+                    </span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div>
+            <h2 className="text-2xl leading-tight sm:text-3xl">Support in your location</h2>
+            <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              {locations.map((l) => (
+                <li key={l.place}>
+                  <Link
+                    to={l.to as never}
+                    className="surface-card flex items-center gap-3 px-4 py-3 transition-colors hover:border-accent/50"
+                  >
+                    <MapPin className="size-4 shrink-0 text-accent" aria-hidden="true" />
+                    <span className="min-w-0">
+                      <span className="block text-sm font-semibold text-foreground">{l.place}</span>
+                      <span className="block text-xs text-muted-foreground">{l.copy}</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Link
+              to="/locations"
+              className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground underline-offset-4 hover:underline"
+            >
+              View all locations
+              <ArrowRight className="size-4 text-accent" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Technical expertise */}
+      <section className="border-b border-border bg-background">
+        <div className="container-editorial section-y">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Technical expertise</p>
+            <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
+              Software and technical project support
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Guidance for students working with programming languages, engineering software,
+              modelling tools and statistical packages — plus physical models, prototypes and
+              presentation boards.
+            </p>
+          </div>
+
+          <div className="mt-9 flex flex-wrap gap-2">
+            {[
+              "Python",
+              "Java",
+              "C++",
+              "MATLAB",
+              "R",
+              "Arduino",
+              "AutoCAD",
+              "Revit",
+              "3ds Max",
+              "SketchUp",
+              "SolidWorks",
+              "STAAD",
+              "ETABS",
+              "GIS",
+              "SPSS",
+              "STATA",
+              "Excel",
+              "Photoshop",
+            ].map((t) => (
+              <span
+                key={t}
+                className="rounded-full border border-border bg-card px-3.5 py-1.5 text-sm text-foreground"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {softwareGrid.map((s) => (
-              <div key={s.name} className="border-t border-ink-foreground/25 pt-5">
-                <p className="font-display text-xl uppercase tracking-wide text-accent">
-                  {s.name}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-ink-foreground/75">{s.copy}</p>
+              <div key={s.name} className="surface-card p-5 sm:p-6">
+                <p className="font-display text-lg text-foreground">{s.name}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-xs leading-relaxed text-ink-foreground/60">
+
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
+            <Link to="/engineering-software-support" className="underline-offset-4 hover:underline">
+              Engineering software support
+            </Link>
+            <Link to="/spss-statistics-help" className="underline-offset-4 hover:underline">
+              SPSS &amp; statistics help
+            </Link>
+            <Link to="/revit-project-help" className="underline-offset-4 hover:underline">
+              Revit project help
+            </Link>
+            <Link to="/autocad-help" className="underline-offset-4 hover:underline">
+              AutoCAD help
+            </Link>
+            <Link to="/arduino-project-help" className="underline-offset-4 hover:underline">
+              Arduino project help
+            </Link>
+            <Link to="/physical-project-models" className="underline-offset-4 hover:underline">
+              Physical models &amp; maquettes
+            </Link>
+          </div>
+
+          <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground">
             We are an independent academic coaching service. We are not certified by, affiliated
             with or partnered with any of the software companies named above.
           </p>
         </div>
-      </Section>
+      </section>
 
-      {/* Practical projects */}
-      <Section eyebrow="Practical projects" heading="Physical models & project builds">
-        <p className="mb-10 max-w-2xl text-base leading-relaxed text-muted-foreground">
-          From digital projects to physical models. We provide guidance, tutoring and feedback on
-          planning, materials, technique and presentation — students build and submit their own
-          work.
-        </p>
-        <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
-          {practicalProjects.map((p, i) => (
-            <div key={p} className="bg-card p-6">
-              <span className="eyebrow">{String(i + 1).padStart(2, "0")}</span>
-              <p className="mt-3 text-sm leading-relaxed text-foreground">{p}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Languages */}
+      {/* Majors + levels */}
       <section className="border-b border-border bg-sand">
-        <div className="container-editorial grid gap-8 py-14 md:grid-cols-[1fr_auto] md:items-center md:py-16">
+        <div className="container-editorial section-y grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div>
-            <p className="eyebrow">Languages</p>
-            <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">
-              Academic support in English, Arabic &amp; French
+            <p className="eyebrow">Majors &amp; disciplines</p>
+            <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
+              All majors. All courses. All levels.
             </h2>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
-              Students can receive explanations, tutoring, coaching and guidance in English,
-              Arabic or French.
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+              Engineering, medicine and health, business, computer science, architecture and
+              design, arts and humanities, social sciences, law and the sciences.
+            </p>
+            <ul className="mt-7 flex flex-wrap gap-2">
+              {majorCategories.map((cat) => {
+                const to = majorLinks[cat.name];
+                return (
+                  <li key={cat.name}>
+                    {to ? (
+                      <Link
+                        to={to as never}
+                        className="inline-flex rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground transition-colors hover:border-accent/50 hover:text-accent"
+                      >
+                        {cat.name}
+                      </Link>
+                    ) : (
+                      <span className="inline-flex rounded-full border border-border bg-card px-4 py-2 text-sm text-foreground">
+                        {cat.name}
+                      </span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+              Don&rsquo;t see your major?{" "}
+              <Link to="/find-support" className="font-semibold text-foreground underline underline-offset-4">
+                Tell us what you&rsquo;re studying
+              </Link>{" "}
+              — we support many additional disciplines.
             </p>
           </div>
-          <ul className="flex flex-wrap gap-3">
-            {["English", "العربية · Arabic", "Français · French"].map((l) => (
-              <li
-                key={l}
-                className="border border-border bg-card px-5 py-3 font-display text-lg text-foreground"
-              >
-                {l}
-              </li>
-            ))}
-          </ul>
+
+          <div>
+            <p className="eyebrow">Academic levels</p>
+            <h2 className="mt-3 text-2xl leading-tight sm:text-3xl">Undergraduate to PhD</h2>
+            <div className="mt-7 space-y-3">
+              {academicLevels.map((l) => (
+                <div key={l.name} className="surface-card p-5">
+                  <div className="flex items-center gap-2">
+                    <GraduationCap className="size-4 text-accent" aria-hidden="true" />
+                    <h3 className="text-base font-semibold text-foreground">{l.name}</h3>
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{l.copy}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Academic levels */}
-      <Section eyebrow="Academic levels" heading="Support from undergraduate to PhD">
-        <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {academicLevels.map((l) => (
-            <div key={l.name} className="bg-card p-6 sm:p-8">
-              <h3 className="text-lg text-foreground">{l.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{l.copy}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Don't see your course CTA */}
+      {/* Course finder */}
       <section className="border-b border-border bg-background">
-        <div className="container-editorial py-14 md:py-20">
-          <div className="border border-border bg-card p-8 md:p-12">
-            <h2 className="max-w-2xl text-2xl leading-tight sm:text-3xl">
-              Don't see your course or project?
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Tell us your major, course, academic level and what you need help with. We'll assess
-              your requirements and recommend the most appropriate support.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <CTAButton to="/contact" variant="primary" withArrow>
-                Tell us about your project
-              </CTAButton>
-              <WhatsAppButton label="Chat on WhatsApp" variant="outline" />
-            </div>
+        <div className="container-editorial section-y">
+          <FindSupportCTA tone="paper" className="rounded-2xl shadow-card" />
+        </div>
+      </section>
+
+      {/* Resources */}
+      <section className="border-b border-border bg-background">
+        <div className="container-editorial pb-14 md:pb-20">
+          <p className="eyebrow">Free student guides</p>
+          <h2 className="mt-3 text-2xl leading-tight sm:text-3xl">Read before your next deadline</h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                to: "/resources/spss-dissertation-data-analysis-guide",
+                title: "SPSS for dissertation data analysis",
+              },
+              {
+                to: "/resources/how-to-choose-dissertation-methodology",
+                title: "How to choose a dissertation methodology",
+              },
+              {
+                to: "/resources/engineering-final-year-project-guide",
+                title: "Planning an engineering final-year project",
+              },
+              {
+                to: "/resources/revit-for-architecture-students",
+                title: "Revit for architecture students",
+              },
+              {
+                to: "/resources/architecture-maquette-guide",
+                title: "Planning and building an architecture maquette",
+              },
+            ].map((r) => (
+              <Link
+                key={r.to}
+                to={r.to as never}
+                className="surface-card group flex items-center justify-between gap-4 p-5 transition-colors hover:border-accent/50"
+              >
+                <span className="text-sm font-semibold leading-snug text-foreground">{r.title}</span>
+                <ArrowRight
+                  className="size-4 shrink-0 text-accent transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-
-      {/* Who we help */}
-      <Section
-        tone="sand"
-        eyebrow="Who we help"
-        heading="Students and families who take academic work seriously"
-      >
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {audiences.map(({ icon: Icon, label, copy }) => (
-            <div key={label} className="rule-accent">
-              <Icon className="size-5 text-accent" aria-hidden="true" />
-              <h3 className="mt-3 text-lg text-foreground">{label}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{copy}</p>
-            </div>
-          ))}
+      {/* Integrity + feedback */}
+      <section className="border-b border-border bg-sand">
+        <div className="container-editorial section-y grid gap-10 md:grid-cols-2 md:gap-14">
+          <div>
+            <p className="eyebrow">Academic integrity</p>
+            <h2 className="mt-3 text-2xl leading-tight sm:text-3xl">
+              Support that keeps your work your own
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              We provide tutoring, coaching, research guidance, technical support and feedback so
+              you understand and complete your own work. We do not write or submit academic work on
+              behalf of students, and we follow university academic integrity standards.
+            </p>
+          </div>
+          <div>
+            <p className="eyebrow">Student feedback</p>
+            <h2 className="mt-3 text-2xl leading-tight sm:text-3xl">Coming soon</h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              We only publish feedback from students who have actually worked with us, in their own
+              words and with their permission. In the meantime, ask us anything on WhatsApp — we
+              will tell you honestly whether we are the right fit.
+            </p>
+            <a
+              href={site.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm font-semibold text-foreground underline underline-offset-4"
+            >
+              Follow @yeswedoyourprojects on Instagram
+            </a>
+          </div>
         </div>
-      </Section>
-
-      {/* Why students choose us */}
-      <Section eyebrow="Why students choose us" heading="Serious support, honestly delivered">
-        <div className="grid gap-10 md:grid-cols-2">
-          {reasons.map((r) => (
-            <div key={r.title}>
-              <h3 className="text-xl text-foreground">{r.title}</h3>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-                {r.copy}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* How it works */}
-      <Section tone="ink" eyebrow="How it works" heading="Four steps from first message to finished work">
-        <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((s, i) => (
-            <li key={s.title} className="border-t border-ink-foreground/25 pt-5">
-              <span className="font-display text-3xl text-accent">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-3 text-lg text-ink-foreground">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-foreground/75">{s.copy}</p>
-            </li>
-          ))}
-        </ol>
-      </Section>
-
-      {/* Featured services */}
-      <Section eyebrow="Featured services" heading="Where students ask for us most">
-        <div className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          <ServiceCard
-            index={0}
-            title="Thesis & Dissertation Coaching"
-            description="Refine your topic and research question, plan your methodology and receive structured feedback on your own drafts."
-            to="/services/thesis-dissertation-coaching"
-          />
-          <ServiceCard
-            index={1}
-            title="Academic Writing Coaching"
-            description="Build clear structure, stronger argumentation and correct referencing so your writing reads at university standard."
-            to="/services/academic-writing-coaching"
-          />
-          <ServiceCard
-            index={2}
-            title="SAT Preparation"
-            description="A diagnostic-led preparation plan targeting your weakest areas, with practice strategy and exam technique."
-            to="/services/sat-preparation"
-          />
-        </div>
-      </Section>
-
-      {/* International students */}
-      <Section
-        eyebrow="International students"
-        heading="Studying far from home, assessed by rules nobody explained"
-      >
-        <div className="grid gap-8 md:grid-cols-2">
-          {international.map((i) => (
-            <div key={i.title} className="rule-accent">
-              <h3 className="text-xl text-foreground">{i.title}</h3>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{i.copy}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8">
-          <CTAButton to="/who-we-help" variant="outline" withArrow>
-            Find the right support
-          </CTAButton>
-        </div>
-      </Section>
-
-      {/* Locations */}
-      <Section
-        tone="sand"
-        eyebrow="International locations"
-        heading="Online coaching, in your time zone"
-      >
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {locations.map((l) => (
-            <LocationCard key={l.place} place={l.place} description={l.description} to={l.to} />
-          ))}
-        </div>
-        <div className="mt-8">
-          <CTAButton to="/locations" variant="outline" withArrow>
-            Explore all locations
-          </CTAButton>
-        </div>
-      </Section>
-
-
-      {/* Student feedback */}
-      <Section eyebrow="Student feedback" heading="Student feedback coming soon">
-        <div className="rounded-lg border border-border bg-card p-8 md:p-12">
-          <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            We only publish feedback from students who have actually worked with us, in
-            their own words and with their permission. Verified testimonials will appear
-            here as students complete their coaching programmes.
-          </p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            In the meantime, you are welcome to ask about our approach directly on
-            WhatsApp — we will tell you honestly whether we are the right fit.
-          </p>
-        </div>
-
-        <div className="mt-8">
-          <a
-            href={site.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold text-foreground underline underline-offset-4"
-          >
-            Follow @yeswedoyourprojects on Instagram
-          </a>
-        </div>
-      </Section>
+      </section>
 
       {/* FAQ */}
-      <Section tone="sand" eyebrow="FAQ" heading="Questions students ask before booking">
-        <div className="max-w-3xl">
+      <section className="border-b border-border bg-background">
+        <div className="container-editorial section-y grid gap-10 md:grid-cols-[0.75fr_1.25fr]">
+          <div>
+            <p className="eyebrow">FAQ</p>
+            <h2 className="mt-3 text-2xl leading-tight sm:text-3xl">
+              Questions students ask before booking
+            </h2>
+          </div>
           <FAQ items={faqs} />
         </div>
-      </Section>
+      </section>
 
       {/* Final CTA */}
       <section className="bg-ink text-ink-foreground">
-        <div className="container-editorial py-16 text-center md:py-24">
+        <div className="container-editorial py-14 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight sm:text-4xl">
-            Tell us what you're studying. Tell us what you're working on.
+            Tell us what you&rsquo;re working on
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
-            Whether it's an assignment, engineering project, dissertation, thesis, PhD research or
-            technical project, tell us what you need help with and we'll recommend the right
-            support.
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
+            Assignment, engineering project, dissertation, thesis, PhD research or technical
+            project — send us the details and we&rsquo;ll recommend the right support.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              to="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+              to="/find-support"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90 sm:w-auto"
             >
-              Book a consultation
+              Get expert support
+              <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
             <a
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-md border border-ink-foreground/30 px-6 py-3 text-sm font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10"
+              className="inline-flex w-full items-center justify-center rounded-md border border-ink-foreground/30 px-6 py-3.5 text-sm font-semibold text-ink-foreground transition-colors hover:bg-ink-foreground/10 sm:w-auto"
             >
-              Chat with an academic coach
+              Chat on WhatsApp
             </a>
           </div>
-          <div className="mx-auto mt-10 max-w-2xl text-left">
-            <FindSupportCTA tone="ink" />
-          </div>
+          <p className="mt-6 text-xs text-ink-foreground/60">
+            Coaching and guidance only. You remain responsible for producing and submitting your own
+            academic work.
+          </p>
         </div>
       </section>
     </>
-  );
-}
-
-function Section({
-  eyebrow,
-  heading,
-  children,
-  tone = "paper",
-}: {
-  eyebrow: string;
-  heading: string;
-  children: React.ReactNode;
-  tone?: "paper" | "sand" | "ink";
-}) {
-  const toneClass = {
-    paper: "bg-background text-foreground",
-    sand: "bg-sand text-foreground",
-    ink: "bg-ink text-ink-foreground",
-  }[tone];
-
-  return (
-    <section className={`${toneClass} border-b border-border`}>
-      <div className="container-editorial py-16 md:py-24">
-        <p className="eyebrow">{eyebrow}</p>
-        <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">{heading}</h2>
-        <div className="mt-10 md:mt-14">{children}</div>
-      </div>
-    </section>
   );
 }
