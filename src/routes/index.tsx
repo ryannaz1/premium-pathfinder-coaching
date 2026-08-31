@@ -91,83 +91,64 @@ const faqs: FaqItem[] = [
   },
 ];
 
-const services = [
+const heroPoints = [
   {
-    title: "University Tutoring",
-    description:
-      "One-to-one tutoring that builds genuine subject understanding, from first-year modules to advanced Master's coursework.",
+    icon: ShieldCheck,
+    title: "Academic integrity",
+    copy: "Guidance and coaching only — your work stays yours.",
   },
   {
-    title: "Academic Coaching",
-    description:
-      "Structured guidance on planning, priorities, workload and academic strategy so you work with direction rather than pressure.",
+    icon: Sparkles,
+    title: "Expert guidance",
+    copy: "Specialists across academic and technical disciplines.",
   },
   {
-    title: "Thesis & Dissertation Coaching",
-    description:
-      "Support with topic refinement, research questions, structure and feedback across every stage of your own research project.",
+    icon: Languages,
+    title: "English · Arabic · French",
+    copy: "Explanations in the language you think in.",
   },
   {
-    title: "Research Methodology",
-    description:
-      "Choose and justify the right methods, design your study properly, and explain your approach with academic confidence.",
+    icon: Globe,
+    title: "Online, your time zone",
+    copy: "UK, UAE, Canada and Lebanon scheduling.",
   },
-  {
-    title: "Academic Writing Coaching",
-    description:
-      "Sharpen structure, clarity, argumentation, critical thinking and referencing so your writing meets university expectations.",
-  },
-  {
-    title: "SAT Preparation",
-    description:
-      "Personalised preparation built around a diagnostic assessment, weak-area work, practice strategy and exam technique.",
-  },
-];
-
-const audiences = [
-  { icon: GraduationCap, label: "University students", copy: "Undergraduates who want to understand their subject, not just survive the deadline." },
-  { icon: Users, label: "International students", copy: "Students adapting to a new academic system, language and set of expectations." },
-  { icon: NotebookPen, label: "Master's & PhD students", copy: "Researchers navigating theses, dissertations, methodology and higher academic standards." },
-  { icon: Presentation, label: "Exam candidates", copy: "Students preparing for high-stakes assessments including the SAT." },
-  { icon: BookOpen, label: "Parents", copy: "Families arranging serious, well-structured academic support for their child." },
-  { icon: LineChart, label: "Ambitious students", copy: "Students aiming higher who want expert mentoring alongside their studies." },
-];
-
-const steps = [
-  { title: "Consultation", copy: "Tell us your course, level of study and what you are finding difficult. We listen before we recommend anything." },
-  { title: "Plan", copy: "We agree a clear plan: what we will cover, how often we meet and what progress should look like." },
-  { title: "Coaching", copy: "One-to-one online sessions with a coach, plus structured feedback on your own drafts and work." },
-  { title: "Progress", copy: "We review what improved, adjust the plan and keep you accountable through to your deadline or exam." },
 ];
 
 const reasons = [
-  { title: "Coaching, not shortcuts", copy: "We build skills you keep. Every piece of work stays yours, which protects your academic integrity." },
-  { title: "One-to-one attention", copy: "No group classes or recycled slide decks — support is shaped around your course and your goals." },
-  { title: "International perspective", copy: "We work with students across the UK, the UAE, Canada and Lebanon, and understand each system's expectations." },
-  { title: "Clear communication", copy: "Fast replies on WhatsApp, straight answers about what we can and cannot do, and no pressure tactics." },
+  "One-to-one support, never group classes",
+  "Academic and technical specialists",
+  "Support from undergraduate to PhD",
+  "English, Arabic and French",
+  "Clear, fast replies on WhatsApp",
+  "Your work stays entirely your own",
+];
+
+const steps = [
+  { title: "Tell us", copy: "Share your course, level and what you're working on." },
+  { title: "Match", copy: "We recommend the right format of academic or technical support." },
+  { title: "Work together", copy: "One-to-one sessions, guidance and structured feedback." },
+  { title: "Submit with confidence", copy: "You understand, finish and submit your own work." },
 ];
 
 const locations = [
-  { place: "United Kingdom", description: "Coaching for UK undergraduate, Bachelor's, Master's and PhD students, including international students.", to: "/locations/uk" },
-  { place: "Dubai", description: "Premium private academic support for students and families in Dubai.", to: "/locations/dubai" },
-  { place: "Abu Dhabi", description: "One-to-one tutoring and coaching for Abu Dhabi students.", to: "/locations/abu-dhabi" },
-  { place: "Montreal & Quebec", description: "Support for university students studying in Montreal and across Quebec.", to: "/locations/montreal" },
-  { place: "Lebanon", description: "Academic coaching for Lebanese students studying locally or abroad.", to: "/locations/lebanon" },
+  { place: "United Kingdom", copy: "UK universities, all levels", to: "/locations/uk" },
+  { place: "UAE", copy: "Dubai, Abu Dhabi & all Emirates", to: "/locations/dubai" },
+  { place: "Canada", copy: "Montreal & across Quebec", to: "/locations/montreal" },
+  { place: "Lebanon", copy: "Lebanese universities", to: "/locations/lebanon" },
 ];
 
-const trustPoints = [
-  { stat: "13,000+", label: "Students following @yeswedoyourprojects" },
-  { stat: "4 regions", label: "UK · UAE · Quebec · Lebanon" },
-  { stat: "1-to-1", label: "Every session, never group classes" },
-  { stat: "100% yours", label: "You write and submit your own work" },
-];
+const majorLinks: Record<string, string> = {
+  Engineering: "/engineering-project-help",
+  "Medicine & Health": "/medicine-academic-support",
+  "Business & Management": "/business-academic-support",
+  "Computer Science & Technology": "/computer-science-academic-support",
+  "Architecture & Design": "/architecture-project-help",
+  "Arts & Humanities": "/arts-humanities-academic-support",
+  "Social Sciences": "/social-science-academic-support",
+  Law: "/law-academic-support",
+  Science: "/science-academic-support",
+};
 
-const international = [
-  { title: "A new academic system", copy: "Marking criteria, classification language and expectations around independent research differ between the UK, North America and the Gulf. We make them explicit instead of leaving you to infer them." },
-  { title: "Academic English", copy: "Writing at university level in an additional language is a skill of its own. We coach register, structure and argument — your ideas stay yours." },
-  { title: "Referencing and integrity", copy: "Citation conventions and originality rules vary by institution. We coach proper citation, originality and academic integrity so students can confidently develop and reference their own work." },
-  { title: "Your time zone", copy: "Sessions are scheduled in GMT/BST, GST, Eastern Time or Beirut time, including evenings and weekends." },
-];
 
 
 export const Route = createFileRoute("/")({
