@@ -1,30 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  BookOpen,
+  ArrowRight,
   GraduationCap,
-  LineChart,
-  NotebookPen,
-  Presentation,
-  Users,
+  Globe,
+  Languages,
+  MapPin,
+  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-coaching.jpg";
+import { CategoryGrid } from "@/components/CategoryGrid";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { FindSupportCTA } from "@/components/FindSupportCTA";
-import { LocationCard } from "@/components/LocationCard";
-import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import {
-  academicLevels,
-  helpAreas,
-  majorCategories,
-  practicalProjects,
-  softwareGrid,
-  technicalAreas,
-} from "@/lib/disciplines";
+import { academicLevels, majorCategories, softwareGrid } from "@/lib/disciplines";
 import { site, whatsappHref } from "@/lib/site";
 import { socialMeta } from "@/lib/seo";
+
 
 const title = "Academic Support for Every Major, Course & Level | Yes We Do Your Projects";
 const description =
