@@ -363,7 +363,7 @@ export const locationLandings: LandingContent[] = [
     description:
       "Online academic coaching for students at Lebanese universities: assignments, senior projects, theses and technical projects in English, Arabic or French.",
     intro:
-      "Lebanese universities run American-style, French-style and hybrid systems side by side, and students frequently study in a language that is neither their first nor their household one. We coach online in Beirut time, across all three languages, and we plan around the electricity and connectivity realities students here actually face.",
+      "Lebanese universities run American-style, French-style and hybrid systems side by side, and students frequently study in a language that is neither their first nor their household one. We coach students at the American University of Beirut (AUB), the Lebanese American University (LAU), Université Saint-Joseph (USJ), the Lebanese University, Balamand, NDU, USEK and others — online in Beirut time, across all three languages, planning around the electricity and connectivity realities students here actually face.",
     highlights: [
       {
         title: "Three systems, one student",
@@ -409,6 +409,11 @@ export const locationLandings: LandingContent[] = [
       "Coaching runs in English, Arabic and French — often within a single session, matching how Lebanese classrooms and textbooks operate.",
     integrity: integrityDefault,
     faqs: [
+      {
+        question: "Do you work with AUB and LAU students?",
+        answer:
+          "Yes. Many of our Lebanon students study at the American University of Beirut (AUB) and the Lebanese American University (LAU) — from undergraduate courses and senior projects to Master's theses and PhD research. Coaching follows your own syllabus and your institution's academic integrity rules.",
+      },
       {
         question: "Do you have an office in Beirut?",
         answer:
