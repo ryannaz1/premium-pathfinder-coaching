@@ -48,17 +48,19 @@ export function Header() {
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-semibold text-foreground underline-offset-4 hover:underline"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-accent/50"
           >
-            WhatsApp us
+            <MessageCircle className="size-4 text-whatsapp" aria-hidden="true" />
+            Chat on WhatsApp
           </a>
           <Link
-            to="/contact"
-            className="inline-flex items-center rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-ink-foreground transition-opacity hover:opacity-90"
+            to="/find-support"
+            className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-ink-foreground transition-opacity hover:opacity-90"
           >
-            Book a consultation
+            Get expert support
           </Link>
         </div>
+
 
         <button
           type="button"
