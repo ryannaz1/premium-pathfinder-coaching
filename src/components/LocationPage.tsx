@@ -14,7 +14,7 @@ export function LocationPage({ location }: { location: LocationContent }) {
   return (
     <>
       <section className="border-b border-border bg-paper">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <Breadcrumbs
             items={[
               { label: "Home", to: "/" },
@@ -43,14 +43,14 @@ export function LocationPage({ location }: { location: LocationContent }) {
       </section>
 
       <section className="border-b border-border bg-background">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <p className="eyebrow">What we take into account</p>
           <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">
             Coaching shaped around how {location.place} students are actually assessed
           </h2>
-          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border md:mt-14 md:grid-cols-2">
+          <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-2">
             {location.context.map((c) => (
-              <div key={c.title} className="bg-card p-6 sm:p-8">
+              <div key={c.title} className="surface-card p-6 sm:p-8">
                 <h3 className="text-xl leading-snug text-foreground">{c.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.copy}</p>
               </div>
@@ -81,12 +81,12 @@ export function LocationPage({ location }: { location: LocationContent }) {
       </section>
 
       <section className="border-b border-border bg-background">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <p className="eyebrow">Most requested here</p>
           <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">
             Support {location.place} students book most often
           </h2>
-          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-14 lg:grid-cols-4">
             {popular.map((s) => (
               <ServiceCard
                 key={s.slug}
@@ -100,7 +100,7 @@ export function LocationPage({ location }: { location: LocationContent }) {
       </section>
 
       <section className="border-b border-border bg-sand">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <p className="eyebrow">FAQ</p>
           <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">
             Questions from {location.place} students
@@ -111,12 +111,12 @@ export function LocationPage({ location }: { location: LocationContent }) {
         </div>
       </section>
 
-      <section className="bg-ink text-ink-foreground">
+      <section className="bg-sand">
         <div className="container-editorial py-14 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight sm:text-4xl">
             Talk to a coach about studying in {location.place}
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             Tell us your university, level of study and deadline. We reply with an honest
             recommendation — no pressure, no obligation.
           </p>
@@ -124,7 +124,7 @@ export function LocationPage({ location }: { location: LocationContent }) {
             <CTAButton to="/contact" variant="accent">
               Book a consultation
             </CTAButton>
-            <WhatsAppButton label="Chat on WhatsApp" variant="ghost" className="text-ink-foreground hover:bg-ink-foreground/10" />
+            <WhatsAppButton label="Chat on WhatsApp" variant="ghost" className="text-foreground hover:bg-ink-foreground/10" />
           </div>
         </div>
       </section>

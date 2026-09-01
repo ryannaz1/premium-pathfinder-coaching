@@ -216,12 +216,12 @@ export function ArticlePage({ article }: { article: Article }) {
         </div>
       </section>
 
-      <section className="bg-ink text-ink-foreground">
+      <section className="bg-sand">
         <div className="container-editorial py-14 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight sm:text-4xl">
             Need help with your project?
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             Tell us what you're studying, what you're working on and where you're stuck. We provide
             tutoring, coaching, research guidance and technical support while helping students
             develop their own academic work.
@@ -232,7 +232,7 @@ export function ArticlePage({ article }: { article: Article }) {
               Book a Consultation
             </CTAButton>
           </div>
-          <p className="mt-6 text-xs text-ink-foreground/70">
+          <p className="mt-6 text-xs text-foreground/70">
             WhatsApp{" "}
             <a
               href={`https://wa.me/${site.whatsappDigits}`}

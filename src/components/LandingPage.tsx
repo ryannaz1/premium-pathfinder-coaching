@@ -63,7 +63,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
   return (
     <>
       <section className="border-b border-border bg-paper">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: content.label }]} />
           <p className="eyebrow mt-6">{content.eyebrow}</p>
           <h1 className="mt-4 max-w-3xl text-3xl leading-[1.12] sm:text-4xl lg:text-5xl">
@@ -92,14 +92,14 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       <section className="border-b border-border bg-background">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <p className="eyebrow">What the support covers</p>
           <h2 className="mt-4 max-w-2xl text-3xl leading-tight sm:text-4xl">
             How we help with {content.label.toLowerCase()}
           </h2>
-          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border md:mt-14 md:grid-cols-2">
+          <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-2">
             {content.highlights.map((h) => (
-              <div key={h.title} className="bg-card p-6 sm:p-8">
+              <div key={h.title} className="surface-card p-6 sm:p-8">
                 <h3 className="text-xl leading-snug text-foreground">{h.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{h.copy}</p>
               </div>
@@ -109,7 +109,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       <section className="border-b border-border bg-sand">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <div className="grid gap-10 md:grid-cols-2">
             {content.lists.map((list) => (
               <div key={list.heading}>
@@ -132,14 +132,14 @@ export function LandingPage({ content }: { content: LandingContent }) {
       </section>
 
       <section className="border-b border-border bg-background">
-        <div className="container-editorial grid gap-px overflow-hidden border border-border bg-border py-0 md:grid-cols-3">
-          <div className="bg-card p-6 sm:p-8">
+        <div className="container-editorial grid gap-4 py-0 md:grid-cols-3">
+          <div className="surface-card p-6 sm:p-8">
             <p className="eyebrow">Academic levels</p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {content.levelsNote}
             </p>
           </div>
-          <div className="bg-card p-6 sm:p-8">
+          <div className="surface-card p-6 sm:p-8">
             <p className="eyebrow inline-flex items-center gap-2">
               <Globe className="size-4 text-accent" aria-hidden="true" />
               English · Arabic · French
@@ -148,7 +148,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
               {content.languages}
             </p>
           </div>
-          <div className="bg-card p-6 sm:p-8">
+          <div className="surface-card p-6 sm:p-8">
             <p className="eyebrow inline-flex items-center gap-2">
               <ShieldCheck className="size-4 text-accent" aria-hidden="true" />
               Academic integrity
@@ -172,15 +172,15 @@ export function LandingPage({ content }: { content: LandingContent }) {
 
       {content.related.length > 0 && (
         <section className="border-b border-border bg-sand">
-          <div className="container-editorial py-14 md:py-20">
+          <div className="container-editorial section-y">
             <p className="eyebrow">Related support</p>
             <h2 className="mt-3 text-2xl leading-snug sm:text-3xl">Students often also look at</h2>
-            <div className="mt-8 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {content.related.map((r) => (
                 <Link
                   key={r.to}
                   to={r.to as never}
-                  className="bg-card p-6 transition-colors hover:bg-secondary sm:p-8"
+                  className="surface-card p-6 transition-colors hover:border-accent/50 sm:p-8"
                 >
                   <h3 className="text-base leading-snug text-foreground">{r.label}</h3>
                 </Link>
@@ -190,12 +190,12 @@ export function LandingPage({ content }: { content: LandingContent }) {
         </section>
       )}
 
-      <section className="bg-ink text-ink-foreground">
+      <section className="bg-sand">
         <div className="container-editorial py-14 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight sm:text-4xl">
             Talk to a coach about your {content.label.toLowerCase()}
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             Send us your course, level of study and deadline. We reply with an honest view of
             whether we can help and how — in English, Arabic or French.
           </p>
@@ -206,7 +206,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
             <WhatsAppButton
               label="Chat on WhatsApp"
               variant="ghost"
-              className="text-ink-foreground hover:bg-ink-foreground/10"
+              className="text-foreground hover:bg-ink-foreground/10"
             />
           </div>
         </div>

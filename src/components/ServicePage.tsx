@@ -13,7 +13,7 @@ export function ServicePage({ service }: { service: ServiceContent }) {
   return (
     <>
       <section className="border-b border-border bg-paper">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <Breadcrumbs
             items={[
               { label: "Home", to: "/" },
@@ -57,14 +57,14 @@ export function ServicePage({ service }: { service: ServiceContent }) {
       </section>
 
       <section className="border-b border-border bg-paper">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <p className="eyebrow">What support includes</p>
           <h2 className="mt-3 max-w-2xl text-2xl leading-snug sm:text-3xl">
             What we cover together
           </h2>
-          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {service.includes.map((item) => (
-              <div key={item.title} className="bg-card p-6 sm:p-8">
+              <div key={item.title} className="surface-card p-6 sm:p-8">
                 <h3 className="text-lg text-foreground">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.copy}</p>
               </div>
@@ -73,20 +73,20 @@ export function ServicePage({ service }: { service: ServiceContent }) {
         </div>
       </section>
 
-      <section className="border-b border-border bg-ink text-ink-foreground">
-        <div className="container-editorial py-14 md:py-20">
+      <section className="border-b border-border bg-sand">
+        <div className="container-editorial section-y">
           <p className="eyebrow">How the process works</p>
-          <h2 className="mt-3 max-w-2xl text-2xl leading-snug text-ink-foreground sm:text-3xl">
+          <h2 className="mt-3 max-w-2xl text-2xl leading-snug text-foreground sm:text-3xl">
             From first message to real progress
           </h2>
           <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {service.process.map((step, i) => (
-              <li key={step.title} className="border-t border-ink-foreground/25 pt-5">
+              <li key={step.title} className="border-t border-border pt-5">
                 <span className="font-display text-3xl text-accent">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-3 text-lg text-ink-foreground">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-foreground/75">{step.copy}</p>
+                <h3 className="mt-3 text-lg text-foreground">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.copy}</p>
               </li>
             ))}
           </ol>
@@ -105,15 +105,15 @@ export function ServicePage({ service }: { service: ServiceContent }) {
 
       {related.length > 0 && (
         <section className="border-b border-border bg-sand">
-          <div className="container-editorial py-14 md:py-20">
+          <div className="container-editorial section-y">
             <p className="eyebrow">Related support</p>
             <h2 className="mt-3 text-2xl leading-snug sm:text-3xl">Students often combine this with</h2>
-            <div className="mt-8 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-3">
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {related.map((r) => (
                 <Link
                   key={r.slug}
                   to={`/services/${r.slug}` as never}
-                  className="bg-card p-6 transition-colors hover:bg-secondary sm:p-8"
+                  className="surface-card p-6 transition-colors hover:border-accent/50 sm:p-8"
                 >
                   <h3 className="text-lg text-foreground">{r.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
