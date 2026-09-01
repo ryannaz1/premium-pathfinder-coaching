@@ -111,12 +111,12 @@ export function LocationPage({ location }: { location: LocationContent }) {
         </div>
       </section>
 
-      <section className="bg-sand">
+      <section className="bg-ink text-ink-foreground">
         <div className="container-editorial py-14 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight sm:text-4xl">
             Talk to a coach about studying in {location.place}
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
             Tell us your university, level of study and deadline. We reply with an honest
             recommendation — no pressure, no obligation.
           </p>
@@ -124,7 +124,7 @@ export function LocationPage({ location }: { location: LocationContent }) {
             <CTAButton to="/contact" variant="accent">
               Book a consultation
             </CTAButton>
-            <WhatsAppButton label="Chat on WhatsApp" variant="ghost" className="text-foreground hover:bg-ink-foreground/10" />
+            <WhatsAppButton label="Chat on WhatsApp" variant="ghost" className="border border-ink-foreground/30 text-ink-foreground hover:bg-ink-foreground/10" />
           </div>
         </div>
       </section>

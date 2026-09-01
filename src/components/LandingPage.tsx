@@ -190,12 +190,12 @@ export function LandingPage({ content }: { content: LandingContent }) {
         </section>
       )}
 
-      <section className="bg-sand">
+      <section className="bg-ink text-ink-foreground">
         <div className="container-editorial py-14 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight sm:text-4xl">
             Talk to a coach about your {content.label.toLowerCase()}
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
             Send us your course, level of study and deadline. We reply with an honest view of
             whether we can help and how — in English, Arabic or French.
           </p>
@@ -206,7 +206,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
             <WhatsAppButton
               label="Chat on WhatsApp"
               variant="ghost"
-              className="text-foreground hover:bg-ink-foreground/10"
+              className="border border-ink-foreground/30 text-ink-foreground hover:bg-ink-foreground/10"
             />
           </div>
         </div>
