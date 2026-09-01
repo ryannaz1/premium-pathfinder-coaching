@@ -12,7 +12,7 @@ export function ServiceCard({ title, description, to, index }: Props) {
   return (
     <Link
       to={to as never}
-      className="group flex flex-col justify-between gap-6 border border-border bg-card p-6 transition-all duration-300 hover:border-accent/60 hover:shadow-card sm:p-8"
+      className="group surface-card flex flex-col justify-between gap-6 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/50 hover:shadow-lift sm:p-8"
     >
       <div>
         {typeof index === "number" && (
