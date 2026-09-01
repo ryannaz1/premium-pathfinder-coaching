@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, MessageCircle, X } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
 import { navLinks, whatsappHref } from "@/lib/site";
 
@@ -48,17 +48,19 @@ export function Header() {
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-semibold text-foreground underline-offset-4 hover:underline"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-accent/50"
           >
-            WhatsApp us
+            <MessageCircle className="size-4 text-whatsapp" aria-hidden="true" />
+            Chat on WhatsApp
           </a>
           <Link
-            to="/contact"
-            className="inline-flex items-center rounded-md bg-ink px-4 py-2.5 text-sm font-semibold text-ink-foreground transition-opacity hover:opacity-90"
+            to="/find-support"
+            className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-ink-foreground transition-opacity hover:opacity-90"
           >
-            Book a consultation
+            Get expert support
           </Link>
         </div>
+
 
         <button
           type="button"
@@ -87,17 +89,17 @@ export function Header() {
             ))}
             <div className="mt-4 flex flex-col gap-3">
               <Link
-                to="/contact"
+                to="/find-support"
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center rounded-md bg-ink px-4 py-3 text-sm font-semibold text-ink-foreground"
+                className="inline-flex items-center justify-center rounded-full bg-ink px-4 py-3 text-sm font-semibold text-ink-foreground"
               >
-                Book a consultation
+                Get expert support
               </Link>
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md border border-border px-4 py-3 text-sm font-semibold text-foreground"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-4 py-3 text-sm font-semibold text-foreground"
               >
                 Chat on WhatsApp
               </a>

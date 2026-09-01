@@ -31,7 +31,7 @@ function LocationsPage() {
   return (
     <>
       <section className="border-b border-border bg-paper">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Locations" }]} />
           <p className="eyebrow mt-6">Locations</p>
           <h1 className="mt-4 max-w-3xl text-3xl leading-[1.12] sm:text-4xl lg:text-5xl">
@@ -52,9 +52,9 @@ function LocationsPage() {
       </section>
 
       <section className="border-b border-border bg-background">
-        <div className="container-editorial py-14 md:py-20">
+        <div className="container-editorial section-y">
           <h2 className="max-w-2xl text-3xl leading-tight sm:text-4xl">Where we work</h2>
-          <div className="mt-10 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-14 lg:grid-cols-3">
             {locations.map((l) => (
               <ServiceCard
                 key={l.slug}
@@ -67,12 +67,12 @@ function LocationsPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-ink-foreground">
+      <section className="bg-sand">
         <div className="container-editorial py-14 text-center md:py-20">
           <h2 className="mx-auto max-w-2xl text-3xl leading-tight sm:text-4xl">
             Studying somewhere else?
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             These are the regions we know best, but coaching is online. Message us with your
             university and time zone and we will tell you honestly whether we are the right fit.
           </p>

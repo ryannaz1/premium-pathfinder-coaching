@@ -11,7 +11,7 @@ export function LocationCard({ place, description, to }: Props) {
   return (
     <Link
       to={to as never}
-      className="group flex items-start gap-4 border border-border bg-card p-6 transition-colors duration-300 hover:border-accent/60"
+      className="group surface-card flex items-start gap-4 p-6 transition-colors duration-300 hover:border-accent/50"
     >
       <MapPin className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden="true" />
       <span>
