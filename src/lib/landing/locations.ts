@@ -16,7 +16,7 @@ export const locationLandings: LandingContent[] = [
     description:
       "Online academic coaching, tutoring and dissertation support for UK university students. Undergraduate to PhD, in UK time, in English, Arabic or French.",
     intro:
-      "British degrees are assessed on a small number of high-weight pieces: two or three essays a module, an exam, and an independent dissertation marked against criteria that reward argument over description. We coach UK-based students online, in UK time, so the work you hand in reflects what your rubric actually rewards.",
+      "British degrees are assessed on a small number of high-weight pieces: two or three essays a module, an exam, and an independent dissertation marked against criteria that reward argument over description. We coach students at universities across the UK — from UCL, King's College London and Manchester to Edinburgh, Leeds and beyond — online, in UK time, so the work you hand in reflects what your rubric actually rewards.",
     highlights: [
       {
         title: "Marked against your own rubric",
@@ -104,7 +104,7 @@ export const locationLandings: LandingContent[] = [
     description:
       "Online tutoring, coaching and research support for students at Dubai universities and international branch campuses. Undergraduate to PhD, in English, Arabic or French.",
     intro:
-      "Dubai students often sit inside a British, American or Australian curriculum while living in the Gulf, which means the assessment culture in the handbook rarely matches the one students grew up with. We coach online, in Gulf Standard Time, translating what a branch-campus rubric is really asking for into work you can produce yourself.",
+      "Dubai students often sit inside a British, American or Australian curriculum while living in the Gulf — at branch campuses such as Heriot-Watt Dubai, Middlesex Dubai and Canadian University Dubai, or local institutions such as the American University in Dubai — which means the assessment culture in the handbook rarely matches the one students grew up with. We coach online, in Gulf Standard Time, translating what your rubric is really asking for into work you can produce yourself.",
     highlights: [
       {
         title: "Branch-campus curricula",
@@ -191,7 +191,7 @@ export const locationLandings: LandingContent[] = [
     description:
       "Online academic coaching, research guidance and technical project support for Abu Dhabi university students, from undergraduate coursework to PhD research.",
     intro:
-      "Abu Dhabi's universities lean towards research-intensive and technical programmes — engineering, energy, health sciences, public policy — often with sponsored or scholarship students carrying strict progression requirements. We coach online in Gulf Standard Time, with a focus on research quality and defensible method.",
+      "Abu Dhabi's universities — Khalifa University, NYU Abu Dhabi, Zayed University, Abu Dhabi University and their peers — lean towards research-intensive and technical programmes: engineering, energy, health sciences, public policy, often with sponsored or scholarship students carrying strict progression requirements. We coach online in Gulf Standard Time, with a focus on research quality and defensible method.",
     highlights: [
       {
         title: "Research-heavy programmes",
@@ -277,7 +277,7 @@ export const locationLandings: LandingContent[] = [
     description:
       "Bilingual online academic coaching for Montreal and Quebec university students: assignments, research, theses and technical projects in English or French.",
     intro:
-      "Montreal students move between English and French institutions, CEGEP-to-university transitions and a grading culture built on continuous assessment rather than one final exam. We coach online in Eastern Time, in whichever language your programme is delivered in.",
+      "Montreal students move between English and French institutions — McGill, Concordia, Université de Montréal, UQAM, HEC Montréal and Polytechnique — plus CEGEP-to-university transitions and a grading culture built on continuous assessment rather than one final exam. We coach online in Eastern Time, in whichever language your programme is delivered in.",
     highlights: [
       {
         title: "Genuinely bilingual coaching",
@@ -363,7 +363,7 @@ export const locationLandings: LandingContent[] = [
     description:
       "Online academic coaching for students at Lebanese universities: assignments, senior projects, theses and technical projects in English, Arabic or French.",
     intro:
-      "Lebanese universities run American-style, French-style and hybrid systems side by side, and students frequently study in a language that is neither their first nor their household one. We coach online in Beirut time, across all three languages, and we plan around the electricity and connectivity realities students here actually face.",
+      "Lebanese universities run American-style, French-style and hybrid systems side by side, and students frequently study in a language that is neither their first nor their household one. We coach students at the American University of Beirut (AUB), the Lebanese American University (LAU), Université Saint-Joseph (USJ), the Lebanese University, Balamand, NDU, USEK and others — online in Beirut time, across all three languages, planning around the electricity and connectivity realities students here actually face.",
     highlights: [
       {
         title: "Three systems, one student",
@@ -409,6 +409,11 @@ export const locationLandings: LandingContent[] = [
       "Coaching runs in English, Arabic and French — often within a single session, matching how Lebanese classrooms and textbooks operate.",
     integrity: integrityDefault,
     faqs: [
+      {
+        question: "Do you work with AUB and LAU students?",
+        answer:
+          "Yes. Many of our Lebanon students study at the American University of Beirut (AUB) and the Lebanese American University (LAU) — from undergraduate courses and senior projects to Master's theses and PhD research. Coaching follows your own syllabus and your institution's academic integrity rules.",
+      },
       {
         question: "Do you have an office in Beirut?",
         answer:

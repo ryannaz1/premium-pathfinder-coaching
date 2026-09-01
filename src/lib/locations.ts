@@ -70,7 +70,7 @@ export const locations: LocationContent[] = [
       {
         question: "Do you work with students at any UK university?",
         answer:
-          "Yes. Coaching is online and shaped around your own module handbook and marking criteria, so it works for students at any UK institution.",
+          "Yes. We coach students at universities across the UK — including UCL, King's College London, Manchester, Edinburgh, Leeds, Birmingham and many others. Coaching is online and shaped around your own module handbook and marking criteria, so it works at any UK institution.",
       },
       {
         question: "Can you help with a Master's dissertation over the summer?",
@@ -93,7 +93,7 @@ export const locations: LocationContent[] = [
     description:
       "Premium one-to-one academic coaching for university students in Dubai: tutoring, dissertation guidance, academic writing and SAT preparation, online in GST.",
     intro:
-      "Dubai students study across an unusually international set of institutions: international branch campuses, local universities and online programmes awarded by overseas partners. We coach students through whichever academic system their degree belongs to, online and in Gulf Standard Time.",
+      "Dubai students study across an unusually international set of institutions: international branch campuses such as Heriot-Watt Dubai, Middlesex Dubai and Canadian University Dubai, local universities such as the American University in Dubai and the University of Dubai, and online programmes awarded by overseas partners. We coach students through whichever academic system their degree belongs to, online and in Gulf Standard Time.",
     timezone: "Sessions run in GST (UTC+4), including evenings and weekends.",
     context: [
       {
@@ -154,7 +154,7 @@ export const locations: LocationContent[] = [
     description:
       "One-to-one academic coaching and university tutoring for students in Abu Dhabi: research methods, academic writing, dissertations and exam preparation, online in GST.",
     intro:
-      "Abu Dhabi's universities lean heavily toward research-intensive and professionally accredited programmes, from engineering and health sciences to business and public policy. We coach students through the methodology, writing and exam demands those programmes place on them, online and in Gulf Standard Time.",
+      "Abu Dhabi's universities — from Khalifa University, NYU Abu Dhabi and Zayed University to Abu Dhabi University and the American University of Sharjah nearby — lean heavily toward research-intensive and professionally accredited programmes, from engineering and health sciences to business and public policy. We coach students through the methodology, writing and exam demands those programmes place on them, online and in Gulf Standard Time.",
     timezone: "Sessions run in GST (UTC+4), scheduled around lab and clinical timetables.",
     context: [
       {
@@ -215,7 +215,7 @@ export const locations: LocationContent[] = [
     description:
       "Academic coaching and tutoring for university students in Montreal and Quebec: CEGEP transitions, thesis guidance, research methods and academic writing, online in ET.",
     intro:
-      "Quebec runs an academic pathway that exists nowhere else in Canada: CEGEP before university, three-year bachelor's degrees for local students, and a bilingual academic culture across Montreal's institutions. We coach students through that structure, online and in Eastern Time.",
+      "Quebec runs an academic pathway that exists nowhere else in Canada: CEGEP before university, three-year bachelor's degrees for local students, and a bilingual academic culture across Montreal's institutions — McGill, Concordia, Université de Montréal, UQAM, HEC Montréal and Polytechnique among them. We coach students through that structure, online and in Eastern Time.",
     timezone: "Sessions run in Eastern Time (ET), including evenings during term.",
     context: [
       {
@@ -276,7 +276,7 @@ export const locations: LocationContent[] = [
     description:
       "Academic coaching and university tutoring for students in Lebanon and Lebanese students abroad: writing, research methods, theses, SAT and exam preparation.",
     intro:
-      "Lebanese universities follow a mix of American credit-hour and French academic traditions, and many students are simultaneously preparing to continue their studies abroad. We coach students in Lebanon and Lebanese students already overseas, online and in Beirut time.",
+      "Lebanese universities follow a mix of American credit-hour and French academic traditions, and many students are simultaneously preparing to continue their studies abroad. We coach students across Lebanon's universities — including the American University of Beirut (AUB), the Lebanese American University (LAU), Université Saint-Joseph (USJ), the Lebanese University, Balamand, NDU, USEK and others — as well as Lebanese students already overseas, online and in Beirut time.",
     timezone: "Sessions run in Beirut time (EET/EEST), including evenings.",
     context: [
       {
@@ -297,8 +297,8 @@ export const locations: LocationContent[] = [
       },
     ],
     systemNotes: [
-      "Credit-hour and GPA systems at American-model universities",
-      "French-model programmes with heavier final examinations",
+      "American-model universities such as AUB and LAU: credit hours, GPA and continuous assessment",
+      "French-model programmes such as USJ and the Lebanese University, with heavier final examinations",
       "Trilingual Arabic, English and French academic environments",
       "Strong pipeline of students continuing to study abroad",
       "SAT and standardised test preparation for university admission",
@@ -311,6 +311,11 @@ export const locations: LocationContent[] = [
     ],
     faqs: [
       integrityFaq,
+      {
+        question: "Do you work with AUB and LAU students?",
+        answer:
+          "Yes. A large share of our Lebanon students study at the American University of Beirut (AUB) and the Lebanese American University (LAU), across undergraduate courses, senior projects, Master's theses and PhD research. Coaching follows your own course syllabus and the integrity rules of your institution.",
+      },
       {
         question: "Do you work with Lebanese students studying abroad?",
         answer:
