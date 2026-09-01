@@ -276,7 +276,7 @@ export const locations: LocationContent[] = [
     description:
       "Academic coaching and university tutoring for students in Lebanon and Lebanese students abroad: writing, research methods, theses, SAT and exam preparation.",
     intro:
-      "Lebanese universities follow a mix of American credit-hour and French academic traditions, and many students are simultaneously preparing to continue their studies abroad. We coach students in Lebanon and Lebanese students already overseas, online and in Beirut time.",
+      "Lebanese universities follow a mix of American credit-hour and French academic traditions, and many students are simultaneously preparing to continue their studies abroad. We coach students across Lebanon's universities — including the American University of Beirut (AUB), the Lebanese American University (LAU), Université Saint-Joseph (USJ), the Lebanese University, Balamand, NDU, USEK and others — as well as Lebanese students already overseas, online and in Beirut time.",
     timezone: "Sessions run in Beirut time (EET/EEST), including evenings.",
     context: [
       {
@@ -297,8 +297,8 @@ export const locations: LocationContent[] = [
       },
     ],
     systemNotes: [
-      "Credit-hour and GPA systems at American-model universities",
-      "French-model programmes with heavier final examinations",
+      "American-model universities such as AUB and LAU: credit hours, GPA and continuous assessment",
+      "French-model programmes such as USJ and the Lebanese University, with heavier final examinations",
       "Trilingual Arabic, English and French academic environments",
       "Strong pipeline of students continuing to study abroad",
       "SAT and standardised test preparation for university admission",
@@ -311,6 +311,11 @@ export const locations: LocationContent[] = [
     ],
     faqs: [
       integrityFaq,
+      {
+        question: "Do you work with AUB and LAU students?",
+        answer:
+          "Yes. A large share of our Lebanon students study at the American University of Beirut (AUB) and the Lebanese American University (LAU), across undergraduate courses, senior projects, Master's theses and PhD research. Coaching follows your own course syllabus and the integrity rules of your institution.",
+      },
       {
         question: "Do you work with Lebanese students studying abroad?",
         answer:
