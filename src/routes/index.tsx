@@ -259,12 +259,15 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Why / process / locations */}
+      {/* Why + how it works */}
       <section className="border-b border-border bg-sand">
-        <div className="container-editorial section-y grid gap-10 lg:grid-cols-3 lg:gap-8">
+        <div className="container-editorial section-y grid gap-12 md:grid-cols-2 md:gap-16">
           <div>
-            <h2 className="text-2xl leading-tight sm:text-3xl">Why students choose us</h2>
-            <ul className="mt-6 space-y-3">
+            <p className="eyebrow">Why students choose us</p>
+            <h2 className="mt-3 text-2xl leading-tight sm:text-3xl">
+              Real specialists, one student at a time
+            </h2>
+            <ul className="mt-7 space-y-3">
               {reasons.map((r) => (
                 <li key={r} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
                   <ShieldCheck className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
@@ -275,8 +278,9 @@ function HomePage() {
           </div>
 
           <div>
-            <h2 className="text-2xl leading-tight sm:text-3xl">How it works</h2>
-            <ol className="mt-6 space-y-5">
+            <p className="eyebrow">How it works</p>
+            <h2 className="mt-3 text-2xl leading-tight sm:text-3xl">Four simple steps</h2>
+            <ol className="mt-7 space-y-5">
               {steps.map((s, i) => (
                 <li key={s.title} className="flex gap-4">
                   <span className="grid size-8 shrink-0 place-items-center rounded-full border border-accent/40 font-display text-sm text-accent">
@@ -292,38 +296,52 @@ function HomePage() {
               ))}
             </ol>
           </div>
+        </div>
+      </section>
 
-          <div>
-            <h2 className="text-2xl leading-tight sm:text-3xl">Support in your location</h2>
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-              {locations.map((l) => (
-                <li key={l.place}>
-                  <Link
-                    to={l.to as never}
-                    className="surface-card flex items-center gap-3 px-4 py-3 transition-colors hover:border-accent/50"
-                  >
-                    <MapPin className="size-4 shrink-0 text-accent" aria-hidden="true" />
-                    <span className="min-w-0">
-                      <span className="block text-sm font-semibold text-foreground">{l.place}</span>
-                      <span className="block text-xs text-muted-foreground">{l.copy}</span>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+      {/* Locations */}
+      <section className="border-b border-border bg-background">
+        <div className="container-editorial section-y">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-xl">
+              <p className="eyebrow">Where our students study</p>
+              <h2 className="mt-3 text-2xl leading-tight sm:text-3xl">Support in your location</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Sessions are online and scheduled in your time zone, with coaches who know how
+                assessment works in each system.
+              </p>
+            </div>
             <Link
               to="/locations"
-              className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground underline-offset-4 hover:underline"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground underline-offset-4 hover:underline"
             >
               View all locations
               <ArrowRight className="size-4 text-accent" aria-hidden="true" />
             </Link>
           </div>
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {locations.map((l) => (
+              <li key={l.place}>
+                <Link
+                  to={l.to as never}
+                  className="surface-card flex items-center gap-3 px-4 py-4 transition-colors hover:border-accent/50"
+                >
+                  <MapPin className="size-4 shrink-0 text-accent" aria-hidden="true" />
+                  <span className="min-w-0">
+                    <span className="block text-sm font-semibold text-foreground">{l.place}</span>
+                    <span className="block text-xs text-muted-foreground">{l.copy}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
+
       {/* Technical expertise */}
-      <section className="border-b border-border bg-background">
+      <section className="border-b border-border bg-sand">
+
         <div className="container-editorial section-y">
           <div className="max-w-2xl">
             <p className="eyebrow">Technical expertise</p>
@@ -367,14 +385,26 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {softwareGrid.map((s) => (
-              <div key={s.name} className="surface-card p-5 sm:p-6">
-                <p className="font-display text-lg text-foreground">{s.name}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
-              </div>
-            ))}
-          </div>
+          <details className="group mt-8 border-t border-border pt-6">
+            <summary className="cursor-pointer list-none text-sm font-semibold text-foreground underline-offset-4 hover:underline">
+              See how we support each tool
+              <span className="ml-2 text-accent group-open:hidden" aria-hidden="true">
+                +
+              </span>
+              <span className="ml-2 hidden text-accent group-open:inline" aria-hidden="true">
+                −
+              </span>
+            </summary>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {softwareGrid.map((s) => (
+                <div key={s.name} className="surface-card p-5 sm:p-6">
+                  <p className="font-display text-lg text-foreground">{s.name}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+                </div>
+              ))}
+            </div>
+          </details>
+
 
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
             <Link to="/engineering-software-support" className="underline-offset-4 hover:underline">
@@ -405,7 +435,8 @@ function HomePage() {
       </section>
 
       {/* Majors + levels */}
-      <section className="border-b border-border bg-sand">
+      <section className="border-b border-border bg-background">
+
         <div className="container-editorial section-y grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div>
             <p className="eyebrow">Majors &amp; disciplines</p>
