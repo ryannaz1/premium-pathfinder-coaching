@@ -329,10 +329,16 @@ export const locationLandings: LandingContent[] = [
           "Yes. Coaching is available in French, English or Arabic, and we regularly work with students drafting in one language and submitting in another.",
       },
       {
+        question: "Do you offer an essay writing service in Montreal?",
+        answer:
+          "No. We are an essay and academic writing coaching service, not a writing service. We help you plan the argument, structure the essay, use sources properly and improve drafts you have written — in English or French. You write and submit your own work.",
+      },
+      {
         question: "Are you located in Montreal?",
         answer:
           "No. Support is online for students based in Montreal and elsewhere in Quebec, scheduled in Eastern Time.",
       },
+
       {
         question: "Do you help with a memoire?",
         answer:

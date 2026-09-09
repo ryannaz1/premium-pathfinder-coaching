@@ -484,10 +484,16 @@ export const serviceLandings: LandingContent[] = [
     integrity: integrityDefault,
     faqs: [
       {
+        question: "Can I book a single literature review consultation?",
+        answer:
+          "Yes. A one-off session is often enough to fix a search strategy, agree the themes your review should be organised around and sanity-check the gap you plan to claim, before you commit weeks of reading.",
+      },
+      {
         question: "How many sources do I need?",
         answer:
           "Fewer than students fear, more critically handled. Coverage of the key debates matters more than a count.",
       },
+
       {
         question: "Can you help with a systematic review?",
         answer:
