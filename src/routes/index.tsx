@@ -340,7 +340,8 @@ function HomePage() {
 
 
       {/* Technical expertise */}
-      <section className="border-b border-border bg-background">
+      <section className="border-b border-border bg-sand">
+
         <div className="container-editorial section-y">
           <div className="max-w-2xl">
             <p className="eyebrow">Technical expertise</p>
