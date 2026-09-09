@@ -385,14 +385,26 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {softwareGrid.map((s) => (
-              <div key={s.name} className="surface-card p-5 sm:p-6">
-                <p className="font-display text-lg text-foreground">{s.name}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
-              </div>
-            ))}
-          </div>
+          <details className="group mt-8 border-t border-border pt-6">
+            <summary className="cursor-pointer list-none text-sm font-semibold text-foreground underline-offset-4 hover:underline">
+              See how we support each tool
+              <span className="ml-2 text-accent group-open:hidden" aria-hidden="true">
+                +
+              </span>
+              <span className="ml-2 hidden text-accent group-open:inline" aria-hidden="true">
+                −
+              </span>
+            </summary>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {softwareGrid.map((s) => (
+                <div key={s.name} className="surface-card p-5 sm:p-6">
+                  <p className="font-display text-lg text-foreground">{s.name}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+                </div>
+              ))}
+            </div>
+          </details>
+
 
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
             <Link to="/engineering-software-support" className="underline-offset-4 hover:underline">
