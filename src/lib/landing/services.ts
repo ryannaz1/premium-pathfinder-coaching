@@ -147,6 +147,11 @@ export const serviceLandings: LandingContent[] = [
     integrity: integrityDefault,
     faqs: [
       {
+        question: "Can I book a one-off methodology consultation?",
+        answer:
+          "Yes. Many candidates start with a single consultation on research design — sampling, instruments, analysis strategy and how to justify the choices in your methodology chapter — before deciding whether ongoing coaching is useful.",
+      },
+      {
         question: "Can coaching replace my supervisor?",
         answer:
           "No, and it should not. We complement supervision with more frequent structure, feedback and accountability.",
@@ -156,6 +161,7 @@ export const serviceLandings: LandingContent[] = [
         answer:
           "We coach article structure, journal fit and responding to reviewer comments. The writing remains yours.",
       },
+
       {
         question: "Can you prepare me for the viva?",
         answer:

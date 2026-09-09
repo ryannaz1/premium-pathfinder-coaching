@@ -435,7 +435,8 @@ function HomePage() {
       </section>
 
       {/* Majors + levels */}
-      <section className="border-b border-border bg-sand">
+      <section className="border-b border-border bg-background">
+
         <div className="container-editorial section-y grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div>
             <p className="eyebrow">Majors &amp; disciplines</p>
