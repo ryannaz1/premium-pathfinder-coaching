@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
+import { ChevronDown, Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
 import logoAsset from "@/assets/logo.png.asset.json";
 import { site, whatsappHref, mailtoHref } from "@/lib/site";
 import { landings, type LandingGroup } from "@/lib/landing";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const directoryGroups: LandingGroup[] = [
   "Locations",
@@ -39,7 +40,6 @@ const locationLinks = [
   { label: "Abu Dhabi", to: "/locations/abu-dhabi" },
   { label: "Montreal", to: "/locations/montreal" },
   { label: "Lebanon", to: "/locations/lebanon" },
-
 ];
 
 const companyLinks = [
@@ -49,15 +49,43 @@ const companyLinks = [
   { label: "Contact", to: "/contact" },
 ];
 
-function Column({ title, links }: { title: string; links: { label: string; to: string }[] }) {
+const languageLinks = [
+  { label: "English", to: "/" },
+  { label: "العربية", to: "/ar" },
+  { label: "Français", to: "/fr" },
+];
+
+/**
+ * Collapsible on mobile, always expanded from md up.
+ * Rendered open during SSR so every link stays in the crawlable HTML.
+ */
+function FooterGroup({
+  title,
+  links,
+  collapsible = true,
+}: {
+  title: string;
+  links: { label: string; to: string }[];
+  collapsible?: boolean;
+}) {
+  const isMobile = useIsMobile();
+  const open = collapsible ? !isMobile : true;
+
   return (
-    <div>
-      <h3 className="text-[0.7rem] font-sans font-semibold uppercase tracking-[0.18em] text-ink-foreground/60">
+    <details
+      open={open}
+      className="group border-b border-ink-foreground/10 py-3 md:border-0 md:py-0"
+    >
+      <summary className="flex cursor-pointer list-none items-center justify-between text-[0.7rem] font-sans font-semibold uppercase tracking-[0.18em] text-ink-foreground/60 md:cursor-default md:pointer-events-none">
         {title}
-      </h3>
-      <ul className="mt-4 space-y-2.5">
+        <ChevronDown
+          className="size-4 shrink-0 transition-transform group-open:rotate-180 md:hidden"
+          aria-hidden="true"
+        />
+      </summary>
+      <ul className="mt-3 space-y-2.5 md:mt-4">
         {links.map((l) => (
-          <li key={l.label}>
+          <li key={`${title}-${l.label}`}>
             <Link
               to={l.to as never}
               className="text-sm text-ink-foreground/85 transition-colors hover:text-ink-foreground"
@@ -67,15 +95,15 @@ function Column({ title, links }: { title: string; links: { label: string; to: s
           </li>
         ))}
       </ul>
-    </div>
+    </details>
   );
 }
 
 export function Footer() {
   return (
     <footer className="bg-ink text-ink-foreground">
-      <div className="container-editorial py-14 md:py-20">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
+      <div className="container-editorial py-12 pb-28 md:py-16 md:pb-20">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5 lg:gap-10">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3">
               <img
@@ -92,14 +120,7 @@ export function Footer() {
               Premium one-to-one academic coaching, tutoring, research guidance and technical
               project support for students at every academic level — from undergraduate study to
               Master&apos;s and PhD research — across the UK, UAE, Canada, Lebanon and
-              internationally.
-            </p>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-foreground/85">
-              Support is available in English, Arabic and French.
-            </p>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-foreground/75">
-              Online academic coaching, tutoring, research guidance and technical project support
-              for students in the UK, UAE, Canada, Lebanon and internationally.
+              internationally. Support is available in English, Arabic and French.
             </p>
             <div className="mt-6 flex flex-col gap-3 text-sm">
               <a
@@ -134,51 +155,39 @@ export function Footer() {
                 className="inline-flex items-center gap-2 text-ink-foreground/85 hover:text-ink-foreground"
               >
                 <Facebook className="size-4" aria-hidden="true" />
-                Yes We Do Your Projects on Facebook
+                Facebook
               </a>
             </div>
           </div>
 
-          <Column title="Services" links={serviceLinks} />
+          <FooterGroup title="Services" links={serviceLinks} />
+          <FooterGroup title="Locations" links={locationLinks} />
           <div>
-            <Column title="Locations" links={locationLinks} />
-            <p className="mt-4 max-w-xs text-xs leading-relaxed text-ink-foreground/60">
-              Online academic support across multiple time zones.
-            </p>
+            <FooterGroup title="Company" links={companyLinks} />
+            <div className="mt-3 md:mt-8">
+              <FooterGroup title="Language" links={languageLinks} collapsible={false} />
+            </div>
           </div>
-          <Column title="Company" links={companyLinks} />
         </div>
 
-        <div className="mt-12 border-t border-ink-foreground/15 pt-10">
+        <div className="mt-10 border-t border-ink-foreground/15 pt-8">
           <h3 className="text-[0.7rem] font-sans font-semibold uppercase tracking-[0.18em] text-ink-foreground/60">
             Explore academic support
           </h3>
-          <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-4 grid gap-0 md:mt-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
             {directoryGroups.map((group) => (
-              <div key={group}>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-foreground/50">
-                  {group}
-                </p>
-                <ul className="mt-3 space-y-2">
-                  {landings
-                    .filter((l) => l.group === group)
-                    .map((l) => (
-                      <li key={l.slug}>
-                        <Link
-                          to={`/${l.slug}` as never}
-                          className="text-sm text-ink-foreground/75 transition-colors hover:text-ink-foreground"
-                        >
-                          {l.label}
-                        </Link>
-                      </li>
-                    ))}
-                </ul>
-              </div>
+              <FooterGroup
+                key={group}
+                title={group}
+                links={landings
+                  .filter((l) => l.group === group)
+                  .map((l) => ({ label: l.label, to: `/${l.slug}` }))}
+              />
             ))}
           </div>
         </div>
 
-        <div className="mt-12 border-t border-ink-foreground/15 pt-6">
+        <div className="mt-10 border-t border-ink-foreground/15 pt-6">
           <p className="text-xs leading-relaxed text-ink-foreground/60">
             Yes We Do Your Projects provides coaching, tutoring and guidance only. We do not write,
             complete or submit academic work on behalf of students; students remain responsible for
