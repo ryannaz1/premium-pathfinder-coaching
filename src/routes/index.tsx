@@ -127,7 +127,10 @@ const steps = [
   { title: "Tell us", copy: "Share your course, level and what you're working on." },
   { title: "Match", copy: "We recommend the right format of academic or technical support." },
   { title: "Work together", copy: "One-to-one sessions, guidance and structured feedback." },
-  { title: "Submit with confidence", copy: "You understand, finish and submit your own work." },
+  {
+    title: "Complete your work with confidence",
+    copy: "You understand the material, then write and submit your own work.",
+  },
 ];
 
 const locations = [
