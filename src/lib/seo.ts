@@ -17,3 +17,18 @@ export function socialMeta(title: string, description: string) {
     { name: "twitter:image", content: OG_IMAGE },
   ];
 }
+
+/**
+ * hreflang alternates for the pages that exist in English, Arabic and French.
+ * `enPath` is the canonical English path, e.g. "" (home), "/services", "/contact".
+ * English stays the canonical primary version (x-default).
+ */
+export function hreflangLinks(enPath: "" | "/services" | "/contact") {
+  const en = `${SITE_URL}${enPath || "/"}`;
+  return [
+    { rel: "alternate", hrefLang: "en", href: en },
+    { rel: "alternate", hrefLang: "ar", href: `${SITE_URL}/ar${enPath}` },
+    { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/fr${enPath}` },
+    { rel: "alternate", hrefLang: "x-default", href: en },
+  ];
+}

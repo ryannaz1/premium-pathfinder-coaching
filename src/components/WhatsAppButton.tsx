@@ -44,7 +44,11 @@ export function WhatsAppFloating() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with an academic coach on WhatsApp"
-      className="fixed bottom-5 right-5 z-40 inline-flex size-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-lift transition-transform duration-200 hover:scale-105 md:bottom-8 md:right-8"
+      style={{
+        bottom: "calc(1.25rem + env(safe-area-inset-bottom, 0px))",
+        right: "calc(1rem + env(safe-area-inset-right, 0px))",
+      }}
+      className="fixed z-40 inline-flex size-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-lift transition-transform duration-200 hover:scale-105"
     >
       <MessageCircle className="size-6" aria-hidden="true" />
     </a>

@@ -52,6 +52,12 @@ import { Route as SpssStatisticsHelpRouteImport } from './routes/spss-statistics
 import { Route as ThesisDissertationCoachingRouteImport } from './routes/thesis-dissertation-coaching'
 import { Route as UkAcademicSupportRouteImport } from './routes/uk-academic-support'
 import { Route as WhoWeHelpRouteImport } from './routes/who-we-help'
+import { Route as ArIndexRouteImport } from './routes/ar/index'
+import { Route as ArContactRouteImport } from './routes/ar/contact'
+import { Route as ArServicesRouteImport } from './routes/ar/services'
+import { Route as FrIndexRouteImport } from './routes/fr/index'
+import { Route as FrContactRouteImport } from './routes/fr/contact'
+import { Route as FrServicesRouteImport } from './routes/fr/services'
 import { Route as LocationsIndexRouteImport } from './routes/locations/index'
 import { Route as LocationsAbuDhabiRouteImport } from './routes/locations/abu-dhabi'
 import { Route as LocationsDubaiRouteImport } from './routes/locations/dubai'
@@ -300,6 +306,36 @@ const WhoWeHelpRoute = WhoWeHelpRouteImport.update({
   path: '/who-we-help',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArIndexRoute = ArIndexRouteImport.update({
+  id: '/ar/',
+  path: '/ar/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArContactRoute = ArContactRouteImport.update({
+  id: '/ar/contact',
+  path: '/ar/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArServicesRoute = ArServicesRouteImport.update({
+  id: '/ar/services',
+  path: '/ar/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrIndexRoute = FrIndexRouteImport.update({
+  id: '/fr/',
+  path: '/fr/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrContactRoute = FrContactRouteImport.update({
+  id: '/fr/contact',
+  path: '/fr/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrServicesRoute = FrServicesRouteImport.update({
+  id: '/fr/services',
+  path: '/fr/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LocationsIndexRoute = LocationsIndexRouteImport.update({
   id: '/locations/',
   path: '/locations/',
@@ -467,6 +503,10 @@ export interface FileRoutesByFullPath {
   '/thesis-dissertation-coaching': typeof ThesisDissertationCoachingRoute
   '/uk-academic-support': typeof UkAcademicSupportRoute
   '/who-we-help': typeof WhoWeHelpRoute
+  '/ar/contact': typeof ArContactRoute
+  '/ar/services': typeof ArServicesRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/services': typeof FrServicesRoute
   '/locations/abu-dhabi': typeof LocationsAbuDhabiRoute
   '/locations/dubai': typeof LocationsDubaiRoute
   '/locations/lebanon': typeof LocationsLebanonRoute
@@ -486,6 +526,8 @@ export interface FileRoutesByFullPath {
   '/services/sat-preparation': typeof ServicesSatPreparationRoute
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/ar/': typeof ArIndexRoute
+  '/fr/': typeof FrIndexRoute
   '/locations/': typeof LocationsIndexRoute
   '/resources/': typeof ResourcesIndexRoute
   '/services/': typeof ServicesIndexRoute
@@ -534,6 +576,10 @@ export interface FileRoutesByTo {
   '/thesis-dissertation-coaching': typeof ThesisDissertationCoachingRoute
   '/uk-academic-support': typeof UkAcademicSupportRoute
   '/who-we-help': typeof WhoWeHelpRoute
+  '/ar/contact': typeof ArContactRoute
+  '/ar/services': typeof ArServicesRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/services': typeof FrServicesRoute
   '/locations/abu-dhabi': typeof LocationsAbuDhabiRoute
   '/locations/dubai': typeof LocationsDubaiRoute
   '/locations/lebanon': typeof LocationsLebanonRoute
@@ -553,6 +599,8 @@ export interface FileRoutesByTo {
   '/services/sat-preparation': typeof ServicesSatPreparationRoute
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/ar': typeof ArIndexRoute
+  '/fr': typeof FrIndexRoute
   '/locations': typeof LocationsIndexRoute
   '/resources': typeof ResourcesIndexRoute
   '/services': typeof ServicesIndexRoute
@@ -602,6 +650,10 @@ export interface FileRoutesById {
   '/thesis-dissertation-coaching': typeof ThesisDissertationCoachingRoute
   '/uk-academic-support': typeof UkAcademicSupportRoute
   '/who-we-help': typeof WhoWeHelpRoute
+  '/ar/contact': typeof ArContactRoute
+  '/ar/services': typeof ArServicesRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/services': typeof FrServicesRoute
   '/locations/abu-dhabi': typeof LocationsAbuDhabiRoute
   '/locations/dubai': typeof LocationsDubaiRoute
   '/locations/lebanon': typeof LocationsLebanonRoute
@@ -621,6 +673,8 @@ export interface FileRoutesById {
   '/services/sat-preparation': typeof ServicesSatPreparationRoute
   '/services/thesis-dissertation-coaching': typeof ServicesThesisDissertationCoachingRoute
   '/services/university-tutoring': typeof ServicesUniversityTutoringRoute
+  '/ar/': typeof ArIndexRoute
+  '/fr/': typeof FrIndexRoute
   '/locations/': typeof LocationsIndexRoute
   '/resources/': typeof ResourcesIndexRoute
   '/services/': typeof ServicesIndexRoute
@@ -671,6 +725,10 @@ export interface FileRouteTypes {
     | '/thesis-dissertation-coaching'
     | '/uk-academic-support'
     | '/who-we-help'
+    | '/ar/contact'
+    | '/ar/services'
+    | '/fr/contact'
+    | '/fr/services'
     | '/locations/abu-dhabi'
     | '/locations/dubai'
     | '/locations/lebanon'
@@ -690,6 +748,8 @@ export interface FileRouteTypes {
     | '/services/sat-preparation'
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
+    | '/ar/'
+    | '/fr/'
     | '/locations/'
     | '/resources/'
     | '/services/'
@@ -738,6 +798,10 @@ export interface FileRouteTypes {
     | '/thesis-dissertation-coaching'
     | '/uk-academic-support'
     | '/who-we-help'
+    | '/ar/contact'
+    | '/ar/services'
+    | '/fr/contact'
+    | '/fr/services'
     | '/locations/abu-dhabi'
     | '/locations/dubai'
     | '/locations/lebanon'
@@ -757,6 +821,8 @@ export interface FileRouteTypes {
     | '/services/sat-preparation'
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
+    | '/ar'
+    | '/fr'
     | '/locations'
     | '/resources'
     | '/services'
@@ -805,6 +871,10 @@ export interface FileRouteTypes {
     | '/thesis-dissertation-coaching'
     | '/uk-academic-support'
     | '/who-we-help'
+    | '/ar/contact'
+    | '/ar/services'
+    | '/fr/contact'
+    | '/fr/services'
     | '/locations/abu-dhabi'
     | '/locations/dubai'
     | '/locations/lebanon'
@@ -824,6 +894,8 @@ export interface FileRouteTypes {
     | '/services/sat-preparation'
     | '/services/thesis-dissertation-coaching'
     | '/services/university-tutoring'
+    | '/ar/'
+    | '/fr/'
     | '/locations/'
     | '/resources/'
     | '/services/'
@@ -873,6 +945,10 @@ export interface RootRouteChildren {
   ThesisDissertationCoachingRoute: typeof ThesisDissertationCoachingRoute
   UkAcademicSupportRoute: typeof UkAcademicSupportRoute
   WhoWeHelpRoute: typeof WhoWeHelpRoute
+  ArContactRoute: typeof ArContactRoute
+  ArServicesRoute: typeof ArServicesRoute
+  FrContactRoute: typeof FrContactRoute
+  FrServicesRoute: typeof FrServicesRoute
   LocationsAbuDhabiRoute: typeof LocationsAbuDhabiRoute
   LocationsDubaiRoute: typeof LocationsDubaiRoute
   LocationsLebanonRoute: typeof LocationsLebanonRoute
@@ -892,6 +968,8 @@ export interface RootRouteChildren {
   ServicesSatPreparationRoute: typeof ServicesSatPreparationRoute
   ServicesThesisDissertationCoachingRoute: typeof ServicesThesisDissertationCoachingRoute
   ServicesUniversityTutoringRoute: typeof ServicesUniversityTutoringRoute
+  ArIndexRoute: typeof ArIndexRoute
+  FrIndexRoute: typeof FrIndexRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
   ResourcesIndexRoute: typeof ResourcesIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
@@ -1200,6 +1278,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhoWeHelpRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ar/': {
+      id: '/ar/'
+      path: '/ar'
+      fullPath: '/ar/'
+      preLoaderRoute: typeof ArIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/contact': {
+      id: '/ar/contact'
+      path: '/ar/contact'
+      fullPath: '/ar/contact'
+      preLoaderRoute: typeof ArContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/services': {
+      id: '/ar/services'
+      path: '/ar/services'
+      fullPath: '/ar/services'
+      preLoaderRoute: typeof ArServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/': {
+      id: '/fr/'
+      path: '/fr'
+      fullPath: '/fr/'
+      preLoaderRoute: typeof FrIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/contact': {
+      id: '/fr/contact'
+      path: '/fr/contact'
+      fullPath: '/fr/contact'
+      preLoaderRoute: typeof FrContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/services': {
+      id: '/fr/services'
+      path: '/fr/services'
+      fullPath: '/fr/services'
+      preLoaderRoute: typeof FrServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/locations/': {
       id: '/locations/'
       path: '/locations'
@@ -1402,6 +1522,10 @@ const rootRouteChildren: RootRouteChildren = {
   ThesisDissertationCoachingRoute: ThesisDissertationCoachingRoute,
   UkAcademicSupportRoute: UkAcademicSupportRoute,
   WhoWeHelpRoute: WhoWeHelpRoute,
+  ArContactRoute: ArContactRoute,
+  ArServicesRoute: ArServicesRoute,
+  FrContactRoute: FrContactRoute,
+  FrServicesRoute: FrServicesRoute,
   LocationsAbuDhabiRoute: LocationsAbuDhabiRoute,
   LocationsDubaiRoute: LocationsDubaiRoute,
   LocationsLebanonRoute: LocationsLebanonRoute,
@@ -1428,6 +1552,8 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesThesisDissertationCoachingRoute:
     ServicesThesisDissertationCoachingRoute,
   ServicesUniversityTutoringRoute: ServicesUniversityTutoringRoute,
+  ArIndexRoute: ArIndexRoute,
+  FrIndexRoute: FrIndexRoute,
   LocationsIndexRoute: LocationsIndexRoute,
   ResourcesIndexRoute: ResourcesIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
