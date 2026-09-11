@@ -5,7 +5,7 @@ import { Mail, MessageCircle } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, mailtoHref, whatsappHref } from "@/lib/site";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, hreflangLinks } from "@/lib/seo";
 
 const title = "Contact Yes We Do Your Projects — Book an Academic Consultation";
 const description =
@@ -22,7 +22,10 @@ export const Route = createFileRoute("/contact")({
       { property: "og:url", content: "https://yeswedoyourprojects.online/contact" },
       ...socialMeta(title, description),
     ],
-    links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/contact" }],
+    links: [
+      { rel: "canonical", href: "https://yeswedoyourprojects.online/contact" },
+      ...hreflangLinks("/contact"),
+    ],
   }),
   component: ContactPage,
 });

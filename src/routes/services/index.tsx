@@ -8,7 +8,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { majorCategories, practicalProjects, technicalAreas } from "@/lib/disciplines";
 import { services } from "@/lib/services";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, hreflangLinks } from "@/lib/seo";
 
 const title = "Academic Coaching & Tutoring Services | Yes We Do Your Projects";
 const description =
@@ -68,7 +68,10 @@ export const Route = createFileRoute("/services/")({
       { property: "og:url", content: "https://yeswedoyourprojects.online/services" },
       ...socialMeta(title, description),
     ],
-    links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/services" }],
+    links: [
+      { rel: "canonical", href: "https://yeswedoyourprojects.online/services" },
+      ...hreflangLinks("/services"),
+    ],
     scripts: [
       {
         type: "application/ld+json",
