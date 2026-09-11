@@ -89,6 +89,7 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-4 flex flex-col gap-3">
+              <LanguageSelector onNavigate={() => setOpen(false)} />
               <Link
                 to="/find-support"
                 onClick={() => setOpen(false)}
@@ -109,5 +110,36 @@ export function Header() {
         </div>
       )}
     </header>
+  );
+}
+
+const languages = [
+  { code: "EN", label: "English", to: "/" },
+  { code: "العربية", label: "العربية", to: "/ar" },
+  { code: "FR", label: "Français", to: "/fr" },
+] as const;
+
+function LanguageSelector({ onNavigate }: { onNavigate?: () => void }) {
+  return (
+    <div
+      aria-label="Language"
+      role="group"
+      className="inline-flex items-center gap-1 rounded-full border border-border p-1"
+    >
+      {languages.map((l) => (
+        <Link
+          key={l.code}
+          to={l.to}
+          onClick={onNavigate}
+          hrefLang={l.to === "/" ? "en" : l.to === "/ar" ? "ar" : "fr"}
+          aria-label={l.label}
+          className="rounded-full px-3 py-1.5 text-xs font-semibold text-muted-foreground transition-colors hover:text-foreground"
+          activeProps={{ className: "bg-secondary text-foreground" }}
+          activeOptions={{ exact: true }}
+        >
+          {l.code}
+        </Link>
+      ))}
+    </div>
   );
 }
