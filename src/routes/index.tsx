@@ -17,7 +17,7 @@ import { FindSupportCTA } from "@/components/FindSupportCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { academicLevels, majorCategories, softwareGrid } from "@/lib/disciplines";
 import { site, whatsappHref } from "@/lib/site";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, hreflangLinks } from "@/lib/seo";
 
 
 const title = "Academic Support for Every Major, Course & Level | Yes We Do Your Projects";
@@ -165,7 +165,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://yeswedoyourprojects.online/" },
       ...socialMeta(title, description),
     ],
-    links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/" }],
+    links: [
+      { rel: "canonical", href: "https://yeswedoyourprojects.online/" },
+      ...hreflangLinks(""),
+    ],
     scripts: [
       {
         type: "application/ld+json",

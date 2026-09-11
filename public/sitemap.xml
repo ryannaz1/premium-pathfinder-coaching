@@ -65,4 +65,10 @@
   <url><loc>https://yeswedoyourprojects.online/resources/revit-for-architecture-students</loc><priority>0.7</priority></url>
   <url><loc>https://yeswedoyourprojects.online/resources/architecture-maquette-guide</loc><priority>0.7</priority></url>
   <url><loc>https://yeswedoyourprojects.online/find-support</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://yeswedoyourprojects.online/ar</loc><priority>0.7</priority></url>
+  <url><loc>https://yeswedoyourprojects.online/ar/services</loc><priority>0.7</priority></url>
+  <url><loc>https://yeswedoyourprojects.online/ar/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://yeswedoyourprojects.online/fr</loc><priority>0.7</priority></url>
+  <url><loc>https://yeswedoyourprojects.online/fr/services</loc><priority>0.7</priority></url>
+  <url><loc>https://yeswedoyourprojects.online/fr/contact</loc><priority>0.7</priority></url>
 </urlset>
