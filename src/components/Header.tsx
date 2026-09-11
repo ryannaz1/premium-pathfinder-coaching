@@ -44,6 +44,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <LanguageSelector />
           <a
             href={whatsappHref}
             target="_blank"
