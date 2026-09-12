@@ -333,6 +333,72 @@ export const locations: LocationContent[] = [
       },
     ],
   },
+  {
+    slug: "saudi-arabia",
+    place: "Saudi Arabia",
+    short: "Academic coaching and tutoring for university students across the Kingdom of Saudi Arabia.",
+    h1: "University academic coaching in Saudi Arabia",
+    title: "Saudi Arabia University Academic Coaching & Tutoring | Yes We Do Your Projects",
+    description:
+      "One-to-one academic coaching and tutoring for university students in Saudi Arabia: coursework, research methods, dissertations, technical projects and exam preparation, online in AST.",
+    intro:
+      "Saudi Arabia's universities are expanding rapidly, from King Saud University, KAUST and King Abdulaziz University to Imam Muhammad Ibn Saud Islamic University, Princess Nourah bint Abdulrahman University and international branch campuses across Riyadh, Jeddah, Dhahran, Dammam and beyond. Students face a mix of Saudi, American and British-influenced curricula, often with English as the language of instruction and Arabic as the language of daily life. We coach students across the Kingdom online, in Arabia Standard Time, in English, Arabic or French.",
+    timezone: "Sessions run in AST (UTC+3), including evenings and weekends to fit around university and family schedules.",
+    context: [
+      {
+        title: "Mixed academic systems",
+        copy: "Saudi universities award degrees under national, American and British frameworks, each with different grading, referencing and assessment conventions. We coach to the system your programme actually uses.",
+      },
+      {
+        title: "English-medium instruction",
+        copy: "Many programmes are taught and assessed in English while students think and discuss in Arabic. We bridge that gap: academic register, structure, argument and citation in the language your rubric demands.",
+      },
+      {
+        title: "Research and technical degrees",
+        copy: "Engineering, computer science, medicine, business and the sciences dominate Saudi higher education. We support coursework, lab reports, capstone projects, Master's theses and PhD research across these fields.",
+      },
+      {
+        title: "Scholarship and progression pressure",
+        copy: "Many students are on competitive scholarships with GPA or progression requirements. We build term plans around the assessments that actually protect your standing.",
+      },
+    ],
+    systemNotes: [
+      "National, American and British-influenced degree structures across institutions",
+      "English as the primary language of instruction and assessment in many programmes",
+      "Bachelor's, Master's and PhD pathways with growing research expectations",
+      "Strong emphasis on STEM, medicine, business and technology",
+      "Scholarship and sponsorship schemes with strict academic conditions",
+    ],
+    popular: [
+      "university-tutoring",
+      "research-methodology",
+      "research-statistics-support",
+      "thesis-dissertation-coaching",
+    ],
+    faqs: [
+      integrityFaq,
+      {
+        question: "Do you work with students at Saudi universities?",
+        answer:
+          "Yes. We coach students at universities across Saudi Arabia, including in Riyadh, Jeddah, Dhahran and Dammam, as well as Saudi students studying abroad. Sessions are online and scheduled in Arabia Standard Time.",
+      },
+      {
+        question: "Can sessions be in Arabic?",
+        answer:
+          "Yes. Coaching is available in Arabic, English or French. Many students prefer to discuss concepts in Arabic and then develop the written submission in academic English.",
+      },
+      {
+        question: "Do you support Master's and PhD research?",
+        answer:
+          "Yes. We provide research planning, methodology guidance, literature review structure, chapter feedback and academic writing coaching at postgraduate and doctoral level.",
+      },
+      {
+        question: "Can you help with engineering and technical projects?",
+        answer:
+          "Yes. We guide coursework, calculations, modelling, reports, capstone projects and technical presentations across engineering, computer science and related disciplines.",
+      },
+    ],
+  },
 ];
 
 export const locationBySlug = Object.fromEntries(

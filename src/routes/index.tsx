@@ -82,7 +82,7 @@ const faqs: FaqItem[] = [
   {
     question: "Are sessions online or in person?",
     answer:
-      "Sessions are delivered online, which is why we can support students across the United Kingdom, Dubai, Abu Dhabi and the wider UAE, Montreal and Quebec, and Lebanon within their own time zones.",
+      "Sessions are delivered online, which is why we can support students across the United Kingdom, Dubai, Abu Dhabi and the wider UAE, Saudi Arabia, Montreal and Quebec, and Lebanon within their own time zones.",
   },
   {
     question: "How do I get started?",
@@ -110,7 +110,7 @@ const heroPoints = [
   {
     icon: Globe,
     title: "Online, your time zone",
-    copy: "UK, UAE, Canada and Lebanon scheduling.",
+    copy: "UK, UAE, Saudi Arabia, Canada and Lebanon scheduling.",
   },
 ];
 
@@ -136,6 +136,7 @@ const steps = [
 const locations = [
   { place: "United Kingdom", copy: "UK universities, all levels", to: "/locations/uk" },
   { place: "UAE", copy: "Dubai, Abu Dhabi & all Emirates", to: "/locations/dubai" },
+  { place: "Saudi Arabia", copy: "KSA universities, all levels", to: "/locations/saudi-arabia" },
   { place: "Canada", copy: "Montreal & across Quebec", to: "/locations/montreal" },
   { place: "Lebanon", copy: "Lebanese universities", to: "/locations/lebanon" },
 ];

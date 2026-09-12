@@ -7,9 +7,9 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { locations } from "@/lib/locations";
 import { socialMeta } from "@/lib/seo";
 
-const title = "Locations — UK, Dubai, Abu Dhabi, Montreal & Lebanon | Yes We Do Your Projects";
+const title = "Locations — UK, UAE, Saudi Arabia, Montreal & Lebanon | Yes We Do Your Projects";
 const description =
-  "Online academic coaching and university tutoring for students in the United Kingdom, Dubai, Abu Dhabi, Montreal and Quebec, and Lebanon — delivered in your time zone.";
+  "Online academic coaching and university tutoring for students in the United Kingdom, Dubai, Abu Dhabi, Saudi Arabia, Montreal and Quebec, and Lebanon — delivered in your time zone.";
 
 export const Route = createFileRoute("/locations/")({
   head: () => ({
@@ -35,7 +35,7 @@ function LocationsPage() {
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Locations" }]} />
           <p className="eyebrow mt-6">Locations</p>
           <h1 className="mt-4 max-w-3xl text-3xl leading-[1.12] sm:text-4xl lg:text-5xl">
-            Academic coaching across four academic cultures
+            Academic coaching across five academic cultures
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             Coaching is delivered online and scheduled in your time zone. What changes between

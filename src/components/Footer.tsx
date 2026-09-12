@@ -38,6 +38,7 @@ const locationLinks = [
   { label: "United Kingdom", to: "/locations/uk" },
   { label: "Dubai", to: "/locations/dubai" },
   { label: "Abu Dhabi", to: "/locations/abu-dhabi" },
+  { label: "Saudi Arabia", to: "/locations/saudi-arabia" },
   { label: "Montreal", to: "/locations/montreal" },
   { label: "Lebanon", to: "/locations/lebanon" },
 ];
@@ -119,7 +120,7 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-foreground/75">
               Premium one-to-one academic coaching, tutoring, research guidance and technical
               project support for students at every academic level — from undergraduate study to
-              Master&apos;s and PhD research — across the UK, UAE, Canada, Lebanon and
+              Master&apos;s and PhD research — across the UK, UAE, Saudi Arabia, Canada, Lebanon and
               internationally. Support is available in English, Arabic and French.
             </p>
             <div className="mt-6 flex flex-col gap-3 text-sm">

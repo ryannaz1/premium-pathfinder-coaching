@@ -46,6 +46,7 @@ import { Route as PhysicalProjectModelsRouteImport } from './routes/physical-pro
 import { Route as ResearchMethodologySupportRouteImport } from './routes/research-methodology-support'
 import { Route as ResearchProposalSupportRouteImport } from './routes/research-proposal-support'
 import { Route as RevitProjectHelpRouteImport } from './routes/revit-project-help'
+import { Route as SaudiArabiaAcademicSupportRouteImport } from './routes/saudi-arabia-academic-support'
 import { Route as ScienceAcademicSupportRouteImport } from './routes/science-academic-support'
 import { Route as SocialScienceAcademicSupportRouteImport } from './routes/social-science-academic-support'
 import { Route as SpssStatisticsHelpRouteImport } from './routes/spss-statistics-help'
@@ -63,6 +64,7 @@ import { Route as LocationsAbuDhabiRouteImport } from './routes/locations/abu-dh
 import { Route as LocationsDubaiRouteImport } from './routes/locations/dubai'
 import { Route as LocationsLebanonRouteImport } from './routes/locations/lebanon'
 import { Route as LocationsMontrealRouteImport } from './routes/locations/montreal'
+import { Route as LocationsSaudiArabiaRouteImport } from './routes/locations/saudi-arabia'
 import { Route as LocationsUkRouteImport } from './routes/locations/uk'
 import { Route as ResourcesIndexRouteImport } from './routes/resources/index'
 import { Route as ResourcesArchitectureMaquetteGuideRouteImport } from './routes/resources/architecture-maquette-guide'
@@ -274,6 +276,12 @@ const RevitProjectHelpRoute = RevitProjectHelpRouteImport.update({
   path: '/revit-project-help',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SaudiArabiaAcademicSupportRoute =
+  SaudiArabiaAcademicSupportRouteImport.update({
+    id: '/saudi-arabia-academic-support',
+    path: '/saudi-arabia-academic-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ScienceAcademicSupportRoute = ScienceAcademicSupportRouteImport.update({
   id: '/science-academic-support',
   path: '/science-academic-support',
@@ -359,6 +367,11 @@ const LocationsLebanonRoute = LocationsLebanonRouteImport.update({
 const LocationsMontrealRoute = LocationsMontrealRouteImport.update({
   id: '/locations/montreal',
   path: '/locations/montreal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsSaudiArabiaRoute = LocationsSaudiArabiaRouteImport.update({
+  id: '/locations/saudi-arabia',
+  path: '/locations/saudi-arabia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LocationsUkRoute = LocationsUkRouteImport.update({
@@ -497,6 +510,7 @@ export interface FileRoutesByFullPath {
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
+  '/saudi-arabia-academic-support': typeof SaudiArabiaAcademicSupportRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
   '/spss-statistics-help': typeof SpssStatisticsHelpRoute
@@ -511,6 +525,7 @@ export interface FileRoutesByFullPath {
   '/locations/dubai': typeof LocationsDubaiRoute
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
+  '/locations/saudi-arabia': typeof LocationsSaudiArabiaRoute
   '/locations/uk': typeof LocationsUkRoute
   '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
   '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
@@ -570,6 +585,7 @@ export interface FileRoutesByTo {
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
+  '/saudi-arabia-academic-support': typeof SaudiArabiaAcademicSupportRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
   '/spss-statistics-help': typeof SpssStatisticsHelpRoute
@@ -584,6 +600,7 @@ export interface FileRoutesByTo {
   '/locations/dubai': typeof LocationsDubaiRoute
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
+  '/locations/saudi-arabia': typeof LocationsSaudiArabiaRoute
   '/locations/uk': typeof LocationsUkRoute
   '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
   '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
@@ -644,6 +661,7 @@ export interface FileRoutesById {
   '/research-methodology-support': typeof ResearchMethodologySupportRoute
   '/research-proposal-support': typeof ResearchProposalSupportRoute
   '/revit-project-help': typeof RevitProjectHelpRoute
+  '/saudi-arabia-academic-support': typeof SaudiArabiaAcademicSupportRoute
   '/science-academic-support': typeof ScienceAcademicSupportRoute
   '/social-science-academic-support': typeof SocialScienceAcademicSupportRoute
   '/spss-statistics-help': typeof SpssStatisticsHelpRoute
@@ -658,6 +676,7 @@ export interface FileRoutesById {
   '/locations/dubai': typeof LocationsDubaiRoute
   '/locations/lebanon': typeof LocationsLebanonRoute
   '/locations/montreal': typeof LocationsMontrealRoute
+  '/locations/saudi-arabia': typeof LocationsSaudiArabiaRoute
   '/locations/uk': typeof LocationsUkRoute
   '/resources/architecture-maquette-guide': typeof ResourcesArchitectureMaquetteGuideRoute
   '/resources/engineering-final-year-project-guide': typeof ResourcesEngineeringFinalYearProjectGuideRoute
@@ -719,6 +738,7 @@ export interface FileRouteTypes {
     | '/research-methodology-support'
     | '/research-proposal-support'
     | '/revit-project-help'
+    | '/saudi-arabia-academic-support'
     | '/science-academic-support'
     | '/social-science-academic-support'
     | '/spss-statistics-help'
@@ -733,6 +753,7 @@ export interface FileRouteTypes {
     | '/locations/dubai'
     | '/locations/lebanon'
     | '/locations/montreal'
+    | '/locations/saudi-arabia'
     | '/locations/uk'
     | '/resources/architecture-maquette-guide'
     | '/resources/engineering-final-year-project-guide'
@@ -792,6 +813,7 @@ export interface FileRouteTypes {
     | '/research-methodology-support'
     | '/research-proposal-support'
     | '/revit-project-help'
+    | '/saudi-arabia-academic-support'
     | '/science-academic-support'
     | '/social-science-academic-support'
     | '/spss-statistics-help'
@@ -806,6 +828,7 @@ export interface FileRouteTypes {
     | '/locations/dubai'
     | '/locations/lebanon'
     | '/locations/montreal'
+    | '/locations/saudi-arabia'
     | '/locations/uk'
     | '/resources/architecture-maquette-guide'
     | '/resources/engineering-final-year-project-guide'
@@ -865,6 +888,7 @@ export interface FileRouteTypes {
     | '/research-methodology-support'
     | '/research-proposal-support'
     | '/revit-project-help'
+    | '/saudi-arabia-academic-support'
     | '/science-academic-support'
     | '/social-science-academic-support'
     | '/spss-statistics-help'
@@ -879,6 +903,7 @@ export interface FileRouteTypes {
     | '/locations/dubai'
     | '/locations/lebanon'
     | '/locations/montreal'
+    | '/locations/saudi-arabia'
     | '/locations/uk'
     | '/resources/architecture-maquette-guide'
     | '/resources/engineering-final-year-project-guide'
@@ -939,6 +964,7 @@ export interface RootRouteChildren {
   ResearchMethodologySupportRoute: typeof ResearchMethodologySupportRoute
   ResearchProposalSupportRoute: typeof ResearchProposalSupportRoute
   RevitProjectHelpRoute: typeof RevitProjectHelpRoute
+  SaudiArabiaAcademicSupportRoute: typeof SaudiArabiaAcademicSupportRoute
   ScienceAcademicSupportRoute: typeof ScienceAcademicSupportRoute
   SocialScienceAcademicSupportRoute: typeof SocialScienceAcademicSupportRoute
   SpssStatisticsHelpRoute: typeof SpssStatisticsHelpRoute
@@ -953,6 +979,7 @@ export interface RootRouteChildren {
   LocationsDubaiRoute: typeof LocationsDubaiRoute
   LocationsLebanonRoute: typeof LocationsLebanonRoute
   LocationsMontrealRoute: typeof LocationsMontrealRoute
+  LocationsSaudiArabiaRoute: typeof LocationsSaudiArabiaRoute
   LocationsUkRoute: typeof LocationsUkRoute
   ResourcesArchitectureMaquetteGuideRoute: typeof ResourcesArchitectureMaquetteGuideRoute
   ResourcesEngineeringFinalYearProjectGuideRoute: typeof ResourcesEngineeringFinalYearProjectGuideRoute
@@ -1236,6 +1263,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RevitProjectHelpRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/saudi-arabia-academic-support': {
+      id: '/saudi-arabia-academic-support'
+      path: '/saudi-arabia-academic-support'
+      fullPath: '/saudi-arabia-academic-support'
+      preLoaderRoute: typeof SaudiArabiaAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/science-academic-support': {
       id: '/science-academic-support'
       path: '/science-academic-support'
@@ -1353,6 +1387,13 @@ declare module '@tanstack/react-router' {
       path: '/locations/montreal'
       fullPath: '/locations/montreal'
       preLoaderRoute: typeof LocationsMontrealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/saudi-arabia': {
+      id: '/locations/saudi-arabia'
+      path: '/locations/saudi-arabia'
+      fullPath: '/locations/saudi-arabia'
+      preLoaderRoute: typeof LocationsSaudiArabiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/locations/uk': {
@@ -1516,6 +1557,7 @@ const rootRouteChildren: RootRouteChildren = {
   ResearchMethodologySupportRoute: ResearchMethodologySupportRoute,
   ResearchProposalSupportRoute: ResearchProposalSupportRoute,
   RevitProjectHelpRoute: RevitProjectHelpRoute,
+  SaudiArabiaAcademicSupportRoute: SaudiArabiaAcademicSupportRoute,
   ScienceAcademicSupportRoute: ScienceAcademicSupportRoute,
   SocialScienceAcademicSupportRoute: SocialScienceAcademicSupportRoute,
   SpssStatisticsHelpRoute: SpssStatisticsHelpRoute,
@@ -1530,6 +1572,7 @@ const rootRouteChildren: RootRouteChildren = {
   LocationsDubaiRoute: LocationsDubaiRoute,
   LocationsLebanonRoute: LocationsLebanonRoute,
   LocationsMontrealRoute: LocationsMontrealRoute,
+  LocationsSaudiArabiaRoute: LocationsSaudiArabiaRoute,
   LocationsUkRoute: LocationsUkRoute,
   ResourcesArchitectureMaquetteGuideRoute:
     ResourcesArchitectureMaquetteGuideRoute,

@@ -450,6 +450,92 @@ export const locationLandings: LandingContent[] = [
     areaServed: "Lebanon",
   },
   {
+    slug: "saudi-arabia-academic-support",
+    group: "Locations",
+    label: "Saudi Arabia academic support",
+    eyebrow: "Online academic support · Saudi Arabia",
+    h1: "Online academic support for university students in Saudi Arabia",
+    title: "Academic Support in Saudi Arabia | Online University Tutoring & Coaching",
+    description:
+      "Online academic coaching, tutoring and research support for university students in Saudi Arabia. Undergraduate to PhD, in AST, in English, Arabic or French.",
+    intro:
+      "Saudi Arabia's universities — King Saud, KAUST, King Abdulaziz, Imam Muhammad Ibn Saud, Princess Nourah bint Abdulrahman and a growing number of international branch campuses — teach under national, American and British-influenced systems, often in English while students live and reason in Arabic. We coach students across the Kingdom online, in Arabia Standard Time, helping them meet the expectations of whichever academic system their degree belongs to.",
+    highlights: [
+      {
+        title: "National, American and British frameworks",
+        copy: "Different Saudi institutions use different grading, referencing and assessment cultures. We work from your own programme handbook and rubric rather than applying a generic template.",
+      },
+      {
+        title: "Arabic explanation, English submission",
+        copy: "Many students understand their subject best in Arabic but are marked on academic English. We coach the register, structure and argumentation that turn strong thinking into strong writing.",
+      },
+      {
+        title: "STEM, medicine, business and technology",
+        copy: "Saudi higher education leans heavily toward technical and professional fields. We support coursework, lab reports, capstone projects, research proposals and dissertations in these areas.",
+      },
+      {
+        title: "Scholarship-aware planning",
+        copy: "If you are on a scholarship with GPA or progression conditions, we build the term around the assessments that protect your place.",
+      },
+    ],
+    lists: [
+      {
+        heading: "Most requested in Saudi Arabia",
+        items: [
+          "Coursework, reports and essay structure",
+          "Research proposals and literature reviews",
+          "Master's theses and PhD chapters",
+          "Engineering and technical project guidance",
+          "SPSS and quantitative data analysis",
+          "Academic writing in English",
+        ],
+      },
+      {
+        heading: "Academic levels we support",
+        items: [
+          "Undergraduate and Bachelor's",
+          "Master's by coursework and by research",
+          "PhD candidates",
+          "Scholarship and sponsored students",
+        ],
+      },
+    ],
+    levelsNote: levelsDefault,
+    languages:
+      "Sessions run in English, Arabic and French. Students frequently reason in Arabic and then develop the written work in academic English with our feedback.",
+    integrity: integrityDefault,
+    faqs: [
+      {
+        question: "Do you have an office in Saudi Arabia?",
+        answer:
+          "No. All coaching is delivered online for students in Saudi Arabia, scheduled in Arabia Standard Time.",
+      },
+      {
+        question: "Can you coach in Arabic?",
+        answer:
+          "Yes. Sessions can be delivered in Arabic, English or French, and many students mix languages while working toward an English-language submission.",
+      },
+      {
+        question: "Do you support PhD research?",
+        answer:
+          "Yes. We provide research planning, methodology guidance, literature review structure, chapter feedback and academic writing coaching at doctoral level.",
+      },
+      {
+        question: "Do you complete assignments for students in Saudi Arabia?",
+        answer:
+          "No. We coach, tutor and give feedback. You produce and submit your own assessed work, which keeps you inside your university's academic integrity rules.",
+      },
+    ],
+    related: [
+      { label: "PhD research support", to: "/phd-research-support" },
+      { label: "Research methodology support", to: "/research-methodology-support" },
+      { label: "Engineering project help", to: "/engineering-project-help" },
+      { label: "Data analysis & statistics", to: "/data-analysis-statistics" },
+    ],
+    serviceType: "Online academic coaching and research guidance",
+    areaServed: "Saudi Arabia",
+  },
+  {
     slug: "international-student-academic-support",
     group: "Students",
     label: "International student support",
