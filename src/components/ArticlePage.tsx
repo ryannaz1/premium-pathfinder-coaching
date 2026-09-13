@@ -7,7 +7,7 @@ import { FAQ } from "@/components/FAQ";
 import { FindSupportCTA } from "@/components/FindSupportCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { integrityNote, type Article, type Block } from "@/lib/articles";
-import { mailtoHref, site } from "@/lib/site";
+import { mailtoHref, site, whatsappHref } from "@/lib/site";
 
 function slugify(text: string) {
   return text
@@ -235,7 +235,7 @@ export function ArticlePage({ article }: { article: Article }) {
           <p className="mt-6 text-xs text-foreground/70">
             WhatsApp{" "}
             <a
-              href={`https://wa.me/${site.whatsappDigits}`}
+              href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4"

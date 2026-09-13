@@ -9,9 +9,8 @@ export const site = {
   whatsappMessage: "Hi, I'd like to learn more about your academic coaching services.",
 };
 
-export const whatsappHref = `https://wa.me/${site.whatsappDigits}?text=${encodeURIComponent(
-  site.whatsappMessage,
-)}`;
+export const whatsappHref =
+  "https://chat.whatsapp.com/HSAioDTM0xY2tRkAmBkYIr?s=cl&p=a&mlu=0&ilr=4";
 
 export const mailtoHref = `mailto:${site.email}?subject=${encodeURIComponent(
   "Academic coaching enquiry",

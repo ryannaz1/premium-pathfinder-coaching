@@ -5,7 +5,7 @@ import { z } from "zod";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { findSupportCopy } from "@/components/FindSupportCTA";
-import { site } from "@/lib/site";
+import { site, whatsappHref } from "@/lib/site";
 import { socialMeta } from "@/lib/seo";
 
 const title = "Find Support for My Course | Yes We Do Your Projects";
@@ -144,7 +144,7 @@ function FindSupportPage() {
     setErrors({});
     const message = buildMessage(parsed.data);
     setResult({
-      wa: `https://wa.me/${site.whatsappDigits}?text=${encodeURIComponent(message)}`,
+      wa: whatsappHref,
       mail: `mailto:${site.email}?subject=${encodeURIComponent(
         `Academic support request — ${parsed.data.major} (${parsed.data.level})`,
       )}&body=${encodeURIComponent(message)}`,
