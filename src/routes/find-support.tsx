@@ -5,7 +5,7 @@ import { z } from "zod";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { findSupportCopy } from "@/components/FindSupportCTA";
-import { site } from "@/lib/site";
+import { site, whatsappHref } from "@/lib/site";
 import { socialMeta } from "@/lib/seo";
 
 const title = "Find Support for My Course | Yes We Do Your Projects";

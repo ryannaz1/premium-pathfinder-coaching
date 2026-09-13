@@ -7,7 +7,7 @@ import { FAQ } from "@/components/FAQ";
 import { FindSupportCTA } from "@/components/FindSupportCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { integrityNote, type Article, type Block } from "@/lib/articles";
-import { mailtoHref, site } from "@/lib/site";
+import { mailtoHref, site, whatsappHref } from "@/lib/site";
 
 function slugify(text: string) {
   return text
