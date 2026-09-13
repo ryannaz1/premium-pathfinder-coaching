@@ -235,7 +235,7 @@ export function ArticlePage({ article }: { article: Article }) {
           <p className="mt-6 text-xs text-foreground/70">
             WhatsApp{" "}
             <a
-              href={`https://wa.me/${site.whatsappDigits}`}
+              href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4"
