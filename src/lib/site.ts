@@ -9,6 +9,9 @@ export const site = {
   whatsappMessage: "Hi, I'd like to learn more about your academic coaching services.",
 };
 
+/** Card checkout for originality reports, hosted on our scanning service. */
+export const reportCheckoutUrl = "https://yesweturnitin.online/checkout";
+
 export const whatsappHref =
   "https://chat.whatsapp.com/HSAioDTM0xY2tRkAmBkYIr?s=cl&p=a&mlu=0&ilr=4";
 
