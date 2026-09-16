@@ -171,7 +171,7 @@ function DocumentScanPage() {
       setErrors((p) => ({ ...p, file: "Please keep the file under 25 MB" }));
       return;
     }
-    setErrors((p) => ({ ...p, file: undefined }));
+    setErrors(({ file: _omit, ...rest }) => rest);
     setFile(next);
   }
 
