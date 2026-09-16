@@ -14,7 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      scan_submissions: {
+        Row: {
+          academic_level: string | null
+          created_at: string
+          document_type: string | null
+          email: string
+          file_name: string
+          file_path: string
+          file_size: number
+          full_name: string
+          id: string
+          notes: string | null
+          status: string
+          university: string | null
+          whatsapp: string | null
+        }
+        Insert: {
+          academic_level?: string | null
+          created_at?: string
+          document_type?: string | null
+          email: string
+          file_name: string
+          file_path: string
+          file_size: number
+          full_name: string
+          id?: string
+          notes?: string | null
+          status?: string
+          university?: string | null
+          whatsapp?: string | null
+        }
+        Update: {
+          academic_level?: string | null
+          created_at?: string
+          document_type?: string | null
+          email?: string
+          file_name?: string
+          file_path?: string
+          file_size?: number
+          full_name?: string
+          id?: string
+          notes?: string | null
+          status?: string
+          university?: string | null
+          whatsapp?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
