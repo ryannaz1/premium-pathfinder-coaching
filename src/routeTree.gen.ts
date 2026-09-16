@@ -28,6 +28,7 @@ import { Route as ComputerScienceAcademicSupportRouteImport } from './routes/com
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DataAnalysisStatisticsRouteImport } from './routes/data-analysis-statistics'
 import { Route as DesignAcademicSupportRouteImport } from './routes/design-academic-support'
+import { Route as DocumentScanRouteImport } from './routes/document-scan'
 import { Route as DubaiAcademicSupportRouteImport } from './routes/dubai-academic-support'
 import { Route as EngineeringProjectHelpRouteImport } from './routes/engineering-project-help'
 import { Route as EngineeringSoftwareSupportRouteImport } from './routes/engineering-software-support'
@@ -180,6 +181,11 @@ const DataAnalysisStatisticsRoute = DataAnalysisStatisticsRouteImport.update({
 const DesignAcademicSupportRoute = DesignAcademicSupportRouteImport.update({
   id: '/design-academic-support',
   path: '/design-academic-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentScanRoute = DocumentScanRouteImport.update({
+  id: '/document-scan',
+  path: '/document-scan',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DubaiAcademicSupportRoute = DubaiAcademicSupportRouteImport.update({
@@ -492,6 +498,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/data-analysis-statistics': typeof DataAnalysisStatisticsRoute
   '/design-academic-support': typeof DesignAcademicSupportRoute
+  '/document-scan': typeof DocumentScanRoute
   '/dubai-academic-support': typeof DubaiAcademicSupportRoute
   '/engineering-project-help': typeof EngineeringProjectHelpRoute
   '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
@@ -567,6 +574,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/data-analysis-statistics': typeof DataAnalysisStatisticsRoute
   '/design-academic-support': typeof DesignAcademicSupportRoute
+  '/document-scan': typeof DocumentScanRoute
   '/dubai-academic-support': typeof DubaiAcademicSupportRoute
   '/engineering-project-help': typeof EngineeringProjectHelpRoute
   '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
@@ -643,6 +651,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/data-analysis-statistics': typeof DataAnalysisStatisticsRoute
   '/design-academic-support': typeof DesignAcademicSupportRoute
+  '/document-scan': typeof DocumentScanRoute
   '/dubai-academic-support': typeof DubaiAcademicSupportRoute
   '/engineering-project-help': typeof EngineeringProjectHelpRoute
   '/engineering-software-support': typeof EngineeringSoftwareSupportRoute
@@ -720,6 +729,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/data-analysis-statistics'
     | '/design-academic-support'
+    | '/document-scan'
     | '/dubai-academic-support'
     | '/engineering-project-help'
     | '/engineering-software-support'
@@ -795,6 +805,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/data-analysis-statistics'
     | '/design-academic-support'
+    | '/document-scan'
     | '/dubai-academic-support'
     | '/engineering-project-help'
     | '/engineering-software-support'
@@ -870,6 +881,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/data-analysis-statistics'
     | '/design-academic-support'
+    | '/document-scan'
     | '/dubai-academic-support'
     | '/engineering-project-help'
     | '/engineering-software-support'
@@ -946,6 +958,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DataAnalysisStatisticsRoute: typeof DataAnalysisStatisticsRoute
   DesignAcademicSupportRoute: typeof DesignAcademicSupportRoute
+  DocumentScanRoute: typeof DocumentScanRoute
   DubaiAcademicSupportRoute: typeof DubaiAcademicSupportRoute
   EngineeringProjectHelpRoute: typeof EngineeringProjectHelpRoute
   EngineeringSoftwareSupportRoute: typeof EngineeringSoftwareSupportRoute
@@ -1135,6 +1148,13 @@ declare module '@tanstack/react-router' {
       path: '/design-academic-support'
       fullPath: '/design-academic-support'
       preLoaderRoute: typeof DesignAcademicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/document-scan': {
+      id: '/document-scan'
+      path: '/document-scan'
+      fullPath: '/document-scan'
+      preLoaderRoute: typeof DocumentScanRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dubai-academic-support': {
@@ -1538,6 +1558,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DataAnalysisStatisticsRoute: DataAnalysisStatisticsRoute,
   DesignAcademicSupportRoute: DesignAcademicSupportRoute,
+  DocumentScanRoute: DocumentScanRoute,
   DubaiAcademicSupportRoute: DubaiAcademicSupportRoute,
   EngineeringProjectHelpRoute: EngineeringProjectHelpRoute,
   EngineeringSoftwareSupportRoute: EngineeringSoftwareSupportRoute,

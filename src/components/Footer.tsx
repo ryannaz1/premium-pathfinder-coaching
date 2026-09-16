@@ -47,6 +47,7 @@ const companyLinks = [
   { label: "About", to: "/about" },
   { label: "Who We Help", to: "/who-we-help" },
   { label: "Resources", to: "/resources" },
+  { label: "Document Scanning", to: "/document-scan" },
   { label: "Contact", to: "/contact" },
 ];
 
