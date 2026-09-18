@@ -266,6 +266,52 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Document scanning */}
+      <section className="border-b border-border bg-sand">
+        <div className="container-editorial section-y">
+          <div className="grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+            <div className="max-w-2xl">
+              <p className="eyebrow">Document scanning</p>
+              <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
+                Check your draft before you submit it
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Upload your essay, report, thesis or dissertation for an originality scan. You get a
+                clear similarity report plus plain-language feedback on your citations, quotations,
+                paraphrasing and reference list — so you can correct your own work with confidence.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <CTAButton to="/document-scan" withArrow>
+                  Scan my document
+                </CTAButton>
+                <p className="flex items-start gap-2 text-xs leading-relaxed text-muted-foreground sm:max-w-xs">
+                  <ShieldCheck className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                  <span>
+                    Private, secure upload. We never write or edit your work — we explain the
+                    report so you improve it yourself.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <ol className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+              {[
+                { step: "Upload", copy: "PDF, DOCX, DOC, RTF or TXT, up to 25 MB." },
+                { step: "Checkout", copy: "Pay securely by card to have the report generated." },
+                { step: "Review", copy: "Understand the report and fix your own referencing." },
+              ].map((s, i) => (
+                <li key={s.step} className="border-t border-ink/20 pt-3">
+                  <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                    Step {i + 1}
+                  </p>
+                  <p className="mt-1 font-display text-lg text-foreground">{s.step}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
       {/* Why + how it works */}
       <section className="border-b border-border bg-sand">
         <div className="container-editorial section-y grid gap-12 md:grid-cols-2 md:gap-16">
