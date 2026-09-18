@@ -206,29 +206,27 @@ function DocumentScanPage() {
       return;
     }
 
-    const insert = await supabase
-      .from("scan_submissions")
-      .insert({
-        full_name: parsed.data.fullName,
-        email: parsed.data.email,
-        whatsapp: parsed.data.whatsapp || null,
-        university: parsed.data.university || null,
-        academic_level: parsed.data.level,
-        document_type: parsed.data.documentType,
-        notes: parsed.data.notes || null,
-        file_path: path,
-        file_name: file.name,
-        file_size: file.size,
-      })
-      .select("id")
-      .single();
+    const submissionId = crypto.randomUUID();
+    const insert = await supabase.from("scan_submissions").insert({
+      id: submissionId,
+      full_name: parsed.data.fullName,
+      email: parsed.data.email,
+      whatsapp: parsed.data.whatsapp || null,
+      university: parsed.data.university || null,
+      academic_level: parsed.data.level,
+      document_type: parsed.data.documentType,
+      notes: parsed.data.notes || null,
+      file_path: path,
+      file_name: file.name,
+      file_size: file.size,
+    });
 
-    if (insert.error || !insert.data) {
+    if (insert.error) {
       setStatus("error");
       return;
     }
 
-    setReference(insert.data.id);
+    setReference(submissionId);
     setStatus("done");
     requestAnimationFrame(() => {
       document.getElementById("scan-next-step")?.scrollIntoView({ behavior: "smooth" });
