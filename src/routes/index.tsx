@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
+  ExternalLink,
   GraduationCap,
   Globe,
   Languages,
@@ -16,7 +17,7 @@ import { FAQ, type FaqItem } from "@/components/FAQ";
 import { FindSupportCTA } from "@/components/FindSupportCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { academicLevels, majorCategories, softwareGrid } from "@/lib/disciplines";
-import { site, whatsappHref } from "@/lib/site";
+import { site, whatsappHref, reportCheckoutUrl } from "@/lib/site";
 import { socialMeta, hreflangLinks } from "@/lib/seo";
 
 
@@ -281,9 +282,15 @@ function HomePage() {
                 paraphrasing and reference list — so you can correct your own work with confidence.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <CTAButton to="/document-scan" withArrow>
+                <a
+                  href={reportCheckoutUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-3 text-sm font-semibold text-ink-foreground transition-colors hover:bg-ink/90"
+                >
                   Scan my document
-                </CTAButton>
+                  <ExternalLink className="size-4" aria-hidden="true" />
+                </a>
                 <p className="flex items-start gap-2 text-xs leading-relaxed text-muted-foreground sm:max-w-xs">
                   <ShieldCheck className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
                   <span>
