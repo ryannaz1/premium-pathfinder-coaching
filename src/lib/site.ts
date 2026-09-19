@@ -10,7 +10,7 @@ export const site = {
 };
 
 /** Card checkout for originality reports, hosted on our scanning service. */
-export const reportCheckoutUrl = "https://yesweturnitin.online/checkout";
+export const reportCheckoutUrl = "https://yesweturnitin.online/pre-submission-check";
 
 export const whatsappHref =
   "https://chat.whatsapp.com/HSAioDTM0xY2tRkAmBkYIr?s=cl&p=a&mlu=0&ilr=4";
