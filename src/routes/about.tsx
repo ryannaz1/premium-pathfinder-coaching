@@ -46,6 +46,12 @@ export const Route = createFileRoute("/about")({
       ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/about" }],
+    scripts: [
+      breadcrumbScript([
+        { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+      ]),
+    ],
   }),
   component: AboutPage,
 });
