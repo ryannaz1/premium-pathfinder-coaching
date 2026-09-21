@@ -334,6 +334,6 @@ export const revitArticle: Article = {
   sources: [
     { label: "Autodesk Revit official product documentation", url: "https://help.autodesk.com/view/RVT/2024/ENU/" },
     { label: "Autodesk Education access information", url: "https://www.autodesk.com/education/edu-software/overview" },
-    { label: "UK BIM Framework — information management standards", url: "https://www.ukbimframework.org/standards-guidance/" },
+    { label: "UK BIM Framework — information management standards", url: "https://www.ukbimframework.org/standards/" },
   ],
 };
