@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { LocalizedPage, type LocalizedPageContent } from "@/components/LocalizedPage";
-import { SITE_URL, socialMeta, hreflangLinks } from "@/lib/seo";
+import { SITE_URL, socialMeta, hreflangLinks, breadcrumbScript } from "@/lib/seo";
 
 const title = "خدماتنا الأكاديمية — تدريس وإرشاد ودعم بحثي | Yes We Do Your Projects";
 const description =
@@ -20,6 +20,13 @@ export const Route = createFileRoute("/ar/services")({
       ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/ar/services` }, ...hreflangLinks("/services")],
+    scripts: [
+      breadcrumbScript([
+        { name: "الرئيسية", path: "/" },
+        { name: "العربية", path: "/ar" },
+        { name: "الخدمات", path: "/ar/services" },
+      ]),
+    ],
   }),
   component: ArabicServices,
 });

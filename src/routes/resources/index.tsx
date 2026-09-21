@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { articles } from "@/lib/articles";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, breadcrumbScript } from "@/lib/seo";
 
 const title = "Academic Resources & Study Guides | Yes We Do Your Projects";
 const description =
@@ -82,6 +82,10 @@ export const Route = createFileRoute("/resources/")({
           })),
         }),
       },
+      breadcrumbScript([
+        { name: "Home", path: "/" },
+        { name: "Resources", path: "/resources" },
+      ]),
     ],
   }),
   component: ResourcesPage,

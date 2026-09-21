@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { FAQ, type FaqItem } from "@/components/FAQ";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, breadcrumbScript } from "@/lib/seo";
 
 const title = "Who We Help — University, Master's & PhD Students | Yes We Do Your Projects";
 const description =
@@ -98,6 +98,10 @@ export const Route = createFileRoute("/who-we-help")({
           })),
         }),
       },
+      breadcrumbScript([
+        { name: "Home", path: "/" },
+        { name: "Who we help", path: "/who-we-help" },
+      ]),
     ],
   }),
   component: WhoWeHelpPage,

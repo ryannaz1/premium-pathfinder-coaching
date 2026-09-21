@@ -8,7 +8,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { majorCategories, practicalProjects, technicalAreas } from "@/lib/disciplines";
 import { services } from "@/lib/services";
-import { socialMeta, hreflangLinks } from "@/lib/seo";
+import { socialMeta, hreflangLinks, breadcrumbScript } from "@/lib/seo";
 
 const title = "Academic Coaching & Tutoring Services | Yes We Do Your Projects";
 const description =
@@ -85,6 +85,10 @@ export const Route = createFileRoute("/services/")({
           })),
         }),
       },
+      breadcrumbScript([
+        { name: "Home", path: "/" },
+        { name: "Services", path: "/services" },
+      ]),
     ],
   }),
   component: ServicesPage,
