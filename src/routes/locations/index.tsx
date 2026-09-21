@@ -5,7 +5,7 @@ import { CTAButton } from "@/components/CTAButton";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { locations } from "@/lib/locations";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, breadcrumbScript } from "@/lib/seo";
 
 const title = "Locations — UK, UAE, Saudi Arabia, Montreal & Lebanon | Yes We Do Your Projects";
 const description =
@@ -23,6 +23,12 @@ export const Route = createFileRoute("/locations/")({
       ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/locations" }],
+    scripts: [
+      breadcrumbScript([
+        { name: "Home", path: "/" },
+        { name: "Locations", path: "/locations" },
+      ]),
+    ],
   }),
   component: LocationsPage,
 });

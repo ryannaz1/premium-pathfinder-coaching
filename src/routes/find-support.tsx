@@ -6,7 +6,7 @@ import { z } from "zod";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { findSupportCopy } from "@/components/FindSupportCTA";
 import { site, whatsappHref } from "@/lib/site";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, breadcrumbScript } from "@/lib/seo";
 
 const title = "Find Support for My Course | Yes We Do Your Projects";
 const description =
@@ -25,6 +25,12 @@ export const Route = createFileRoute("/find-support")({
       ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: url }],
+    scripts: [
+      breadcrumbScript([
+        { name: "Home", path: "/" },
+        { name: "Find support", path: "/find-support" },
+      ]),
+    ],
   }),
   component: FindSupportPage,
 });

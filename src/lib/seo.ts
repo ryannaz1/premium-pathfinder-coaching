@@ -19,6 +19,26 @@ export function socialMeta(title: string, description: string) {
 }
 
 /**
+ * BreadcrumbList JSON-LD script entry for a page's head().
+ * `path` is a site-relative path, e.g. "/" or "/locations".
+ */
+export function breadcrumbScript(items: { name: string; path: string }[]) {
+  return {
+    type: "application/ld+json",
+    children: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: items.map((item, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: item.name,
+        item: `${SITE_URL}${item.path === "/" ? "/" : item.path}`,
+      })),
+    }),
+  };
+}
+
+/**
  * hreflang alternates for the pages that exist in English, Arabic and French.
  * `enPath` is the canonical English path, e.g. "" (home), "/services", "/contact".
  * English stays the canonical primary version (x-default).

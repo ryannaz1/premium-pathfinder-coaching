@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTAButton } from "@/components/CTAButton";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, mailtoHref } from "@/lib/site";
-import { socialMeta } from "@/lib/seo";
+import { socialMeta, breadcrumbScript } from "@/lib/seo";
 
 const title = "About Yes We Do Your Projects — Premium Academic Coaching";
 const description =
@@ -46,6 +46,12 @@ export const Route = createFileRoute("/about")({
       ...socialMeta(title, description),
     ],
     links: [{ rel: "canonical", href: "https://yeswedoyourprojects.online/about" }],
+    scripts: [
+      breadcrumbScript([
+        { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+      ]),
+    ],
   }),
   component: AboutPage,
 });
