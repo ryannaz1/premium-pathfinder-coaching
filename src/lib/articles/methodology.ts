@@ -352,7 +352,7 @@ export const methodologyArticle: Article = {
     { label: "Data Analysis & Statistics", to: "/data-analysis-statistics" },
   ],
   sources: [
-    { label: "UK Research Integrity Office — guidance for researchers", url: "https://ukrio.org/publications/" },
+    { label: "UK Research Integrity Office — guidance for researchers", url: "https://ukrio.org/ukrio-resources/" },
     { label: "UK Data Service — research data management", url: "https://ukdataservice.ac.uk/learning-hub/research-data-management/" },
     { label: "Economic and Social Research Council — research ethics guidance", url: "https://www.ukri.org/councils/esrc/guidance-for-applicants/research-ethics-guidance/" },
   ],
