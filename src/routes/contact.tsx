@@ -5,7 +5,7 @@ import { Mail, MessageCircle } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, mailtoHref, whatsappHref } from "@/lib/site";
-import { socialMeta, hreflangLinks } from "@/lib/seo";
+import { socialMeta, hreflangLinks, breadcrumbScript } from "@/lib/seo";
 
 const title = "Contact Yes We Do Your Projects — Book an Academic Consultation";
 const description =
@@ -25,6 +25,12 @@ export const Route = createFileRoute("/contact")({
     links: [
       { rel: "canonical", href: "https://yeswedoyourprojects.online/contact" },
       ...hreflangLinks("/contact"),
+    ],
+    scripts: [
+      breadcrumbScript([
+        { name: "Home", path: "/" },
+        { name: "Contact", path: "/contact" },
+      ]),
     ],
   }),
   component: ContactPage,
