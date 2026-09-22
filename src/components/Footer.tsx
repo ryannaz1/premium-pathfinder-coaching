@@ -176,6 +176,7 @@ export function Footer() {
 
           <FooterGroup title="Services" links={serviceLinks} />
           <FooterGroup title="Locations" links={locationLinks} />
+          <FooterGroup title="Guides" links={guideLinks} />
           <div>
             <FooterGroup title="Company" links={companyLinks} />
             <div className="mt-3 md:mt-8">
