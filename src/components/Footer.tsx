@@ -51,10 +51,22 @@ const companyLinks = [
   { label: "Contact", to: "/contact" },
 ];
 
+const guideLinks = [
+  { label: "SPSS Dissertation Data Analysis Guide", to: "/resources/spss-dissertation-data-analysis-guide" },
+  { label: "How to Choose a Dissertation Methodology", to: "/resources/how-to-choose-dissertation-methodology" },
+  { label: "Engineering Final-Year Project Guide", to: "/resources/engineering-final-year-project-guide" },
+  { label: "Revit for Architecture Students", to: "/resources/revit-for-architecture-students" },
+  { label: "Architecture Maquette Guide", to: "/resources/architecture-maquette-guide" },
+];
+
 const languageLinks = [
   { label: "English", to: "/" },
-  { label: "العربية", to: "/ar" },
-  { label: "Français", to: "/fr" },
+  { label: "العربية — الصفحة الرئيسية", to: "/ar" },
+  { label: "العربية — الخدمات", to: "/ar/services" },
+  { label: "العربية — تواصل معنا", to: "/ar/contact" },
+  { label: "Français — Accueil", to: "/fr" },
+  { label: "Français — Services", to: "/fr/services" },
+  { label: "Français — Contact", to: "/fr/contact" },
 ];
 
 /**
