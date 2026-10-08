@@ -264,10 +264,10 @@ export const serviceLandings: LandingContent[] = [
     group: "Services",
     label: "Research methodology support",
     eyebrow: "Service · Methodology",
-    h1: "Research methodology support and guidance",
-    title: "Research Methodology Support | Qualitative & Quantitative Design",
+    h1: "PhD methodology consultation and research methodology support",
+    title: "PhD Methodology Consultation | Research Methodology Support",
     description:
-      "Guidance on research design, sampling, instruments, qualitative and quantitative methods, ethics and writing a defensible methodology chapter.",
+      "One-to-one PhD and Master's methodology consultation: research design, sampling, instruments, qualitative and quantitative methods, ethics and a defensible methodology chapter.",
     intro:
       "The methodology chapter is where markers decide whether to trust everything that follows. We help you choose a method your question actually requires, apply it properly, and justify it in writing against alternatives you considered and rejected.",
     highlights: [
@@ -433,10 +433,10 @@ export const serviceLandings: LandingContent[] = [
     group: "Services",
     label: "Literature review support",
     eyebrow: "Service · Literature reviews",
-    h1: "Literature review support and guidance",
-    title: "Literature Review Support | Search, Synthesis & Structure",
+    h1: "Literature review consultation and support",
+    title: "Literature Review Consultation | Search, Synthesis & Structure",
     description:
-      "Coaching on literature reviews: search strategy, source appraisal, thematic synthesis, identifying the gap and writing a review that argues rather than lists.",
+      "Literature review consultation for dissertations, theses and PhDs: search strategy, source appraisal, thematic synthesis, finding the gap and writing a review that argues.",
     intro:
       "A weak literature review summarises studies one after another. A strong one organises the field into themes and debates, and ends by making your study look necessary. We coach the search, the synthesis and the structure that gets you there.",
     highlights: [
