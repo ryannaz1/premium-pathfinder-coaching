@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LocalizedPage, type LocalizedPageContent } from "@/components/LocalizedPage";
 import { SITE_URL, socialMeta, hreflangLinks, breadcrumbScript } from "@/lib/seo";
 
-const title = "Nous joindre — consultation académique | Yes We Do Your Projects";
+const title = "Nous joindre : consultation académique | YWDYP";
 const description =
-  "Écrivez-nous sur WhatsApp ou par courriel pour réserver une consultation académique en français, en anglais ou en arabe. Réponse pendant les heures d'ouverture.";
+  "Écrivez-nous sur WhatsApp ou par courriel pour réserver une consultation académique en français, anglais ou arabe. Réponse pendant les heures d'ouverture.";
 
 export const Route = createFileRoute("/fr/contact")({
   head: () => ({

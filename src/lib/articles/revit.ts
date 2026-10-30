@@ -7,7 +7,7 @@ export const revitArticle: Article = {
   h1: "Revit for Architecture Students: A Practical Project Guide",
   title: "Revit for Architecture Students: A Practical Project Guide",
   description:
-    "A practical Revit guide for architecture students: setting up a project, levels and grids, walls, doors, floors, roofs, views, sections, sheets, schedules and preparing a studio presentation.",
+    "Practical Revit guide for architecture students: project setup, levels and grids, walls, floors, roofs, views, sections, sheets and studio presentation.",
   intro:
     "Revit rewards students who set the model up properly and punishes those who treat it as a drawing program. This guide follows the order you would actually build a studio project — project setup, levels and grids, then the building elements, then views, sheets and presentation — and flags the decisions that cause the most rework later. It is an independent student guide and is not affiliated with or endorsed by Autodesk.",
   summary:

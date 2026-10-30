@@ -26,9 +26,9 @@ export const services: ServiceContent[] = [
     slug: "university-tutoring",
     name: "University Tutoring",
     h1: "University tutoring for undergraduate, Bachelor's, Master's and PhD students",
-    title: "University Tutoring | One-to-One Online Tutors | Yes We Do Your Projects",
+    title: "University Tutoring | One-to-One Online Tutors",
     description:
-      "One-to-one university tutoring for undergraduate, Bachelor's, Master's and PhD students, including international students, across a wide range of majors. Online sessions built around your modules, assessments and deadlines.",
+      "One-to-one online university tutoring for undergraduate, Master's and PhD students in every major, built around your modules and deadlines.",
     intro:
       "University tutoring is one-to-one teaching built around your actual modules, reading lists and assessments. A tutor works through the concepts you find hardest, checks your understanding, and helps you approach coursework and exams with a clear method rather than guesswork.",
     forWho: [
@@ -63,9 +63,9 @@ export const services: ServiceContent[] = [
     slug: "academic-coaching",
     name: "Academic Coaching",
     h1: "Academic coaching for students who want direction, not pressure",
-    title: "Academic Coaching for University Students | Yes We Do Your Projects",
+    title: "Academic Coaching for University Students | Study Plans",
     description:
-      "One-to-one academic coaching covering planning, workload management, motivation, study strategy and accountability for undergraduate, Bachelor's, Master's and PhD students.",
+      "One-to-one academic coaching for planning, workload, motivation, study strategy and accountability — for undergraduate, Master's and PhD students.",
     intro:
       "Academic coaching is about how you work, not only what you know. A coach helps you build a realistic plan across all your modules, sort priorities, break large projects into manageable stages, and stay accountable between sessions so deadlines stop arriving as emergencies.",
     forWho: [
@@ -138,7 +138,7 @@ export const services: ServiceContent[] = [
     slug: "research-methodology",
     name: "Research Methodology",
     h1: "Research methodology guidance for student researchers",
-    title: "Research Methodology Support & Guidance | Yes We Do Your Projects",
+    title: "Research Methodology Support & Guidance for Students",
     description:
       "Guidance on research design, qualitative and quantitative methods, sampling, data collection instruments, ethics and how to justify your methodology chapter.",
     intro:
@@ -174,7 +174,7 @@ export const services: ServiceContent[] = [
     slug: "academic-writing-coaching",
     name: "Academic Writing Coaching",
     h1: "Academic writing coaching for clearer, more critical work",
-    title: "Academic Writing Coaching | Structure, Argument & Referencing",
+    title: "Academic Writing Coaching | Structure & Referencing",
     description:
       "Coaching in academic structure, clarity, argumentation, critical thinking and referencing, with detailed feedback on your own essays, reports and chapters.",
     intro:
@@ -210,7 +210,7 @@ export const services: ServiceContent[] = [
     slug: "editing-proofreading",
     name: "Editing & Proofreading",
     h1: "Editing and proofreading for student academic work",
-    title: "Academic Editing & Proofreading Services | Yes We Do Your Projects",
+    title: "Academic Editing & Proofreading | Ethical Feedback",
     description:
       "Ethical academic editing and proofreading: grammar, punctuation, consistency, formatting and referencing checks on work you have written yourself.",
     intro:
@@ -317,7 +317,7 @@ export const services: ServiceContent[] = [
     slug: "research-statistics-support",
     name: "Research & Statistics Support",
     h1: "Research and statistics support for student projects",
-    title: "Research & Statistics Support for Students | Data Analysis Coaching",
+    title: "Research & Statistics Support | SPSS Data Analysis",
     description:
       "Coaching in statistical analysis for student research: choosing the right test, using SPSS, R or Excel, interpreting output and reporting results correctly.",
     intro:

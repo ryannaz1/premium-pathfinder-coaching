@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LocalizedPage, type LocalizedPageContent } from "@/components/LocalizedPage";
 import { SITE_URL, socialMeta, hreflangLinks, breadcrumbScript } from "@/lib/seo";
 
-const title = "خدماتنا الأكاديمية — تدريس وإرشاد ودعم بحثي | Yes We Do Your Projects";
+const title = "خدماتنا الأكاديمية: تدريس وإرشاد ودعم بحثي | YWDYP";
 const description =
-  "تفاصيل خدماتنا: تدريس جامعي، إرشاد أكاديمي، دعم الأطروحات والرسائل، منهجية البحث، التحليل الإحصائي، الكتابة الأكاديمية، والمراجعة اللغوية — بالعربية والإنكليزية والفرنسية.";
+  "خدماتنا: تدريس جامعي، إرشاد أكاديمي، دعم الأطروحات والرسائل، منهجية البحث، التحليل الإحصائي والكتابة الأكاديمية — بثلاث لغات.";
 
 export const Route = createFileRoute("/ar/services")({
   head: () => ({

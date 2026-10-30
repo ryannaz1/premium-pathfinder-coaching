@@ -7,7 +7,7 @@ export const methodologyArticle: Article = {
   h1: "How to Choose a Dissertation Methodology: A Student Guide",
   title: "How to Choose a Dissertation Methodology: A Student Guide",
   description:
-    "How to choose and justify a dissertation methodology: qualitative, quantitative and mixed methods, research design, sampling, data collection, reliability, validity, ethics and chapter structure.",
+    "How to choose and justify a dissertation methodology: qualitative, quantitative and mixed methods, research design, sampling, validity and ethics.",
   intro:
     "The methodology chapter is where a dissertation is won or lost. It is not a description of what you did; it is an argument that what you did was the right way to answer your research question, and that you understood its limits. This guide explains how to reason from question to method, what each major approach can and cannot deliver, and how to structure the chapter so an examiner can follow your logic.",
   summary:

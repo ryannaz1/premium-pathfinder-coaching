@@ -7,9 +7,9 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { locations } from "@/lib/locations";
 import { socialMeta, breadcrumbScript } from "@/lib/seo";
 
-const title = "Locations — UK, UAE, Saudi Arabia, Montreal & Lebanon | Yes We Do Your Projects";
+const title = "Locations | UK, UAE, Saudi Arabia, Montreal & Lebanon";
 const description =
-  "Online academic coaching and university tutoring for students in the United Kingdom, Dubai, Abu Dhabi, Saudi Arabia, Montreal and Quebec, and Lebanon — delivered in your time zone.";
+  "Online academic coaching and university tutoring for students in the UK, Dubai, Abu Dhabi, Saudi Arabia, Montreal and Lebanon — in your time zone.";
 
 export const Route = createFileRoute("/locations/")({
   head: () => ({

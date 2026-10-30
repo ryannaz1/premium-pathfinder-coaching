@@ -5,9 +5,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { socialMeta, SITE_URL } from "@/lib/seo";
 import { site, reportCheckoutUrl } from "@/lib/site";
 
-const title = "Document Scanning & Originality Report | Yes We Do Your Projects";
+const title = "Document Scanning & Originality Report | Pre-Submission";
 const description =
-  "Get a clear originality and similarity report for your essay, thesis or dissertation, with plain-English feedback on citations, paraphrasing and referencing — on our dedicated scanning service.";
+  "Get an originality and similarity report for your essay, thesis or dissertation, with clear feedback on citations, paraphrasing and referencing.";
 const url = `${SITE_URL}/document-scan`;
 
 const faqs = [

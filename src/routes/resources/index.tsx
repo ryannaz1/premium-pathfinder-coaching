@@ -9,7 +9,7 @@ import { socialMeta, breadcrumbScript } from "@/lib/seo";
 
 const title = "Academic Resources & Study Guides | Yes We Do Your Projects";
 const description =
-  "Practical guidance on academic writing, dissertation planning, research methodology, referencing and exam preparation for undergraduate, Bachelor's, Master's and PhD students.";
+  "Free study guides on academic writing, dissertation planning, research methodology, SPSS and referencing for undergraduate, Master's and PhD students.";
 
 const guides = [
   {

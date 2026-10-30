@@ -97,7 +97,7 @@ export const serviceLandings: LandingContent[] = [
     label: "PhD research support",
     eyebrow: "Service · Doctoral research",
     h1: "PhD research support and doctoral coaching",
-    title: "PhD Research Support | Doctoral Coaching, Methodology & Writing",
+    title: "PhD Research Support | Doctoral Coaching & Methodology",
     description:
       "Coaching for PhD candidates: research design, methodology, literature synthesis, chapter drafting, publication planning and viva preparation.",
     intro:
@@ -186,7 +186,7 @@ export const serviceLandings: LandingContent[] = [
     label: "Academic writing coaching",
     eyebrow: "Service · Academic writing",
     h1: "Academic writing coaching for university students",
-    title: "Academic Writing Coaching | Essays, Reports & Research Writing",
+    title: "Academic Writing Coaching | Essays & Research Writing",
     description:
       "Coaching in academic writing: argument, structure, critical voice, paragraph craft, referencing and clarity for students writing in a second language.",
     intro:
@@ -267,7 +267,7 @@ export const serviceLandings: LandingContent[] = [
     h1: "PhD methodology consultation and research methodology support",
     title: "PhD Methodology Consultation | Research Methodology Support",
     description:
-      "One-to-one PhD and Master's methodology consultation: research design, sampling, instruments, qualitative and quantitative methods, ethics and a defensible methodology chapter.",
+      "One-to-one PhD methodology consultation: research design, sampling, instruments, qualitative and quantitative methods, ethics and a defensible chapter.",
     intro:
       "The methodology chapter is where markers decide whether to trust everything that follows. We help you choose a method your question actually requires, apply it properly, and justify it in writing against alternatives you considered and rejected.",
     highlights: [
@@ -350,7 +350,7 @@ export const serviceLandings: LandingContent[] = [
     label: "Research proposal support",
     eyebrow: "Service · Research proposals",
     h1: "Research proposal support for Master's and PhD applications",
-    title: "Research Proposal Support | Master's, PhD & Funding Proposals",
+    title: "Research Proposal Support | Master's & PhD Proposals",
     description:
       "Coaching on research proposals: problem statement, aims and objectives, literature framing, methodology, timeline and feasibility for approval or admission.",
     intro:
@@ -434,9 +434,9 @@ export const serviceLandings: LandingContent[] = [
     label: "Literature review support",
     eyebrow: "Service · Literature reviews",
     h1: "Literature review consultation and support",
-    title: "Literature Review Consultation | Search, Synthesis & Structure",
+    title: "Literature Review Consultation | Synthesis & Structure",
     description:
-      "Literature review consultation for dissertations, theses and PhDs: search strategy, source appraisal, thematic synthesis, finding the gap and writing a review that argues.",
+      "Literature review consultation for dissertations, theses and PhDs: search strategy, source appraisal, thematic synthesis and finding the research gap.",
     intro:
       "A weak literature review summarises studies one after another. A strong one organises the field into themes and debates, and ends by making your study look necessary. We coach the search, the synthesis and the structure that gets you there.",
     highlights: [
@@ -687,7 +687,7 @@ export const serviceLandings: LandingContent[] = [
     label: "Final-year project support",
     eyebrow: "Service · Final-year & senior projects",
     h1: "Final-year and senior project support",
-    title: "Final-Year Project Support | Senior Project Coaching for Students",
+    title: "Final-Year Project Support | Senior Project Coaching",
     description:
       "Coaching for final-year and senior projects: scoping, planning, technical execution guidance, report writing and defence preparation across disciplines.",
     intro:
@@ -773,7 +773,7 @@ export const serviceLandings: LandingContent[] = [
     label: "Capstone project support",
     eyebrow: "Service · Capstone projects",
     h1: "Capstone project support and coaching",
-    title: "Capstone Project Support | Team, Industry & Applied Project Coaching",
+    title: "Capstone Project Support | Applied Project Coaching",
     description:
       "Coaching for capstone projects: client briefs, team coordination, applied research, deliverables, documentation and final presentations.",
     intro:

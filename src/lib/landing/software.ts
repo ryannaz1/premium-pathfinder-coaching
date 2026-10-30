@@ -98,7 +98,7 @@ export const softwareLandings: LandingContent[] = [
     label: "GIS project help",
     eyebrow: "Software · GIS",
     h1: "GIS project help for university students",
-    title: "GIS Project Help | Spatial Analysis & Mapping Support for Students",
+    title: "GIS Project Help | Spatial Analysis & Mapping Support",
     description:
       "Tutoring for GIS coursework and projects: data sourcing, projections, layers, spatial analysis, cartographic output and writing up spatial results.",
     intro:
@@ -177,7 +177,7 @@ export const softwareLandings: LandingContent[] = [
     label: "AutoCAD help",
     eyebrow: "Software · AutoCAD",
     h1: "AutoCAD help for architecture and engineering students",
-    title: "AutoCAD Help for Students | Technical Drawing & Drafting Support",
+    title: "AutoCAD Help for Students | Technical Drawing Support",
     description:
       "Tutoring in AutoCAD for university coursework: drafting standards, layers, dimensioning, layouts, plotting and producing coordinated drawing sets.",
     intro:
@@ -256,7 +256,7 @@ export const softwareLandings: LandingContent[] = [
     label: "Revit project help",
     eyebrow: "Software · Revit & BIM",
     h1: "Revit project help and BIM coaching for students",
-    title: "Revit Project Help | BIM Modelling Support for Architecture Students",
+    title: "Revit Project Help | BIM Modelling for Architecture",
     description:
       "Tutoring in Revit and BIM for university projects: model setup, families, levels, views, schedules, sheets and coordinated documentation.",
     intro:
@@ -335,7 +335,7 @@ export const softwareLandings: LandingContent[] = [
     label: "3ds Max help",
     eyebrow: "Software · 3ds Max",
     h1: "3ds Max help for architecture and design students",
-    title: "3ds Max Help for Students | 3D Modelling, Lighting & Rendering",
+    title: "3ds Max Help for Students | Modelling & Rendering",
     description:
       "Tutoring in 3ds Max for university projects: modelling, materials, lighting, camera setup, rendering and post-production for presentation boards.",
     intro:
@@ -415,7 +415,7 @@ export const softwareLandings: LandingContent[] = [
     label: "Arduino project help",
     eyebrow: "Hardware · Arduino",
     h1: "Arduino project help for engineering students",
-    title: "Arduino Project Help | Prototyping & Embedded Coursework Support",
+    title: "Arduino Project Help | Prototyping & Coursework Support",
     description:
       "Coaching for Arduino university projects: circuit design, sensors, wiring, code structure, debugging, testing and documenting your prototype.",
     intro:
@@ -495,7 +495,7 @@ export const softwareLandings: LandingContent[] = [
     label: "Photoshop help",
     eyebrow: "Software · Photoshop",
     h1: "Photoshop help for academic and design projects",
-    title: "Photoshop Help for Academic Projects | Boards, Diagrams & Portfolios",
+    title: "Photoshop Help for Academic Projects | Boards & Portfolios",
     description:
       "Tutoring in Photoshop for university projects: presentation boards, architectural post-production, diagrams, portfolio layout and export for print.",
     intro:
@@ -573,7 +573,7 @@ export const softwareLandings: LandingContent[] = [
     label: "3D modelling help",
     eyebrow: "Software · 3D modelling",
     h1: "3D modelling help for university projects",
-    title: "3D Modelling Help for Students | CAD, Digital Models & Visualisation",
+    title: "3D Modelling Help for Students | CAD & Visualisation",
     description:
       "Tutoring in 3D modelling for academic projects: modelling strategy, CAD workflows, digital models for architecture, engineering and design, and output.",
     intro:
@@ -646,7 +646,7 @@ export const softwareLandings: LandingContent[] = [
     label: "Engineering software support",
     eyebrow: "Software · Engineering tools",
     h1: "Engineering software support for university students",
-    title: "Engineering Software Support | CAD, Modelling & Analysis Tools",
+    title: "Engineering Software Support | CAD & Analysis Tools",
     description:
       "Academic tutoring in the software engineering students actually use: CAD and drafting, modelling, simulation output, Arduino, GIS and statistical analysis.",
     intro:

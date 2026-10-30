@@ -4,10 +4,10 @@ export const maquetteArticle: Article = {
   slug: "architecture-maquette-guide",
   category: "Projects",
   label: "Architecture maquette guide",
-  h1: "How to Plan and Build an Architecture Maquette: A Student Guide",
-  title: "How to Plan and Build an Architecture Maquette: A Student Guide",
+  h1: "How to Build an Architecture Maquette: Student Guide",
+  title: "How to Build an Architecture Maquette: Student Guide",
   description:
-    "A practical student guide to planning and building an architecture maquette: choosing scale, reading drawings, materials, tools and safety, base preparation, walls, openings, roofs, landscape, finishing and presentation.",
+    "Student guide to building an architecture maquette: choosing scale, reading drawings, materials, tools, base, walls, roofs, landscape and finishing.",
   intro:
     "A maquette is an argument made in three dimensions. It should show what your drawings cannot — mass, rhythm, light, the relationship between building and ground — and it should do so at a level of detail you can finish before the crit. Most model failures are planning failures: the wrong scale, the wrong material, or a build sequence that leaves the fiddly work until the last night. This guide walks through the process in build order.",
   summary:

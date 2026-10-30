@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { LocalizedPage, type LocalizedPageContent } from "@/components/LocalizedPage";
 import { SITE_URL, socialMeta, hreflangLinks, breadcrumbScript } from "@/lib/seo";
 
-const title = "Nos services — tutorat, encadrement et soutien à la recherche | Yes We Do Your Projects";
+const title = "Nos services : tutorat et soutien à la recherche | YWDYP";
 const description =
-  "Tutorat universitaire, encadrement académique, soutien au mémoire et à la thèse, méthodologie, analyse statistique, rédaction académique et révision — en français, en anglais et en arabe.";
+  "Tutorat universitaire, encadrement, soutien au mémoire et à la thèse, méthodologie, statistiques et rédaction académique — en français, anglais et arabe.";
 
 export const Route = createFileRoute("/fr/services")({
   head: () => ({
