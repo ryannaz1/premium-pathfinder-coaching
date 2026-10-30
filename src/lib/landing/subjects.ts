@@ -12,9 +12,9 @@ export const subjectLandings: LandingContent[] = [
     label: "Engineering",
     eyebrow: "Discipline · Engineering",
     h1: "Engineering project help and academic support",
-    title: "Engineering Project Help & Academic Support | Yes We Do Your Projects",
+    title: "Engineering Project Help | Engineering Academic Support",
     description:
-      "Coaching for engineering students: coursework, calculations, lab reports, simulations, prototypes and final-year or capstone engineering projects, undergraduate to PhD.",
+      "Engineering project help: coaching on coursework, calculations, lab reports, simulations, prototypes and final-year or capstone projects, up to PhD.",
     intro:
       "Engineering assessment punishes two things above all: an unjustified assumption and an unexplained result. We coach students through the reasoning chain — problem definition, assumptions, method, calculation, verification and reporting — so your project holds up when a supervisor pushes on it.",
     highlights: [
@@ -98,7 +98,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Architecture",
     eyebrow: "Discipline · Architecture",
     h1: "Architecture project help and studio support",
-    title: "Architecture Project Help | Studio, Drawings & Modelling Support",
+    title: "Architecture Project Help | Studio & Modelling Support",
     description:
       "Academic support for architecture students: concept development, studio crits, technical drawings, BIM and 3D modelling, presentation boards and maquettes.",
     intro:
@@ -182,7 +182,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Business & management",
     eyebrow: "Discipline · Business & management",
     h1: "Academic support for business and management students",
-    title: "Business Academic Support | Management, Finance & Marketing Coaching",
+    title: "Business Academic Support | Finance & Marketing Coaching",
     description:
       "Coaching for business students: case analysis, strategy reports, finance and accounting coursework, marketing research and MBA or Master's dissertations.",
     intro:
@@ -267,7 +267,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Computer science",
     eyebrow: "Discipline · Computer science & IT",
     h1: "Academic support for computer science and IT students",
-    title: "Computer Science Academic Support | Programming & Project Coaching",
+    title: "Computer Science Support | Programming & Project Coaching",
     description:
       "Coaching for computer science students: programming concepts, algorithms, databases, software projects, data science and final-year or Master's CS projects.",
     intro:
@@ -352,7 +352,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Medicine & health",
     eyebrow: "Discipline · Medicine & health sciences",
     h1: "Academic support for medicine, nursing and health science students",
-    title: "Medicine & Health Academic Support | Nursing, Pharmacy & Research Coaching",
+    title: "Medicine & Health Academic Support | Nursing & Pharmacy",
     description:
       "Academic coaching for medical, nursing, pharmacy and public health students: evidence appraisal, reflective writing, research projects and dissertations.",
     intro:
@@ -438,7 +438,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Law",
     eyebrow: "Discipline · Law",
     h1: "Academic support for law students",
-    title: "Law Academic Support | Legal Research, Writing & Dissertation Coaching",
+    title: "Law Academic Support | Legal Research & Writing Coaching",
     description:
       "Coaching for law students: case analysis, problem questions, legal research, OSCOLA referencing and LLM dissertations. Academic support, not legal advice.",
     intro:
@@ -523,7 +523,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Arts & humanities",
     eyebrow: "Discipline · Arts & humanities",
     h1: "Academic support for arts and humanities students",
-    title: "Arts & Humanities Academic Support | Essay and Research Coaching",
+    title: "Arts & Humanities Support | Essay & Research Coaching",
     description:
       "Coaching for history, literature, philosophy, media and cultural studies students: argument construction, close reading, source work and dissertations.",
     intro:
@@ -609,7 +609,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Social sciences",
     eyebrow: "Discipline · Social sciences",
     h1: "Academic support for social science students",
-    title: "Social Science Academic Support | Research Methods & Dissertation Coaching",
+    title: "Social Science Support | Research Methods & Dissertations",
     description:
       "Coaching for psychology, sociology, politics, education and social work students: research design, qualitative and quantitative methods, and dissertations.",
     intro:
@@ -695,7 +695,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Science",
     eyebrow: "Discipline · Natural & applied sciences",
     h1: "Academic support for science students",
-    title: "Science Academic Support | Maths, Physics, Chemistry & Biology Coaching",
+    title: "Science Academic Support | Maths, Physics & Chemistry",
     description:
       "Tutoring and research coaching for science students: problem sets, lab reports, data handling, statistics and research projects from undergraduate to PhD.",
     intro:
@@ -780,7 +780,7 @@ export const subjectLandings: LandingContent[] = [
     label: "Design",
     eyebrow: "Discipline · Design",
     h1: "Academic support for design students",
-    title: "Design Academic Support | Studio Projects, Portfolios & Written Work",
+    title: "Design Academic Support | Studio Projects & Portfolios",
     description:
       "Coaching for graphic, product, interior and industrial design students: concept development, process documentation, portfolios and written dissertations.",
     intro:

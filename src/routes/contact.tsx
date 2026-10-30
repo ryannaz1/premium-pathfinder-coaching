@@ -7,7 +7,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site, mailtoHref, whatsappHref } from "@/lib/site";
 import { socialMeta, hreflangLinks, breadcrumbScript } from "@/lib/seo";
 
-const title = "Contact Yes We Do Your Projects — Book an Academic Consultation";
+const title = "Contact Us | Book an Academic Consultation";
 const description =
   "Book a consultation or message an academic coach on WhatsApp. Email ryannazha@gmail.com or write to us using the contact form.";
 

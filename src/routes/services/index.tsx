@@ -10,9 +10,9 @@ import { majorCategories, practicalProjects, technicalAreas } from "@/lib/discip
 import { services } from "@/lib/services";
 import { socialMeta, hreflangLinks, breadcrumbScript } from "@/lib/seo";
 
-const title = "Academic Coaching & Tutoring Services | Yes We Do Your Projects";
+const title = "Academic Coaching & University Tutoring Services";
 const description =
-  "University tutoring, academic coaching, thesis and dissertation support, academic writing, exam prep and SAT prep across all majors and levels — in English, Arabic and French.";
+  "University tutoring, academic coaching, thesis and dissertation support, academic writing and exam prep for all majors — in English, Arabic and French.";
 
 const faqs: FaqItem[] = [
   {

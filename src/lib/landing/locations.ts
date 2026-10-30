@@ -12,7 +12,7 @@ export const locationLandings: LandingContent[] = [
     label: "UK academic support",
     eyebrow: "Online academic support · United Kingdom",
     h1: "Online academic support for university students in the UK",
-    title: "Academic Support in the UK | Online University Tutoring & Coaching",
+    title: "Academic Support in the UK | Online University Tutoring",
     description:
       "Online academic coaching, tutoring and dissertation support for UK university students. Undergraduate to PhD, in UK time, in English, Arabic or French.",
     intro:
@@ -100,9 +100,9 @@ export const locationLandings: LandingContent[] = [
     label: "Dubai academic support",
     eyebrow: "Online academic support · Dubai",
     h1: "Online academic support for university students in Dubai",
-    title: "Academic Support in Dubai | Online University Tutoring & Coaching",
+    title: "Academic Support in Dubai | Online University Tutoring",
     description:
-      "Online tutoring, coaching and research support for students at Dubai universities and international branch campuses. Undergraduate to PhD, in English, Arabic or French.",
+      "Online tutoring, coaching and research support for students at Dubai universities and branch campuses. Undergraduate to PhD, in English, Arabic or French.",
     intro:
       "Dubai students often sit inside a British, American or Australian curriculum while living in the Gulf — at branch campuses such as Heriot-Watt Dubai, Middlesex Dubai and Canadian University Dubai, or local institutions such as the American University in Dubai — which means the assessment culture in the handbook rarely matches the one students grew up with. We coach online, in Gulf Standard Time, translating what your rubric is really asking for into work you can produce yourself.",
     highlights: [
@@ -187,7 +187,7 @@ export const locationLandings: LandingContent[] = [
     label: "Abu Dhabi academic support",
     eyebrow: "Online academic support · Abu Dhabi",
     h1: "Online academic support for university students in Abu Dhabi",
-    title: "Academic Support in Abu Dhabi | Online Tutoring & Research Coaching",
+    title: "Academic Support in Abu Dhabi | Online Tutoring",
     description:
       "Online academic coaching, research guidance and technical project support for Abu Dhabi university students, from undergraduate coursework to PhD research.",
     intro:
@@ -273,7 +273,7 @@ export const locationLandings: LandingContent[] = [
     label: "Montreal academic support",
     eyebrow: "Online academic support · Montreal & Quebec",
     h1: "Online academic support for university students in Montreal",
-    title: "Academic Support in Montreal | Bilingual University Tutoring Online",
+    title: "Academic Support in Montreal | Bilingual Tutoring",
     description:
       "Bilingual online academic coaching for Montreal and Quebec university students: assignments, research, theses and technical projects in English or French.",
     intro:
@@ -365,7 +365,7 @@ export const locationLandings: LandingContent[] = [
     label: "Lebanon academic support",
     eyebrow: "Online academic support · Lebanon",
     h1: "Online academic support for university students in Lebanon",
-    title: "Academic Support in Lebanon | Online Tutoring in English, Arabic & French",
+    title: "Academic Support in Lebanon | Online Tutoring EN, AR, FR",
     description:
       "Online academic coaching for students at Lebanese universities: assignments, senior projects, theses and technical projects in English, Arabic or French.",
     intro:
@@ -455,7 +455,7 @@ export const locationLandings: LandingContent[] = [
     label: "Saudi Arabia academic support",
     eyebrow: "Online academic support · Saudi Arabia",
     h1: "Online academic support for university students in Saudi Arabia",
-    title: "Academic Support in Saudi Arabia | Online University Tutoring & Coaching",
+    title: "Academic Support in Saudi Arabia | Online Tutoring",
     description:
       "Online academic coaching, tutoring and research support for university students in Saudi Arabia. Undergraduate to PhD, in AST, in English, Arabic or French.",
     intro:
@@ -541,9 +541,9 @@ export const locationLandings: LandingContent[] = [
     label: "International student support",
     eyebrow: "International students",
     h1: "Academic support for international students studying abroad",
-    title: "International Student Academic Support | Online Coaching in EN, AR & FR",
+    title: "International Student Support | Online Academic Coaching",
     description:
-      "Online academic coaching for international students in the UK, UAE, Canada and Lebanon: academic English, referencing, research skills and time-zone-friendly sessions.",
+      "Online academic coaching for international students in the UK, UAE, Canada and Lebanon: academic English, referencing, research skills, in your time zone.",
     intro:
       "Studying away from home means being assessed in an unfamiliar academic culture, usually in a second or third language, often with a scholarship or family expectation attached. Our coaching addresses the gap between what you know and what the marking criteria reward — not your subject ability, which is usually already there.",
     highlights: [

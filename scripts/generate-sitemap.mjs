@@ -32,11 +32,10 @@ function priority(path) {
   return depth === 1 ? "0.8" : "0.6";
 }
 
-const today = new Date().toISOString().slice(0, 10);
 const body = paths
   .map(
     (p) =>
-      `  <url>\n    <loc>${SITE_URL}${p === "/" ? "/" : p}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${priority(p)}</priority>\n  </url>`,
+      `  <url>\n    <loc>${SITE_URL}${p === "/" ? "/" : p}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${priority(p)}</priority>\n  </url>`,
   )
   .join("\n");
 

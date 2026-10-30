@@ -28,7 +28,7 @@ export const locations: LocationContent[] = [
     place: "United Kingdom",
     short: "Coaching for UK undergraduate, Bachelor's, Master's and PhD students, including international students.",
     h1: "University academic coaching in the United Kingdom",
-    title: "UK University Academic Coaching & Tutoring | Yes We Do Your Projects",
+    title: "UK Academic Coaching & University Tutoring",
     description:
       "One-to-one academic coaching and tutoring for UK university students: essays, dissertations, research methods and exams, delivered online in UK time.",
     intro:
@@ -89,7 +89,7 @@ export const locations: LocationContent[] = [
     place: "Dubai",
     short: "Premium private academic support for students and families in Dubai.",
     h1: "University academic coaching in Dubai",
-    title: "Dubai University Academic Coaching & Tutoring | Yes We Do Your Projects",
+    title: "Dubai Academic Coaching & University Tutoring",
     description:
       "Premium one-to-one academic coaching for university students in Dubai: tutoring, dissertation guidance, academic writing and SAT preparation, online in GST.",
     intro:
@@ -150,9 +150,9 @@ export const locations: LocationContent[] = [
     place: "Abu Dhabi",
     short: "One-to-one tutoring and coaching for Abu Dhabi students.",
     h1: "University academic coaching in Abu Dhabi",
-    title: "Abu Dhabi University Academic Coaching & Tutoring | Yes We Do Your Projects",
+    title: "Abu Dhabi Academic Coaching & University Tutoring",
     description:
-      "One-to-one academic coaching and university tutoring for students in Abu Dhabi: research methods, academic writing, dissertations and exam preparation, online in GST.",
+      "One-to-one academic coaching and university tutoring in Abu Dhabi: research methods, academic writing, dissertations and exam prep, online in GST.",
     intro:
       "Abu Dhabi's universities — from Khalifa University, NYU Abu Dhabi and Zayed University to Abu Dhabi University and the American University of Sharjah nearby — lean heavily toward research-intensive and professionally accredited programmes, from engineering and health sciences to business and public policy. We coach students through the methodology, writing and exam demands those programmes place on them, online and in Gulf Standard Time.",
     timezone: "Sessions run in GST (UTC+4), scheduled around lab and clinical timetables.",
@@ -211,9 +211,9 @@ export const locations: LocationContent[] = [
     place: "Montreal & Quebec",
     short: "Support for university students studying in Montreal and across Quebec.",
     h1: "University academic coaching in Montreal and Quebec",
-    title: "Montreal & Quebec University Academic Coaching | Yes We Do Your Projects",
+    title: "Montreal & Quebec Academic Coaching & Tutoring",
     description:
-      "Academic coaching and tutoring for university students in Montreal and Quebec: CEGEP transitions, thesis guidance, research methods and academic writing, online in ET.",
+      "Academic coaching and tutoring for Montreal and Quebec university students: CEGEP transitions, thesis guidance, research methods and writing, online in ET.",
     intro:
       "Quebec runs an academic pathway that exists nowhere else in Canada: CEGEP before university, three-year bachelor's degrees for local students, and a bilingual academic culture across Montreal's institutions — McGill, Concordia, Université de Montréal, UQAM, HEC Montréal and Polytechnique among them. We coach students through that structure, online and in Eastern Time.",
     timezone: "Sessions run in Eastern Time (ET), including evenings during term.",
@@ -272,7 +272,7 @@ export const locations: LocationContent[] = [
     place: "Lebanon",
     short: "Academic coaching for Lebanese students studying locally or abroad.",
     h1: "University academic coaching in Lebanon",
-    title: "Lebanon University Academic Coaching & Tutoring | Yes We Do Your Projects",
+    title: "Lebanon Academic Coaching & Tutoring | AUB, LAU",
     description:
       "Academic coaching and university tutoring for students in Lebanon and Lebanese students abroad: writing, research methods, theses, SAT and exam preparation.",
     intro:
@@ -338,9 +338,9 @@ export const locations: LocationContent[] = [
     place: "Saudi Arabia",
     short: "Academic coaching and tutoring for university students across the Kingdom of Saudi Arabia.",
     h1: "University academic coaching in Saudi Arabia",
-    title: "Saudi Arabia University Academic Coaching & Tutoring | Yes We Do Your Projects",
+    title: "Saudi Arabia (KSA) Academic Coaching & Tutoring",
     description:
-      "One-to-one academic coaching and tutoring for university students in Saudi Arabia: coursework, research methods, dissertations, technical projects and exam preparation, online in AST.",
+      "One-to-one academic coaching and tutoring for university students in Saudi Arabia: coursework, research methods, dissertations and exam prep, online in AST.",
     intro:
       "Saudi Arabia's universities are expanding rapidly, from King Saud University, KAUST and King Abdulaziz University to Imam Muhammad Ibn Saud Islamic University, Princess Nourah bint Abdulrahman University and international branch campuses across Riyadh, Jeddah, Dhahran, Dammam and beyond. Students face a mix of Saudi, American and British-influenced curricula, often with English as the language of instruction and Arabic as the language of daily life. We coach students across the Kingdom online, in Arabia Standard Time, in English, Arabic or French.",
     timezone: "Sessions run in AST (UTC+3), including evenings and weekends to fit around university and family schedules.",

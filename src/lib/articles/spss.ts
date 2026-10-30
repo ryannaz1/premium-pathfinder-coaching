@@ -4,10 +4,10 @@ export const spssArticle: Article = {
   slug: "spss-dissertation-data-analysis-guide",
   category: "Data analysis",
   label: "SPSS for dissertation data analysis",
-  h1: "SPSS for Dissertation Data Analysis: A Practical Student Guide",
-  title: "SPSS for Dissertation Data Analysis: A Practical Student Guide",
+  h1: "SPSS for Dissertation Data Analysis: A Student Guide",
+  title: "SPSS for Dissertation Data Analysis: A Student Guide",
   description:
-    "A practical SPSS guide for dissertation students: preparing data, coding variables, cleaning, descriptives, correlation, t-tests, ANOVA, regression, choosing a test and reporting results.",
+    "SPSS guide for dissertation students: coding and cleaning data, descriptives, correlation, t-tests, ANOVA, regression, choosing a test and reporting.",
   intro:
     "Most dissertation students meet SPSS at the worst possible moment: the data is collected, the deadline is close, and the software expects decisions that should have been made months earlier. This guide walks through the whole process in the order you will actually need it — from setting up a dataset to reporting output in your results chapter — and explains how to choose an analysis that matches your research question rather than one you happened to find in a tutorial.",
   summary:

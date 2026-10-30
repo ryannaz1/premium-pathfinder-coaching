@@ -121,8 +121,8 @@ export function ArticlePage({ article }: { article: Article }) {
       </section>
 
       <section className="border-b border-border bg-background">
-        <div className="container-editorial grid gap-12 py-12 md:py-16 lg:grid-cols-[1fr_18rem]">
-          <article>
+        <div className="container-editorial grid gap-12 py-12 md:py-16 lg:grid-cols-[minmax(0,1fr)_18rem]">
+          <article className="min-w-0 break-words">
             <nav aria-label="On this page" className="border border-border bg-card p-6">
               <p className="eyebrow">On this page</p>
               <ul className="mt-4 space-y-2">

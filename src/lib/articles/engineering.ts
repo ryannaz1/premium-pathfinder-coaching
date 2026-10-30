@@ -7,7 +7,7 @@ export const engineeringArticle: Article = {
   h1: "Engineering Final-Year Project: A Complete Student Guide",
   title: "Engineering Final-Year Project: A Complete Student Guide",
   description:
-    "A complete guide to the engineering final-year project: choosing a topic, defining the problem, objectives, requirements, design, simulation, prototyping, testing, safety, documentation and the viva presentation.",
+    "Engineering final-year project guide: choosing a topic, objectives, requirements, design, simulation, prototyping, testing, documentation and the viva.",
   intro:
     "A final-year project (FYP) is the first time most engineering students own a problem end to end: define it, scope it, design a solution, build or model it, test it honestly and defend the result. It is also the module where the failure mode is rarely technical inability — it is scope, planning and documentation. This guide follows the project in the order it happens, across civil, mechanical, electrical, electronics, computer, chemical, biomedical, environmental, mechatronics and industrial engineering.",
   summary:

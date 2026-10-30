@@ -186,9 +186,9 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-ink-foreground/15 pt-8">
-          <h3 className="text-[0.7rem] font-sans font-semibold uppercase tracking-[0.18em] text-ink-foreground/60">
+          <p className="text-[0.7rem] font-sans font-semibold uppercase tracking-[0.18em] text-ink-foreground/60">
             Explore academic support
-          </h3>
+          </p>
           <div className="mt-4 grid gap-0 md:mt-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
             {directoryGroups.map((group) => (
               <FooterGroup

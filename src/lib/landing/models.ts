@@ -12,7 +12,7 @@ export const modelLandings: LandingContent[] = [
     label: "Architecture maquette help",
     eyebrow: "Physical models · Maquettes",
     h1: "Architecture maquette help and model-making guidance",
-    title: "Architecture Maquette Help | Model-Making Guidance for Students",
+    title: "Architecture Maquette Help | Model-Making Guidance",
     description:
       "Guidance on architectural maquettes: scale choice, materials, construction sequence, site models, finishing and photographing models for submission.",
     intro:
@@ -96,7 +96,7 @@ export const modelLandings: LandingContent[] = [
     label: "Building model help",
     eyebrow: "Physical models · Building models",
     h1: "Building model help for architecture and construction students",
-    title: "Building Model Help | Scale Models for Architecture & Construction",
+    title: "Building Model Help | Architecture Scale Models",
     description:
       "Support for building models: structural logic, scale detailing, façade treatment, materials, sectional cutaways and presentation for university juries.",
     intro:
@@ -181,7 +181,7 @@ export const modelLandings: LandingContent[] = [
     label: "Physical project models",
     eyebrow: "Physical models · All disciplines",
     h1: "Physical project models and presentation model support",
-    title: "Physical Project Models | Presentation & Prototype Model Support",
+    title: "Physical Project Models | Presentation & Prototypes",
     description:
       "Guidance on physical project models across engineering, architecture and design: prototypes, presentation models, project boards and technical drawings.",
     intro:
