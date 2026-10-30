@@ -21,7 +21,7 @@ import { site, whatsappHref, reportCheckoutUrl } from "@/lib/site";
 import { socialMeta, hreflangLinks } from "@/lib/seo";
 
 
-const title = "Academic Coaching & Project Support | Yes We Do Your Projects";
+const title = "Academic Coaching & Project Help | Yes We Do Your Projects";
 const description =
   "Academic coaching, university tutoring and research project support for every major, undergraduate to PhD — in English, Arabic and French.";
 
